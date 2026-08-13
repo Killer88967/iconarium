@@ -3,15 +3,33 @@ import type { SourceResult } from "../../core/types";
 
 const BASE =
   "https://raw.githubusercontent.com/simple-icons/simple-icons/develop";
+
+export interface SimpleIconDuplicateAlias {
+  title: string;
+  hex?: string;
+  guidelines?: string;
+}
+
+export interface SimpleIconAliases {
+  aka?: string[];
+  dup?: SimpleIconDuplicateAlias[];
+  loc?: Record<string, string>;
+  old?: string[];
+}
+
 export interface SimpleIconSourceIcon {
   title: string;
   slug?: string;
   hex: string;
   source: string;
   guidelines?: string;
-  aliases?: { aka?: string[]; dup?: string[]; loc?: Record<string, string> };
-  license?: { type: string; url?: string };
+  aliases?: SimpleIconAliases;
+  license?: {
+    type: string;
+    url?: string;
+  };
 }
+
 interface PackageJson {
   version: string;
 }
