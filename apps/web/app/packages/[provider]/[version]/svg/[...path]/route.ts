@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import type { NextRequest } from "next/server";
 
 interface RouteContext {
@@ -31,11 +33,7 @@ function safeSegment(value: string) {
 function normalizeHex(value: string): string | null {
   const hex = value.replace(/^#/, "");
 
-  if (
-    !/^(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(
-      hex,
-    )
-  ) {
+  if (!/^[0-9a-fA-F]{6}$/.test(hex)) {
     return null;
   }
 
@@ -108,7 +106,6 @@ function upstreamUrl(provider: Provider, version: string, path: string[]) {
 }
 
 async function getSimpleIconBrandColor(
-  request: NextRequest,
   version: string,
   path: string[],
 ): Promise<string | null> {
@@ -118,30 +115,30 @@ async function getSimpleIconBrandColor(
 
   const iconName = path[0].replace(/\.svg$/i, "");
 
-  const metadataUrl = new URL(
-    `/packages/simple-icons/${version}/metadata.json`,
-    request.nextUrl.origin,
+  const metadataPath = join(
+    process.cwd(),
+    "public",
+    "packages",
+    "simple-icons",
+    version,
+    "metadata.json",
   );
 
-  const response = await fetch(metadataUrl, {
-    next: {
-      revalidate: version === "latest" ? 300 : false,
-    },
-  });
+  try {
+    const raw = await readFile(metadataPath, "utf8");
 
-  if (!response.ok) {
+    const metadata = JSON.parse(raw) as SimpleIconsMetadata;
+
+    const icon = metadata.icons[iconName];
+
+    if (!icon?.hex) {
+      return null;
+    }
+
+    return normalizeHex(icon.hex);
+  } catch {
     return null;
   }
-
-  const metadata = (await response.json()) as SimpleIconsMetadata;
-
-  const icon = metadata.icons[iconName];
-
-  if (!icon?.hex) {
-    return null;
-  }
-
-  return normalizeHex(icon.hex);
 }
 
 function applySvgColor(svg: string, color: string) {
@@ -222,7 +219,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
         );
       }
 
-      color = await getSimpleIconBrandColor(request, version, path);
+      color = await getSimpleIconBrandColor(version, path);
 
       if (!color) {
         return new Response("Brand color not found", {
@@ -234,7 +231,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
 
       if (!color) {
         return new Response(
-          "Invalid color. Use a 3, 4, 6, or 8 digit hexadecimal value.",
+          'Invalid color. Use "?color=brand" or a 6-digit hex value.',
           {
             status: 400,
           },
