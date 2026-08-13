@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2023",
+    "lib": ["ES2023", "DOM"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "strict": true,
@@ -8,6 +9,14 @@
     "skipLibCheck": true,
     "verbatimModuleSyntax": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "allowJs": true,
+    "checkJs": false,
+    "paths": {
+      "@icon-meta/core": ["./packages/core/src/index.ts"],
+      "@icon-meta/font-awesome": ["./packages/font-awesome/src/index.ts"],
+      "@icon-meta/devicons": ["./packages/devicons/src/index.ts"],
+      "@icon-meta/simple-icons": ["./packages/simple-icons/src/index.ts"]
+    }
   }
 }

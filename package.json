@@ -1,17 +1,23 @@
 {
-  "name": "icon-website",
+  "name": "icon-meta",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@11.21.0",
+  "packageManager": "pnpm@10.15.0",
   "scripts": {
-    "build": "pnpm -r build",
-    "dev": "pnpm --filter web dev",
-    "generate": "tsx scripts/generate.ts",
-    "typecheck": "pnpm -r typecheck"
+    "dev": "pnpm --filter @icon-meta/web dev",
+    "build": "pnpm generate && pnpm -r --if-present build",
+    "generate": "tsx generators/generate-all.ts",
+    "generate:font-awesome": "tsx generators/providers/font-awesome/generate.ts",
+    "generate:devicons": "tsx generators/providers/devicons/generate.ts",
+    "generate:simple-icons": "tsx generators/providers/simple-icons/generate.ts",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "clean": "node scripts/clean.mjs"
   },
   "devDependencies": {
-    "tsx": "latest",
-    "typescript": "latest",
-    "@icon-meta/font-awesome": "workspace:*"
+    "@types/node": "^22.15.0",
+    "tsx": "^4.20.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.0"
   }
 }

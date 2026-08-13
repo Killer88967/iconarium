@@ -1,0 +1,36 @@
+// Seed data. `pnpm generate:simple-icons` replaces this file.
+export const icons = {
+  github: {
+    name: "github",
+    label: "GitHub",
+    provider: "simple-icons",
+    aliases: [],
+    categories: ["brand"],
+    tags: ["github"],
+    deprecated: false,
+    hex: "181717",
+    source: "https://github.com/",
+    guidelines: null,
+    license: null,
+  },
+  typescript: {
+    name: "typescript",
+    label: "TypeScript",
+    provider: "simple-icons",
+    aliases: [],
+    categories: ["brand"],
+    tags: ["typescript"],
+    deprecated: false,
+    hex: "3178C6",
+    source: "https://www.typescriptlang.org/",
+    guidelines: null,
+    license: null,
+  },
+} as const;
+
+export const providerInfo = {
+  id: "simple-icons",
+  name: "Simple Icons",
+  version: "seed",
+  source: "https://github.com/simple-icons/simple-icons",
+} as const;
