@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Icon Meta",
-  description: "Typed metadata and runtime helpers for icon providers.",
+  title: "Iconarium",
+  description:
+    "Typed icon metadata, provider helpers, and CDN-ready modules for popular icon ecosystems.",
 };
 
 export default function RootLayout({
