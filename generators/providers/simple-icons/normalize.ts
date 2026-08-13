@@ -10,15 +10,38 @@ function slugify(title: string) {
     .replace(/[^a-z0-9]+/g, "");
 }
 
+function normalizeAliases(values: unknown): string[] {
+  if (typeof values === "string") {
+    return [values];
+  }
+
+  if (Array.isArray(values)) {
+    return values.flatMap(normalizeAliases);
+  }
+
+  if (typeof values === "object" && values !== null) {
+    if ("title" in values && typeof values.title === "string") {
+      return [values.title];
+    }
+
+    return Object.values(values).flatMap(normalizeAliases);
+  }
+
+  return [];
+}
+
 export function normalizeSimpleIcons(data: SimpleIconSourceIcon[]) {
   const icons: Record<string, SimpleIconNormalized> = {};
+
   for (const icon of data) {
     const name = icon.slug ?? slugify(icon.title);
+
     const aliases = [
-      ...(icon.aliases?.aka ?? []),
-      ...(icon.aliases?.dup ?? []),
-      ...Object.values(icon.aliases?.loc ?? {}),
+      ...normalizeAliases(icon.aliases?.aka),
+      ...normalizeAliases(icon.aliases?.dup),
+      ...normalizeAliases(Object.values(icon.aliases?.loc ?? {})),
     ];
+
     icons[name] = {
       name,
       label: icon.title,
@@ -33,5 +56,6 @@ export function normalizeSimpleIcons(data: SimpleIconSourceIcon[]) {
       license: icon.license ?? null,
     };
   }
+
   return icons;
 }
