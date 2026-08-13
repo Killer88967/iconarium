@@ -32,6 +32,8 @@ interface FontAwesomeIcon extends BaseIcon {
 interface DeviconIcon extends BaseIcon {
   provider: "devicons";
   variants: string[];
+  svgVariants: string[];
+  fontVariants: string[];
 }
 
 interface SimpleIcon extends BaseIcon {
@@ -121,42 +123,30 @@ function IconDetails({ icon }: { icon: Icon }) {
   );
 }
 
-function IconPreview({ icon }: { icon: Icon }) {
+function IconPreview({ icon, version }: { icon: Icon; version: string }) {
+  let src: string | null = null;
+
   if (icon.provider === "font-awesome") {
-    return (
-      <div className="icon-preview">
-        <i className={icon.className} aria-hidden="true" />
-      </div>
-    );
+    src = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@${version}/svgs/${icon.style}/${icon.name}.svg`;
   }
 
   if (icon.provider === "devicons") {
     const variant =
-      icon.variants.find((variant) => variant.includes("original")) ??
-      icon.variants[0];
+      icon.svgVariants.find((value) => value.includes("original")) ??
+      icon.svgVariants[0];
 
-    if (!variant) {
-      return (
-        <div className="icon-preview">
-          <span>?</span>
-        </div>
-      );
+    if (variant) {
+      src = `https://cdn.jsdelivr.net/npm/devicon@${version}/icons/${icon.name}/${icon.name}-${variant}.svg`;
     }
+  }
 
-    return (
-      <div className="icon-preview">
-        <i className={`devicon-${icon.name}-${variant}`} aria-hidden="true" />
-      </div>
-    );
+  if (icon.provider === "simple-icons") {
+    src = `https://cdn.jsdelivr.net/npm/simple-icons@${version}/icons/${icon.name}.svg`;
   }
 
   return (
     <div className="icon-preview">
-      <img
-        src={`https://cdn.simpleicons.org/${encodeURIComponent(icon.name)}/${icon.hex}`}
-        alt=""
-        loading="lazy"
-      />
+      {src ? <img src={src} alt="" loading="lazy" /> : <span>?</span>}
     </div>
   );
 }
@@ -273,7 +263,7 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
             key={`${icon.provider}-${"style" in icon ? icon.style : ""}-${icon.name}`}
             href={`/providers/${provider}/${encodeURIComponent(icon.name)}`}
           >
-            <IconPreview icon={icon} />
+            <IconPreview icon={icon} version={metadata.providerInfo.version} />
 
             <div className="icon-card-heading">
               <strong>{icon.label}</strong>

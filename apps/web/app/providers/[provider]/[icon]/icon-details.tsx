@@ -32,6 +32,8 @@ interface FontAwesomeIcon extends BaseIcon {
 interface DeviconIcon extends BaseIcon {
   provider: "devicons";
   variants: string[];
+  svgVariants: string[];
+  fontVariants: string[];
 }
 
 interface SimpleIcon extends BaseIcon {
@@ -124,37 +126,30 @@ async function copyText(value: string) {
   await navigator.clipboard.writeText(value);
 }
 
-function LargeIconPreview({ icon }: { icon: Icon }) {
+function LargeIconPreview({ icon, version }: { icon: Icon; version: string }) {
+  let src: string | null = null;
+
   if (icon.provider === "font-awesome") {
-    return (
-      <div className="large-icon-preview">
-        <i className={icon.className} aria-hidden="true" />
-      </div>
-    );
+    src = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@${version}/svgs/${icon.style}/${icon.name}.svg`;
   }
 
   if (icon.provider === "devicons") {
     const variant =
-      icon.variants.find((variant) => variant.includes("original")) ??
-      icon.variants[0];
+      icon.svgVariants.find((value) => value.includes("original")) ??
+      icon.svgVariants[0];
 
-    return (
-      <div className="large-icon-preview">
-        {variant ? (
-          <i className={`devicon-${icon.name}-${variant}`} aria-hidden="true" />
-        ) : (
-          <span>?</span>
-        )}
-      </div>
-    );
+    if (variant) {
+      src = `https://cdn.jsdelivr.net/npm/devicon@${version}/icons/${icon.name}/${icon.name}-${variant}.svg`;
+    }
+  }
+
+  if (icon.provider === "simple-icons") {
+    src = `https://cdn.jsdelivr.net/npm/simple-icons@${version}/icons/${icon.name}.svg`;
   }
 
   return (
     <div className="large-icon-preview">
-      <img
-        src={`https://cdn.simpleicons.org/${encodeURIComponent(icon.name)}/${icon.hex}`}
-        alt={`${icon.label} icon`}
-      />
+      {src ? <img src={src} alt={`${icon.label} icon`} /> : <span>?</span>}
     </div>
   );
 }
@@ -238,7 +233,7 @@ export default function IconDetails({ provider, iconName }: IconDetailsProps) {
   return (
     <section className="icon-details-page">
       <div className="icon-summary">
-        <LargeIconPreview icon={icon} />
+        <LargeIconPreview icon={icon} version={metadata.providerInfo.version} />
 
         <div className="icon-summary-copy">
           <span className="section-kicker">{metadata.providerInfo.name}</span>
