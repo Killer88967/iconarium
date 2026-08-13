@@ -12,12 +12,34 @@ const PROVIDERS = ["font-awesome", "devicons", "simple-icons"] as const;
 
 type Provider = (typeof PROVIDERS)[number];
 
+interface SimpleIconMetadata {
+  hex: string;
+}
+
+interface SimpleIconsMetadata {
+  icons: Record<string, SimpleIconMetadata>;
+}
+
 function isProvider(value: string): value is Provider {
   return PROVIDERS.includes(value as Provider);
 }
 
 function safeSegment(value: string) {
   return /^[a-zA-Z0-9._-]+$/.test(value);
+}
+
+function normalizeHex(value: string): string | null {
+  const hex = value.replace(/^#/, "");
+
+  if (
+    !/^(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(
+      hex,
+    )
+  ) {
+    return null;
+  }
+
+  return `#${hex}`;
 }
 
 function upstreamUrl(provider: Provider, version: string, path: string[]) {
@@ -85,6 +107,65 @@ function upstreamUrl(provider: Provider, version: string, path: string[]) {
   );
 }
 
+async function getSimpleIconBrandColor(
+  request: NextRequest,
+  version: string,
+  path: string[],
+): Promise<string | null> {
+  if (path.length !== 1) {
+    return null;
+  }
+
+  const iconName = path[0].replace(/\.svg$/i, "");
+
+  const metadataUrl = new URL(
+    `/packages/simple-icons/${version}/metadata.json`,
+    request.nextUrl.origin,
+  );
+
+  const response = await fetch(metadataUrl, {
+    next: {
+      revalidate: version === "latest" ? 300 : false,
+    },
+  });
+
+  if (!response.ok) {
+    return null;
+  }
+
+  const metadata = (await response.json()) as SimpleIconsMetadata;
+
+  const icon = metadata.icons[iconName];
+
+  if (!icon?.hex) {
+    return null;
+  }
+
+  return normalizeHex(icon.hex);
+}
+
+function applySvgColor(svg: string, color: string) {
+  /*
+   * Setting fill on the root SVG works naturally for
+   * monochrome SVGs whose paths inherit their fill.
+   *
+   * SVGs that explicitly define their own child fills,
+   * such as many colored Devicons, keep those colors.
+   */
+  return svg.replace(/<svg\b([^>]*)>/i, (match, attributes: string) => {
+    if (/\sfill\s*=/i.test(attributes)) {
+      const updated = attributes.replace(
+        /\sfill\s*=\s*["'][^"']*["']/i,
+        ` fill="${color}"`,
+      );
+
+      return `<svg${updated}>`;
+    }
+
+    return `<svg${attributes} fill="${color}">`;
+  });
+}
+
 export async function GET(request: NextRequest, context: RouteContext) {
   const { provider, version, path } = await context.params;
 
@@ -124,7 +205,45 @@ export async function GET(request: NextRequest, context: RouteContext) {
     });
   }
 
-  const svg = await response.text();
+  let svg = await response.text();
+
+  const requestedColor = request.nextUrl.searchParams.get("color");
+
+  if (requestedColor) {
+    let color: string | null = null;
+
+    if (requestedColor.toLowerCase() === "brand") {
+      if (provider !== "simple-icons") {
+        return new Response(
+          'The "brand" color is only available for Simple Icons.',
+          {
+            status: 400,
+          },
+        );
+      }
+
+      color = await getSimpleIconBrandColor(request, version, path);
+
+      if (!color) {
+        return new Response("Brand color not found", {
+          status: 404,
+        });
+      }
+    } else {
+      color = normalizeHex(requestedColor);
+
+      if (!color) {
+        return new Response(
+          "Invalid color. Use a 3, 4, 6, or 8 digit hexadecimal value.",
+          {
+            status: 400,
+          },
+        );
+      }
+    }
+
+    svg = applySvgColor(svg, color);
+  }
 
   const headers = new Headers();
 
