@@ -24,8 +24,12 @@ export async function loadFontAwesomeSource(): Promise<
     fetchJson<Record<string, FontAwesomeSourceIcon>>(
       `${BASE}/metadata/icons.json`,
     ),
-    fetchJson<PackageJson>(`${BASE}/package.json`),
+
+    fetchJson<PackageJson>(
+      `${BASE}/js-packages/@fortawesome/fontawesome-free/package.json`,
+    ),
   ]);
+
   return {
     version: pkg.version,
     source: "https://github.com/FortAwesome/Font-Awesome",
