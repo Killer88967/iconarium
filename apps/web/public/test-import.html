@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icon Meta Import Test</title>
+  </head>
+  <body>
+    <script type="module">
+      import { getIcon } from "/packages/font-awesome/latest";
+
+      const icon = getIcon("brands", "docker");
+
+      console.log(icon);
+
+      document.body.innerHTML = `
+        <pre>${JSON.stringify(icon, null, 2)}</pre>
+      `;
+    </script>
+  </body>
+</html>
