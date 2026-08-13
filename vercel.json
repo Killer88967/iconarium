@@ -1,6 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "buildCommand": "pnpm generate && pnpm --filter @iconarium/web build",
-  "outputDirectory": "apps/web/.next"
+  "buildCommand": "cd ../.. && pnpm generate && pnpm --filter @iconarium/web build"
 }
