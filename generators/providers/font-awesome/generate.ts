@@ -2,6 +2,7 @@ import { writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
 import { mkdir } from "node:fs/promises";
 import { writePublicProvider } from "../../core/public-output";
+import { mirrorNpmAssets } from "../../core/npm-assets";
 import { loadFontAwesomeSource } from "./source";
 import { normalizeFontAwesome } from "./normalize";
 
@@ -31,9 +32,24 @@ export async function generateFontAwesome() {
     esmRuntime: runtime,
     declarations,
   });
+
   console.log(
     `Generated Font Awesome ${source.version}: ${Object.values(icons).reduce((n, style) => n + Object.keys(style).length, 0)} style/icon entries`,
   );
+
+  const assets = await mirrorNpmAssets({
+    provider: "font-awesome",
+
+    packageName: "@fortawesome/fontawesome-free",
+
+    version: source.version,
+
+    include(path) {
+      return path.startsWith("/css/") || path.startsWith("/webfonts/");
+    },
+  });
+
+  console.log(`Mirrored Font Awesome assets: ${assets.length} files`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`)

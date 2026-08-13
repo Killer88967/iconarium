@@ -83,6 +83,44 @@ const config: NextConfig = {
           },
         ],
       },
+
+      {
+        source: "/packages/:provider/latest/:path*",
+
+        headers: [
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "*",
+          },
+          {
+            key: "Cross-Origin-Resource-Policy",
+            value: "cross-origin",
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=300, s-maxage=300",
+          },
+        ],
+      },
+
+      {
+        source: "/packages/:provider/:version((?!latest$).+)/:path*",
+
+        headers: [
+          {
+            key: "Access-Control-Allow-Origin",
+            value: "*",
+          },
+          {
+            key: "Cross-Origin-Resource-Policy",
+            value: "cross-origin",
+          },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, s-maxage=31536000, immutable",
+          },
+        ],
+      },
     ];
   },
 };

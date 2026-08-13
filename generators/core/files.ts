@@ -10,6 +10,14 @@ export async function writeJson(path: string, value: unknown) {
   await writeText(path, JSON.stringify(value, null, 2) + "\n");
 }
 
+export async function writeBytes(path: string, value: Uint8Array) {
+  await mkdir(dirname(path), {
+    recursive: true,
+  });
+
+  await writeFile(path, value);
+}
+
 export async function resetDir(path: string) {
   await rm(path, { recursive: true, force: true });
   await mkdir(path, { recursive: true });

@@ -1,6 +1,7 @@
 import { writeFile, mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
 import { writePublicProvider } from "../../core/public-output";
+import { mirrorNpmAssets } from "../../core/npm-assets";
 import { loadDeviconsSource } from "./source";
 import { normalizeDevicons } from "./normalize";
 
@@ -31,6 +32,22 @@ export async function generateDevicons() {
   console.log(
     `Generated Devicons ${source.version}: ${Object.keys(icons).length} icons`,
   );
+
+  const assets = await mirrorNpmAssets({
+    provider: "devicons",
+    packageName: "devicon",
+    version: source.version,
+
+    include(path) {
+      return (
+        path === "/devicon.css" ||
+        path === "/devicon.min.css" ||
+        path.startsWith("/fonts/")
+      );
+    },
+  });
+
+  console.log(`Mirrored Devicon assets: ${assets.length} files`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) await generateDevicons();

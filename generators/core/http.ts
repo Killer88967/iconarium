@@ -1,6 +1,8 @@
 export async function fetchJson<T>(url: string): Promise<T> {
   const response = await fetch(url, {
-    headers: { "User-Agent": "iconarium-generator/0.1" },
+    headers: {
+      "User-Agent": "iconarium-generator/0.1",
+    },
   });
 
   if (!response.ok) {
@@ -10,4 +12,20 @@ export async function fetchJson<T>(url: string): Promise<T> {
   }
 
   return response.json() as Promise<T>;
+}
+
+export async function fetchBytes(url: string): Promise<Uint8Array> {
+  const response = await fetch(url, {
+    headers: {
+      "User-Agent": "iconarium-generator/0.1",
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(
+      `Failed to fetch ${url}: ${response.status} ${response.statusText}`,
+    );
+  }
+
+  return new Uint8Array(await response.arrayBuffer());
 }
