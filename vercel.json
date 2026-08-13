@@ -1,19 +1,6 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
   "buildCommand": "pnpm generate && pnpm --filter @iconarium/web build",
-  "headers": [
-    {
-      "source": "/packages/:provider/:version/:file*",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Cross-Origin-Resource-Policy", "value": "cross-origin" }
-      ]
-    },
-    {
-      "source": "/packages/:provider/latest/:file*",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=300, s-maxage=300" }
-      ]
-    }
-  ]
+  "outputDirectory": "apps/web/.next"
 }
