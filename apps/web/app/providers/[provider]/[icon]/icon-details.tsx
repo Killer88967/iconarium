@@ -130,21 +130,22 @@ function LargeIconPreview({ icon, version }: { icon: Icon; version: string }) {
   let src: string | null = null;
 
   if (icon.provider === "font-awesome") {
-    src = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@${version}/svgs/${icon.style}/${icon.name}.svg`;
+    src = `/packages/font-awesome/${version}/svg/${icon.style}/${icon.name}.svg`;
   }
 
   if (icon.provider === "devicons") {
+    const svgVariants = icon.svgVariants ?? icon.variants ?? [];
+
     const variant =
-      icon.svgVariants.find((value) => value.includes("original")) ??
-      icon.svgVariants[0];
+      svgVariants.find((value) => value.includes("original")) ?? svgVariants[0];
 
     if (variant) {
-      src = `https://cdn.jsdelivr.net/npm/devicon@${version}/icons/${icon.name}/${icon.name}-${variant}.svg`;
+      src = `/packages/devicons/${version}/svg/${icon.name}/${variant}.svg`;
     }
   }
 
   if (icon.provider === "simple-icons") {
-    src = `https://cdn.simpleicons.org/${encodeURIComponent(icon.name)}/${icon.hex}`;
+    src = `/packages/simple-icons/${version}/svg/${icon.name}.svg`;
   }
 
   return (

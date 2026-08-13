@@ -106,7 +106,7 @@ function SearchIconPreview({ icon }: { icon: Icon }) {
   let src: string | null = null;
 
   if (icon.provider === "font-awesome") {
-    src = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/svgs/${icon.style}/${icon.name}.svg`;
+    src = `/packages/font-awesome/latest/svg/${icon.style}/${icon.name}.svg`;
   }
 
   if (icon.provider === "devicons") {
@@ -116,12 +116,12 @@ function SearchIconPreview({ icon }: { icon: Icon }) {
       svgVariants.find((value) => value.includes("original")) ?? svgVariants[0];
 
     if (variant) {
-      src = `https://cdn.jsdelivr.net/npm/devicon@latest/icons/${icon.name}/${icon.name}-${variant}.svg`;
+      src = `/packages/devicons/latest/svg/${icon.name}/${variant}.svg`;
     }
   }
 
   if (icon.provider === "simple-icons") {
-    src = `https://cdn.simpleicons.org/${encodeURIComponent(icon.name)}/${icon.hex}`;
+    src = `/packages/simple-icons/latest/svg/${icon.name}.svg`;
   }
 
   return (
