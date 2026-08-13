@@ -121,6 +121,46 @@ function IconDetails({ icon }: { icon: Icon }) {
   );
 }
 
+function IconPreview({ icon }: { icon: Icon }) {
+  if (icon.provider === "font-awesome") {
+    return (
+      <div className="icon-preview">
+        <i className={icon.className} aria-hidden="true" />
+      </div>
+    );
+  }
+
+  if (icon.provider === "devicons") {
+    const variant =
+      icon.variants.find((variant) => variant.includes("original")) ??
+      icon.variants[0];
+
+    if (!variant) {
+      return (
+        <div className="icon-preview">
+          <span>?</span>
+        </div>
+      );
+    }
+
+    return (
+      <div className="icon-preview">
+        <i className={`devicon-${icon.name}-${variant}`} aria-hidden="true" />
+      </div>
+    );
+  }
+
+  return (
+    <div className="icon-preview">
+      <img
+        src={`https://cdn.simpleicons.org/${encodeURIComponent(icon.name)}/${icon.hex}`}
+        alt=""
+        loading="lazy"
+      />
+    </div>
+  );
+}
+
 export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
   const [metadata, setMetadata] = useState<ProviderMetadata | null>(null);
 
@@ -233,6 +273,8 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
             key={`${icon.provider}-${"style" in icon ? icon.style : ""}-${icon.name}`}
             href={`/providers/${provider}/${encodeURIComponent(icon.name)}`}
           >
+            <IconPreview icon={icon} />
+
             <div className="icon-card-heading">
               <strong>{icon.label}</strong>
 

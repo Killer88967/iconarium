@@ -12,39 +12,26 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  "1111": {
-    name: "1111";
-    label: "1.1.1.1";
-    provider: "simple-icons";
-    aliases: [];
-    categories: ["brand"];
-    tags: ["1111", "1.1.1.1"];
-    deprecated: false;
-    hex: "221E68";
-    source: "https://one.one.one.one";
-    guidelines: null;
-    license: null;
-  };
-  env: {
-    name: "env";
+  dotenv: {
+    name: "dotenv";
     label: ".ENV";
     provider: "simple-icons";
     aliases: ["Dotenv"];
     categories: ["brand"];
-    tags: ["env", ".ENV", "Dotenv"];
+    tags: ["dotenv", ".ENV", "Dotenv"];
     deprecated: false;
     hex: "ECD53F";
     source: "https://github.com/motdotla/dotenv/blob/40e75440337d1de2345dc8326d6108331f583fd8/dotenv.svg";
     guidelines: null;
     license: null;
   };
-  net: {
-    name: "net";
+  dotnet: {
+    name: "dotnet";
     label: ".NET";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["net", ".NET"];
+    tags: ["dotnet", ".NET"];
     deprecated: false;
     hex: "512BD4";
     source: "https://github.com/dotnet/brand/blob/c7d0f51b8ec59531332d05fb27a5b758a7a3d689/logo/dotnet-logo.svg";
@@ -63,6 +50,19 @@ export const icons: {
     deprecated: false;
     hex: "000000";
     source: "https://doc.e.foundation";
+    guidelines: null;
+    license: null;
+  };
+  "1dot1dot1dot1": {
+    name: "1dot1dot1dot1";
+    label: "1.1.1.1";
+    provider: "simple-icons";
+    aliases: [];
+    categories: ["brand"];
+    tags: ["1dot1dot1dot1", "1.1.1.1"];
+    deprecated: false;
+    hex: "221E68";
+    source: "https://one.one.one.one";
     guidelines: null;
     license: null;
   };
@@ -330,13 +330,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  aboutme: {
-    name: "aboutme";
+  aboutdotme: {
+    name: "aboutdotme";
     label: "about.me";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["aboutme", "about.me"];
+    tags: ["aboutdotme", "about.me"];
     deprecated: false;
     hex: "333333";
     source: "https://about.me/assets";
@@ -356,13 +356,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  abusech: {
-    name: "abusech";
+  abusedotch: {
+    name: "abusedotch";
     label: "abuse.ch";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["abusech", "abuse.ch"];
+    tags: ["abusedotch", "abuse.ch"];
     deprecated: false;
     hex: "00465B";
     source: "https://abuse.ch";
@@ -620,13 +620,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  addyio: {
-    name: "addyio";
+  addydotio: {
+    name: "addydotio";
     label: "addy.io";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["addyio", "addy.io"];
+    tags: ["addydotio", "addy.io"];
     deprecated: false;
     hex: "19216C";
     source: "https://addy.io";
@@ -1332,13 +1332,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  alibabacom: {
-    name: "alibabacom";
+  alibabadotcom: {
+    name: "alibabadotcom";
     label: "Alibaba.com";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["alibabacom", "Alibaba.com"];
+    tags: ["alibabadotcom", "Alibaba.com"];
     deprecated: false;
     hex: "FF6A00";
     source: "https://www.alibabagroup.com/en/ir/reports";
@@ -1462,13 +1462,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  alpinejs: {
-    name: "alpinejs";
+  alpinedotjs: {
+    name: "alpinedotjs";
     label: "Alpine.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["alpinejs", "Alpine.js"];
+    tags: ["alpinedotjs", "Alpine.js"];
     deprecated: false;
     hex: "8BC0D0";
     source: "https://alpinejs.dev";
@@ -1739,13 +1739,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  animejs: {
-    name: "animejs";
+  animedotjs: {
+    name: "animedotjs";
     label: "Anime.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["animejs", "Anime.js"];
+    tags: ["animedotjs", "Anime.js"];
     deprecated: false;
     hex: "000000";
     source: "https://github.com/simple-icons/simple-icons/pull/13197#issuecomment-2900606090";
@@ -3795,13 +3795,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  babylonjs: {
-    name: "babylonjs";
+  babylondotjs: {
+    name: "babylondotjs";
     label: "Babylon.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["babylonjs", "Babylon.js"];
+    tags: ["babylondotjs", "Babylon.js"];
     deprecated: false;
     hex: "BB464B";
     source: "https://github.com/BabylonJS/Brand-Toolkit/blob/8583d4d9bf252a233fa480fa02ac6f367d5207a1/babylon_logo/monochrome/babylon_logo_monochrome_dark.svg";
@@ -3834,13 +3834,13 @@ export const icons: {
     guidelines: "https://backbone.com/press";
     license: null;
   };
-  backbonejs: {
-    name: "backbonejs";
+  backbonedotjs: {
+    name: "backbonedotjs";
     label: "Backbone.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["backbonejs", "Backbone.js"];
+    tags: ["backbonedotjs", "Backbone.js"];
     deprecated: false;
     hex: "0071B5";
     source: "https://commons.wikimedia.org/wiki/File:Backbone.js_logo.svg";
@@ -4135,13 +4135,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  battlenet: {
-    name: "battlenet";
+  battledotnet: {
+    name: "battledotnet";
     label: "Battle.net";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["battlenet", "Battle.net"];
+    tags: ["battledotnet", "Battle.net"];
     deprecated: false;
     hex: "4381C3";
     source: "https://battle.net";
@@ -4826,13 +4826,13 @@ export const icons: {
     guidelines: "https://www.blockbench.net/wiki/blockbench/logos";
     license: null;
   };
-  blockchaincom: {
-    name: "blockchaincom";
+  blockchaindotcom: {
+    name: "blockchaindotcom";
     label: "Blockchain.com";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["blockchaincom", "Blockchain.com"];
+    tags: ["blockchaindotcom", "Blockchain.com"];
     deprecated: false;
     hex: "121D33";
     source: "https://www.blockchain.com/en/press";
@@ -5060,13 +5060,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  bookingcom: {
-    name: "bookingcom";
+  bookingdotcom: {
+    name: "bookingdotcom";
     label: "Booking.com";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["bookingcom", "Booking.com"];
+    tags: ["bookingdotcom", "Booking.com"];
     deprecated: false;
     hex: "003A9A";
     source: "https://www.bookingholdings.com/media-room";
@@ -5650,13 +5650,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  bunnynet: {
-    name: "bunnynet";
+  bunnydotnet: {
+    name: "bunnydotnet";
     label: "bunny.net";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["bunnynet", "bunny.net"];
+    tags: ["bunnydotnet", "bunny.net"];
     deprecated: false;
     hex: "FFAA49";
     source: "https://bunny.net";
@@ -5795,24 +5795,37 @@ export const icons: {
   };
   c: {
     name: "c";
+    label: "C";
+    provider: "simple-icons";
+    aliases: [];
+    categories: ["brand"];
+    tags: ["c", "C"];
+    deprecated: false;
+    hex: "A8B9CC";
+    source: "https://commons.wikimedia.org/wiki/File:The_C_Programming_Language_logo.svg";
+    guidelines: null;
+    license: null;
+  };
+  cplusplus: {
+    name: "cplusplus";
     label: "C++";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["c", "C++"];
+    tags: ["cplusplus", "C++"];
     deprecated: false;
     hex: "00599C";
     source: "https://github.com/isocpp/logos/tree/64ef037049f87ac74875dbe72695e59118b52186";
     guidelines: null;
     license: null;
   };
-  cbuilder: {
-    name: "cbuilder";
+  cplusplusbuilder: {
+    name: "cplusplusbuilder";
     label: "C++ Builder";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["cbuilder", "C++ Builder"];
+    tags: ["cplusplusbuilder", "C++ Builder"];
     deprecated: false;
     hex: "E62431";
     source: "https://www.embarcadero.com/news/logo";
@@ -5936,13 +5949,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  calcom: {
-    name: "calcom";
+  caldotcom: {
+    name: "caldotcom";
     label: "Cal.com";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["calcom", "Cal.com"];
+    tags: ["caldotcom", "Cal.com"];
     deprecated: false;
     hex: "292929";
     source: "https://design.cal.com/assets/logos";
@@ -6455,13 +6468,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  chartjs: {
-    name: "chartjs";
+  chartdotjs: {
+    name: "chartdotjs";
     label: "Chart.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["chartjs", "Chart.js"];
+    tags: ["chartdotjs", "Chart.js"];
     deprecated: false;
     hex: "FF6384";
     source: "https://www.chartjs.org";
@@ -6613,13 +6626,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  chesscom: {
-    name: "chesscom";
+  chessdotcom: {
+    name: "chessdotcom";
     label: "Chess.com";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["chesscom", "Chess.com"];
+    tags: ["chessdotcom", "Chess.com"];
     deprecated: false;
     hex: "81B64C";
     source: "https://www.chess.com/article/view/chess-com-brand-resources";
@@ -9051,13 +9064,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  cytoscapejs: {
-    name: "cytoscapejs";
+  cytoscapedotjs: {
+    name: "cytoscapedotjs";
     label: "Cytoscape.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["cytoscapejs", "Cytoscape.js"];
+    tags: ["cytoscapedotjs", "Cytoscape.js"];
     deprecated: false;
     hex: "F7DF1E";
     source: "https://github.com/cytoscape/cytoscape.js/blob/97c27700feefe2f7b79fca248763049e9a0b38c6/documentation/img/cytoscape-logo.svg";
@@ -9142,13 +9155,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  dailydev: {
-    name: "dailydev";
+  dailydotdev: {
+    name: "dailydotdev";
     label: "daily.dev";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["dailydev", "daily.dev"];
+    tags: ["dailydotdev", "daily.dev"];
     deprecated: false;
     hex: "CE3DF3";
     source: "https://brand.daily.dev/d/4gCtbahXkzKk/guidelines";
@@ -9311,13 +9324,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  dataai: {
-    name: "dataai";
+  datadotai: {
+    name: "datadotai";
     label: "data.ai";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["dataai", "data.ai"];
+    tags: ["datadotai", "data.ai"];
     deprecated: false;
     hex: "000000";
     source: "https://www.data.ai/en/about/press/";
@@ -9921,13 +9934,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  devto: {
-    name: "devto";
+  devdotto: {
+    name: "devdotto";
     label: "dev.to";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["devto", "dev.to"];
+    tags: ["devdotto", "dev.to"];
     deprecated: false;
     hex: "0A0A0A";
     source: "https://dev.to";
@@ -10055,13 +10068,13 @@ export const icons: {
     guidelines: "https://www.dpdhl-brands.com/dhl/en/guides/design-basics/logo-and-claim.html";
     license: null;
   };
-  diagramsnet: {
-    name: "diagramsnet";
+  diagramsdotnet: {
+    name: "diagramsdotnet";
     label: "diagrams.net";
     provider: "simple-icons";
     aliases: ["draw.io"];
     categories: ["brand"];
-    tags: ["diagramsnet", "diagrams.net", "draw.io"];
+    tags: ["diagramsdotnet", "diagrams.net", "draw.io"];
     deprecated: false;
     hex: "F08705";
     source: "https://github.com/jgraph/drawio/blob/4743eba8d5eaa497dc003df7bf7295b695c59bea/src/main/webapp/images/drawlogo.svg";
@@ -10109,13 +10122,13 @@ export const icons: {
       type: "CC-BY-SA-4.0";
     };
   };
-  dictionarycom: {
-    name: "dictionarycom";
+  dictionarydotcom: {
+    name: "dictionarydotcom";
     label: "Dictionary.com";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["dictionarycom", "Dictionary.com"];
+    tags: ["dictionarydotcom", "Dictionary.com"];
     deprecated: false;
     hex: "0049D7";
     source: "https://www.dictionary.com";
@@ -10242,13 +10255,13 @@ export const icons: {
     guidelines: "https://discord.com/branding";
     license: null;
   };
-  discordjs: {
-    name: "discordjs";
+  discorddotjs: {
+    name: "discorddotjs";
     label: "discord.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["discordjs", "discord.js"];
+    tags: ["discorddotjs", "discord.js"];
     deprecated: false;
     hex: "5865F2";
     source: "https://github.com/discordjs/discord.js/blob/8e03af6eaff15a234569c8bccdb8719a8bf282ae/apps/guide/public/logo.svg";
@@ -10437,13 +10450,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  docsrs: {
-    name: "docsrs";
+  docsdotrs: {
+    name: "docsdotrs";
     label: "Docs.rs";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["docsrs", "Docs.rs"];
+    tags: ["docsdotrs", "Docs.rs"];
     deprecated: false;
     hex: "000000";
     source: "https://docs.rs";
@@ -10705,13 +10718,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  draugiemlv: {
-    name: "draugiemlv";
+  draugiemdotlv: {
+    name: "draugiemdotlv";
     label: "Draugiem.lv";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["draugiemlv", "Draugiem.lv"];
+    tags: ["draugiemdotlv", "Draugiem.lv"];
     deprecated: false;
     hex: "FF6600";
     source: "https://www.frype.com/applications/dev/docs/logos/";
@@ -10991,13 +11004,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  eleclerc: {
-    name: "eleclerc";
+  edotleclerc: {
+    name: "edotleclerc";
     label: "E.Leclerc";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["eleclerc", "E.Leclerc"];
+    tags: ["edotleclerc", "E.Leclerc"];
     deprecated: false;
     hex: "0066CC";
     source: "https://www.e.leclerc/assets/images/sue-logo.svg";
@@ -11173,13 +11186,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  eclipsevertx: {
-    name: "eclipsevertx";
+  eclipsevertdotx: {
+    name: "eclipsevertdotx";
     label: "Eclipse Vert.x";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["eclipsevertx", "Eclipse Vert.x"];
+    tags: ["eclipsevertdotx", "Eclipse Vert.x"];
     deprecated: false;
     hex: "782A90";
     source: "https://github.com/vert-x3/.github/blob/1ad6612d87f35665e50a00fc32eb9c542556385d/workflow-templates/vertx-favicon.svg";
@@ -11631,13 +11644,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  emberjs: {
-    name: "emberjs";
+  emberdotjs: {
+    name: "emberdotjs";
     label: "Ember.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["emberjs", "Ember.js"];
+    tags: ["emberdotjs", "Ember.js"];
     deprecated: false;
     hex: "E04E39";
     source: "https://emberjs.com/logos/";
@@ -12099,13 +12112,13 @@ export const icons: {
     guidelines: "https://evernote.com/about-us";
     license: null;
   };
-  everyorg: {
-    name: "everyorg";
+  everydotorg: {
+    name: "everydotorg";
     label: "Every.org";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["everyorg", "Every.org"];
+    tags: ["everydotorg", "Every.org"];
     deprecated: false;
     hex: "2BD7B0";
     source: "https://www.every.org/brand";
@@ -12231,13 +12244,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  expresscom: {
-    name: "expresscom";
+  expressdotcom: {
+    name: "expressdotcom";
     label: "Express.com";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["expresscom", "Express.com"];
+    tags: ["expressdotcom", "Express.com"];
     deprecated: false;
     hex: "000000";
     source: "https://www.express.com";
@@ -12876,13 +12889,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  fileio: {
-    name: "fileio";
+  filedotio: {
+    name: "filedotio";
     label: "File.io";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["fileio", "File.io"];
+    tags: ["filedotio", "File.io"];
     deprecated: false;
     hex: "3D3C9D";
     source: "https://www.file.io";
@@ -13394,13 +13407,13 @@ export const icons: {
     guidelines: "https://fluxer.app/press";
     license: null;
   };
-  flyio: {
-    name: "flyio";
+  flydotio: {
+    name: "flydotio";
     label: "Fly.io";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["flyio", "Fly.io"];
+    tags: ["flydotio", "Fly.io"];
     deprecated: false;
     hex: "24175B";
     source: "https://fly.io/docs/about/brand";
@@ -13879,13 +13892,13 @@ export const icons: {
       type: "CC-BY-SA-4.0";
     };
   };
-  freedesktoporg: {
-    name: "freedesktoporg";
+  freedesktopdotorg: {
+    name: "freedesktopdotorg";
     label: "freedesktop.org";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["freedesktoporg", "freedesktop.org"];
+    tags: ["freedesktopdotorg", "freedesktop.org"];
     deprecated: false;
     hex: "3B80AE";
     source: "https://commons.wikimedia.org/wiki/File:Freedesktop-logo.svg";
@@ -14818,13 +14831,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  gitignoreio: {
-    name: "gitignoreio";
+  gitignoredotio: {
+    name: "gitignoredotio";
     label: "gitignore.io";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["gitignoreio", "gitignore.io"];
+    tags: ["gitignoredotio", "gitignore.io"];
     deprecated: false;
     hex: "204ECF";
     source: "https://docs.gitignore.io/design/logo";
@@ -14883,13 +14896,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  glinet: {
-    name: "glinet";
+  gldotinet: {
+    name: "gldotinet";
     label: "GL.iNet";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["glinet", "GL.iNet"];
+    tags: ["gldotinet", "GL.iNet"];
     deprecated: false;
     hex: "636363";
     source: "https://www.gl-inet.com/press/";
@@ -15222,13 +15235,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  gogcom: {
-    name: "gogcom";
+  gogdotcom: {
+    name: "gogdotcom";
     label: "GOG.com";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["gogcom", "GOG.com"];
+    tags: ["gogdotcom", "GOG.com"];
     deprecated: false;
     hex: "86328A";
     source: "https://www.cdprojekt.com/en/media/logotypes/";
@@ -16321,13 +16334,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  gridai: {
-    name: "gridai";
+  griddotai: {
+    name: "griddotai";
     label: "Grid.ai";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["gridai", "Grid.ai"];
+    tags: ["griddotai", "Grid.ai"];
     deprecated: false;
     hex: "78FF96";
     source: "https://github.com/gridai/logos/blob/1e12c83b77abdc22a41566cab232f4db40223895/GridAI-icons/icon-white-48.svg";
@@ -16438,13 +16451,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  gsmarenacom: {
-    name: "gsmarenacom";
+  gsmarenadotcom: {
+    name: "gsmarenadotcom";
     label: "GSMArena.com";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["gsmarenacom", "GSMArena.com"];
+    tags: ["gsmarenadotcom", "GSMArena.com"];
     deprecated: false;
     hex: "D50000";
     source: "https://www.gsmarena.com";
@@ -16793,13 +16806,13 @@ export const icons: {
     guidelines: "https://www.ccsd.cnrs.fr/en/brand-guidelines/";
     license: null;
   };
-  handlebarsjs: {
-    name: "handlebarsjs";
+  handlebarsdotjs: {
+    name: "handlebarsdotjs";
     label: "Handlebars.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["handlebarsjs", "Handlebars.js"];
+    tags: ["handlebarsdotjs", "Handlebars.js"];
     deprecated: false;
     hex: "000000";
     source: "https://github.com/handlebars-lang/docs/blob/13a2e2d9e31ebff4295924ea366abf3062e47ede/src/.vuepress/public/icons/handlebarsjs-icon.svg";
@@ -17112,13 +17125,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  hearthisat: {
-    name: "hearthisat";
+  hearthisdotat: {
+    name: "hearthisdotat";
     label: "hearthis.at";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["hearthisat", "hearthis.at"];
+    tags: ["hearthisdotat", "hearthis.at"];
     deprecated: false;
     hex: "000000";
     source: "https://hearthis.at";
@@ -17712,13 +17725,13 @@ export const icons: {
     guidelines: "https://www.hostinger.com/newsroom";
     license: null;
   };
-  hotelscom: {
-    name: "hotelscom";
+  hotelsdotcom: {
+    name: "hotelsdotcom";
     label: "Hotels.com";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["hotelscom", "Hotels.com"];
+    tags: ["hotelsdotcom", "Hotels.com"];
     deprecated: false;
     hex: "EF3346";
     source: "https://www.hotels.com";
@@ -18442,13 +18455,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  imagesc: {
-    name: "imagesc";
+  imagedotsc: {
+    name: "imagedotsc";
     label: "Image.sc";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["imagesc", "Image.sc"];
+    tags: ["imagedotsc", "Image.sc"];
     deprecated: false;
     hex: "039CB2";
     source: "https://forum.image.sc";
@@ -19284,13 +19297,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  itchio: {
-    name: "itchio";
+  itchdotio: {
+    name: "itchdotio";
     label: "Itch.io";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["itchio", "Itch.io"];
+    tags: ["itchdotio", "Itch.io"];
     deprecated: false;
     hex: "FA5C5C";
     source: "https://itch.io/press-kit";
@@ -20855,13 +20868,13 @@ export const icons: {
     guidelines: "https://github.com/knative/community/blob/main/BRANDING.MD";
     license: null;
   };
-  knexjs: {
-    name: "knexjs";
+  knexdotjs: {
+    name: "knexdotjs";
     label: "Knex.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["knexjs", "Knex.js"];
+    tags: ["knexdotjs", "Knex.js"];
     deprecated: false;
     hex: "D26B38";
     source: "https://github.com/knex/documentation/blob/a9c4ce47dbc6001bb1c6aa0649bb668edc78fea7/src/public/knex-logo.png";
@@ -21518,13 +21531,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  lastfm: {
-    name: "lastfm";
+  lastdotfm: {
+    name: "lastdotfm";
     label: "Last.fm";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["lastfm", "Last.fm"];
+    tags: ["lastdotfm", "Last.fm"];
     deprecated: false;
     hex: "D51007";
     source: "https://commons.wikimedia.org/wiki/File:Lastfm_logo.svg";
@@ -21861,13 +21874,13 @@ export const icons: {
     guidelines: "https://letterboxd.com/about/brand/";
     license: null;
   };
-  levelsfyi: {
-    name: "levelsfyi";
+  levelsdotfyi: {
+    name: "levelsdotfyi";
     label: "levels.fyi";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["levelsfyi", "levels.fyi"];
+    tags: ["levelsdotfyi", "levels.fyi"];
     deprecated: false;
     hex: "788B95";
     source: "https://www.levels.fyi/press/";
@@ -21900,13 +21913,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  liberachat: {
-    name: "liberachat";
+  liberadotchat: {
+    name: "liberadotchat";
     label: "Libera.Chat";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["liberachat", "Libera.Chat"];
+    tags: ["liberadotchat", "Libera.Chat"];
     deprecated: false;
     hex: "FF55DD";
     source: "https://libera.chat";
@@ -21928,13 +21941,13 @@ export const icons: {
       type: "CC0-1.0";
     };
   };
-  librariesio: {
-    name: "librariesio";
+  librariesdotio: {
+    name: "librariesdotio";
     label: "Libraries.io";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["librariesio", "Libraries.io"];
+    tags: ["librariesdotio", "Libraries.io"];
     deprecated: false;
     hex: "337AB7";
     source: "https://github.com/librariesio/libraries.io/blob/9ab0f659bb7fe137c15cf676612b6811f501a0bd/public/safari-pinned-tab.svg";
@@ -23207,26 +23220,26 @@ export const icons: {
     guidelines: "https://www.mahindra.com/newsroom/logos";
     license: null;
   };
-  mailcom: {
-    name: "mailcom";
+  maildotcom: {
+    name: "maildotcom";
     label: "mail.com";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["mailcom", "mail.com"];
+    tags: ["maildotcom", "mail.com"];
     deprecated: false;
     hex: "004788";
     source: "https://www.mail.com";
     guidelines: "https://www.mail.com/company/terms/";
     license: null;
   };
-  mailru: {
-    name: "mailru";
+  maildotru: {
+    name: "maildotru";
     label: "Mail.Ru";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["mailru", "Mail.Ru"];
+    tags: ["maildotru", "Mail.Ru"];
     deprecated: false;
     hex: "005FF9";
     source: "https://my.mail.ru";
@@ -23733,13 +23746,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  matterjs: {
-    name: "matterjs";
+  matterdotjs: {
+    name: "matterdotjs";
     label: "Matter.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["matterjs", "Matter.js"];
+    tags: ["matterdotjs", "Matter.js"];
     deprecated: false;
     hex: "4B5562";
     source: "https://brm.io/matter-js";
@@ -24424,13 +24437,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  microblog: {
-    name: "microblog";
+  microdotblog: {
+    name: "microdotblog";
     label: "Micro.blog";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["microblog", "Micro.blog"];
+    tags: ["microdotblog", "Micro.blog"];
     deprecated: false;
     hex: "FF8800";
     source: "https://help.micro.blog";
@@ -25739,13 +25752,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  natsio: {
-    name: "natsio";
+  natsdotio: {
+    name: "natsdotio";
     label: "NATS.io";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["natsio", "NATS.io"];
+    tags: ["natsdotio", "NATS.io"];
     deprecated: false;
     hex: "27AAE1";
     source: "https://github.com/cncf/artwork/blob/88bc5e7a0cc7f3770ba6edddc92e1ab8a6006171/projects/nats/icon/black/nats-icon-black.svg";
@@ -26215,13 +26228,13 @@ export const icons: {
     guidelines: "https://brand.nexon.com";
     license: null;
   };
-  nextjs: {
-    name: "nextjs";
+  nextdotjs: {
+    name: "nextdotjs";
     label: "Next.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["nextjs", "Next.js"];
+    tags: ["nextdotjs", "Next.js"];
     deprecated: false;
     hex: "000000";
     source: "https://vercel.com/design/brands#next-js";
@@ -26241,13 +26254,13 @@ export const icons: {
     guidelines: "https://www.nextbike.net/style-guide";
     license: null;
   };
-  nextbillionai: {
-    name: "nextbillionai";
+  nextbilliondotai: {
+    name: "nextbilliondotai";
     label: "NextBillion.ai";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["nextbillionai", "NextBillion.ai"];
+    tags: ["nextbilliondotai", "NextBillion.ai"];
     deprecated: false;
     hex: "8D5A9E";
     source: "https://nextbillion.ai";
@@ -26559,13 +26572,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  nodejs: {
-    name: "nodejs";
+  nodedotjs: {
+    name: "nodedotjs";
     label: "Node.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["nodejs", "Node.js"];
+    tags: ["nodedotjs", "Node.js"];
     deprecated: false;
     hex: "5FA04E";
     source: "https://nodejs.org/en/about/branding";
@@ -26678,13 +26691,13 @@ export const icons: {
     guidelines: "https://nordvpn.com/press-area/";
     license: null;
   };
-  normalizecss: {
-    name: "normalizecss";
+  normalizedotcss: {
+    name: "normalizedotcss";
     label: "Normalize.css";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["normalizecss", "Normalize.css"];
+    tags: ["normalizedotcss", "Normalize.css"];
     deprecated: false;
     hex: "E3695F";
     source: "https://github.com/necolas/normalize.css/blob/3a60304f90870c6087d226f53e02a7523c907a35/logo.svg";
@@ -26743,13 +26756,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  notepad: {
-    name: "notepad";
+  notepadplusplus: {
+    name: "notepadplusplus";
     label: "Notepad++";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["notepad", "Notepad++"];
+    tags: ["notepadplusplus", "Notepad++"];
     deprecated: false;
     hex: "90E59A";
     source: "https://github.com/notepad-plus-plus/notepad-plus-plus/blob/1f2c63cce173e3e1dc5922637c81a851693e2856/PowerEditor/misc/chameleon/chameleon-pencil.eps";
@@ -28540,13 +28553,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  p5js: {
-    name: "p5js";
+  p5dotjs: {
+    name: "p5dotjs";
     label: "p5.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["p5js", "p5.js"];
+    tags: ["p5dotjs", "p5.js"];
     deprecated: false;
     hex: "ED225D";
     source: "https://p5js.org";
@@ -28869,13 +28882,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  paramount: {
-    name: "paramount";
+  paramountplus: {
+    name: "paramountplus";
     label: "Paramount+";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["paramount", "Paramount+"];
+    tags: ["paramountplus", "Paramount+"];
     deprecated: false;
     hex: "0064FF";
     source: "https://www.paramount.com/brand/paramount-plus";
@@ -28908,13 +28921,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  parsely: {
-    name: "parsely";
+  parsedotly: {
+    name: "parsedotly";
     label: "Parse.ly";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["parsely", "Parse.ly"];
+    tags: ["parsedotly", "Parse.ly"];
     deprecated: false;
     hex: "5BA745";
     source: "https://www.parse.ly/press-kit";
@@ -29618,13 +29631,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  picartotv: {
-    name: "picartotv";
+  picartodottv: {
+    name: "picartodottv";
     label: "Picarto.TV";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["picartotv", "Picarto.TV"];
+    tags: ["picartodottv", "Picarto.TV"];
     deprecated: false;
     hex: "1DA456";
     source: "https://picarto.tv/site/press";
@@ -29995,13 +30008,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  platformsh: {
-    name: "platformsh";
+  platformdotsh: {
+    name: "platformdotsh";
     label: "Platform.sh";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["platformsh", "Platform.sh"];
+    tags: ["platformdotsh", "Platform.sh"];
     deprecated: false;
     hex: "1A182A";
     source: "https://platform.sh/logos/";
@@ -30073,13 +30086,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  playerme: {
-    name: "playerme";
+  playerdotme: {
+    name: "playerdotme";
     label: "Player.me";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["playerme", "Player.me"];
+    tags: ["playerdotme", "Player.me"];
     deprecated: false;
     hex: "C0379A";
     source: "https://player.me/p/about-us";
@@ -30544,13 +30557,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  portableappscom: {
-    name: "portableappscom";
+  portableappsdotcom: {
+    name: "portableappsdotcom";
     label: "PortableApps.com";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["portableappscom", "PortableApps.com"];
+    tags: ["portableappsdotcom", "PortableApps.com"];
     deprecated: false;
     hex: "818F95";
     source: "https://github.com/simple-icons/simple-icons/pull/12366#issuecomment-2551561301";
@@ -30687,13 +30700,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  prco: {
-    name: "prco";
+  prdotco: {
+    name: "prdotco";
     label: "pr.co";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["prco", "pr.co"];
+    tags: ["prdotco", "pr.co"];
     deprecated: false;
     hex: "0080FF";
     source: "https://news.pr.co/media_kits";
@@ -31103,13 +31116,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  pronounspage: {
-    name: "pronounspage";
+  pronounsdotpage: {
+    name: "pronounsdotpage";
     label: "Pronouns.page";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["pronounspage", "Pronouns.page"];
+    tags: ["pronounsdotpage", "Pronouns.page"];
     deprecated: false;
     hex: "C71585";
     source: "https://pronouns.page/design";
@@ -31155,26 +31168,26 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  protoio: {
-    name: "protoio";
+  protodotio: {
+    name: "protodotio";
     label: "Proto.io";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["protoio", "Proto.io"];
+    tags: ["protodotio", "Proto.io"];
     deprecated: false;
     hex: "34A7C1";
     source: "https://proto.io/en/presskit";
     guidelines: null;
     license: null;
   };
-  protocolsio: {
-    name: "protocolsio";
+  protocolsdotio: {
+    name: "protocolsdotio";
     label: "protocols.io";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["protocolsio", "protocols.io"];
+    tags: ["protocolsdotio", "protocols.io"];
     deprecated: false;
     hex: "4D9FE7";
     source: "https://www.protocols.io/brand";
@@ -32706,13 +32719,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  readcv: {
-    name: "readcv";
+  readdotcv: {
+    name: "readdotcv";
     label: "Read.cv";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["readcv", "Read.cv"];
+    tags: ["readdotcv", "Read.cv"];
     deprecated: false;
     hex: "111111";
     source: "https://read.cv/support/faq";
@@ -33111,13 +33124,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  removebg: {
-    name: "removebg";
+  removedotbg: {
+    name: "removedotbg";
     label: "remove.bg";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["removebg", "remove.bg"];
+    tags: ["removedotbg", "remove.bg"];
     deprecated: false;
     hex: "54616C";
     source: "https://www.remove.bg";
@@ -33371,13 +33384,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  revealjs: {
-    name: "revealjs";
+  revealdotjs: {
+    name: "revealdotjs";
     label: "reveal.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["revealjs", "reveal.js"];
+    tags: ["revealdotjs", "reveal.js"];
     deprecated: false;
     hex: "F2E142";
     source: "https://revealjs.com";
@@ -33410,13 +33423,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  revoltchat: {
-    name: "revoltchat";
+  revoltdotchat: {
+    name: "revoltdotchat";
     label: "Revolt.chat";
     provider: "simple-icons";
     aliases: ["revolt"];
     categories: ["brand"];
-    tags: ["revoltchat", "Revolt.chat", "revolt"];
+    tags: ["revoltdotchat", "Revolt.chat", "revolt"];
     deprecated: false;
     hex: "FF4655";
     source: "https://app.revolt.chat/assets/badges/revolt_r.svg";
@@ -33618,13 +33631,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  roadmapsh: {
-    name: "roadmapsh";
+  roadmapdotsh: {
+    name: "roadmapdotsh";
     label: "roadmap.sh";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["roadmapsh", "roadmap.sh"];
+    tags: ["roadmapdotsh", "roadmap.sh"];
     deprecated: false;
     hex: "000000";
     source: "https://roadmap.sh";
@@ -33724,13 +33737,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  rocketchat: {
-    name: "rocketchat";
+  rocketdotchat: {
+    name: "rocketdotchat";
     label: "Rocket.Chat";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["rocketchat", "Rocket.Chat"];
+    tags: ["rocketdotchat", "Rocket.Chat"];
     deprecated: false;
     hex: "F5455C";
     source: "https://docs.rocket.chat/docs/media-kit";
@@ -33858,13 +33871,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  rollupjs: {
-    name: "rollupjs";
+  rollupdotjs: {
+    name: "rollupdotjs";
     label: "rollup.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["rollupjs", "rollup.js"];
+    tags: ["rollupdotjs", "rollup.js"];
     deprecated: false;
     hex: "EC4A3F";
     source: "https://rollupjs.org";
@@ -34290,13 +34303,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  runrunit: {
-    name: "runrunit";
+  runrundotit: {
+    name: "runrundotit";
     label: "Runrun.it";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["runrunit", "Runrun.it"];
+    tags: ["runrundotit", "Runrun.it"];
     deprecated: false;
     hex: "DB3729";
     source: "https://runrun.it/en-US/project-management-logos-icons";
@@ -34479,13 +34492,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  sailsjs: {
-    name: "sailsjs";
+  sailsdotjs: {
+    name: "sailsdotjs";
     label: "Sails.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["sailsjs", "Sails.js"];
+    tags: ["sailsdotjs", "Sails.js"];
     deprecated: false;
     hex: "14ACC2";
     source: "https://sailsjs.com/logos";
@@ -35514,13 +35527,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  shieldsio: {
-    name: "shieldsio";
+  shieldsdotio: {
+    name: "shieldsdotio";
     label: "Shields.io";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["shieldsio", "Shields.io"];
+    tags: ["shieldsdotio", "Shields.io"];
     deprecated: false;
     hex: "000000";
     source: "https://github.com/badges/shields/blob/2b4d17177e9f2a2a94038e268a903dba07f9c25d/frontend/static/img/icon.svg";
@@ -36323,13 +36336,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  socketio: {
-    name: "socketio";
+  socketdotio: {
+    name: "socketdotio";
     label: "Socket.io";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["socketio", "Socket.io"];
+    tags: ["socketdotio", "Socket.io"];
     deprecated: false;
     hex: "010101";
     source: "https://socket.io";
@@ -36444,13 +36457,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  solvedac: {
-    name: "solvedac";
+  solveddotac: {
+    name: "solveddotac";
     label: "solved.ac";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["solvedac", "solved.ac"];
+    tags: ["solveddotac", "solved.ac"];
     deprecated: false;
     hex: "17CE3A";
     source: "https://static.solved.ac/logo.svg";
@@ -37443,13 +37456,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  startgg: {
-    name: "startgg";
+  startdotgg: {
+    name: "startdotgg";
     label: "start.gg";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["startgg", "start.gg"];
+    tags: ["startdotgg", "start.gg"];
     deprecated: false;
     hex: "2E75BA";
     source: "https://help.start.gg/en/articles/1716774-start-gg-brand-guidelines";
@@ -38255,13 +38268,13 @@ export const icons: {
       type: "CC-BY-SA-4.0";
     };
   };
-  svgjs: {
-    name: "svgjs";
+  svgdotjs: {
+    name: "svgdotjs";
     label: "SVG.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["svgjs", "SVG.js"];
+    tags: ["svgdotjs", "SVG.js"];
     deprecated: false;
     hex: "FF0066";
     source: "https://github.com/svgdotjs/svg.logo/blob/0de9ff2cca6c058968f838baaaf507e475ee4583/logo.svg";
@@ -39637,13 +39650,13 @@ export const icons: {
     guidelines: "https://www.meta.com/brand/resources/instagram/threads";
     license: null;
   };
-  threejs: {
-    name: "threejs";
+  threedotjs: {
+    name: "threedotjs";
     label: "Three.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["threejs", "Three.js"];
+    tags: ["threedotjs", "Three.js"];
     deprecated: false;
     hex: "000000";
     source: "https://github.com/mrdoob/three.js/blob/a567b810cfcb7f6a03e4faea99f03c53081da477/files/icon.svg";
@@ -40144,13 +40157,13 @@ export const icons: {
     guidelines: "https://ton.org/en/brand-assets";
     license: null;
   };
-  topgg: {
-    name: "topgg";
+  topdotgg: {
+    name: "topdotgg";
     label: "Top.gg";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["topgg", "Top.gg"];
+    tags: ["topdotgg", "Top.gg"];
     deprecated: false;
     hex: "FF3366";
     source: "https://top.gg";
@@ -40638,13 +40651,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  tripcom: {
-    name: "tripcom";
+  tripdotcom: {
+    name: "tripdotcom";
     label: "Trip.com";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["tripcom", "Trip.com"];
+    tags: ["tripdotcom", "Trip.com"];
     deprecated: false;
     hex: "287DFA";
     source: "https://careers.trip.com";
@@ -41134,13 +41147,13 @@ export const icons: {
     guidelines: "https://typst.app/legal/brand";
     license: null;
   };
-  usnews: {
-    name: "usnews";
+  udotsdotnews: {
+    name: "udotsdotnews";
     label: "U.S. News";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["usnews", "U.S. News"];
+    tags: ["udotsdotnews", "U.S. News"];
     deprecated: false;
     hex: "005EA6";
     source: "https://www.usnews.com";
@@ -41422,13 +41435,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  underscorejs: {
-    name: "underscorejs";
+  underscoredotjs: {
+    name: "underscoredotjs";
     label: "Underscore.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["underscorejs", "Underscore.js"];
+    tags: ["underscoredotjs", "Underscore.js"];
     deprecated: false;
     hex: "0371B5";
     source: "https://github.com/jashkenas/underscore/blob/f098f61ff84931dea69c276b3674a62b6ae4def7/docs/images/underscore.png";
@@ -42730,13 +42743,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  voipms: {
-    name: "voipms";
+  voipdotms: {
+    name: "voipdotms";
     label: "VoIP.ms";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["voipms", "VoIP.ms"];
+    tags: ["voipdotms", "VoIP.ms"];
     deprecated: false;
     hex: "E1382D";
     source: "https://voip.ms";
@@ -42873,13 +42886,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  vuejs: {
-    name: "vuejs";
+  vuedotjs: {
+    name: "vuedotjs";
     label: "Vue.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["vuejs", "Vue.js"];
+    tags: ["vuedotjs", "Vue.js"];
     deprecated: false;
     hex: "4FC08D";
     source: "https://github.com/vuejs/art/blob/a1c78b74569b70a25300925b4eacfefcc143b8f6/logo.svg";
@@ -43256,26 +43269,26 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  webde: {
-    name: "webde";
+  webdotde: {
+    name: "webdotde";
     label: "WEB.DE";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["webde", "WEB.DE"];
+    tags: ["webdotde", "WEB.DE"];
     deprecated: false;
     hex: "FFD800";
     source: "https://web.de";
     guidelines: null;
     license: null;
   };
-  web3js: {
-    name: "web3js";
+  web3dotjs: {
+    name: "web3dotjs";
     label: "Web3.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["web3js", "Web3.js"];
+    tags: ["web3dotjs", "Web3.js"];
     deprecated: false;
     hex: "F16822";
     source: "https://github.com/ChainSafe/web3.js/blob/fdbda4958cbdbaebe8ed5ea59183582b07fac254/assets/logo/web3js.svg";
@@ -43308,13 +43321,13 @@ export const icons: {
     guidelines: "https://github.com/webauthn-open-source/webauthn-logos/blob/b21be672811eb4a5caadaba41044970cae299a55/README.md";
     license: null;
   };
-  webcomponentsorg: {
-    name: "webcomponentsorg";
+  webcomponentsdotorg: {
+    name: "webcomponentsdotorg";
     label: "webcomponents.org";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["webcomponentsorg", "webcomponents.org"];
+    tags: ["webcomponentsdotorg", "webcomponents.org"];
     deprecated: false;
     hex: "29ABE2";
     source: "https://www.webcomponents.org";
@@ -43695,26 +43708,26 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  wikigg: {
-    name: "wikigg";
+  wikidotgg: {
+    name: "wikidotgg";
     label: "wiki.gg";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["wikigg", "wiki.gg"];
+    tags: ["wikidotgg", "wiki.gg"];
     deprecated: false;
     hex: "FF1985";
     source: "https://commons.wiki.gg/wiki/Category:Wiki.gg_logos";
     guidelines: null;
     license: null;
   };
-  wikijs: {
-    name: "wikijs";
+  wikidotjs: {
+    name: "wikidotjs";
     label: "Wiki.js";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["wikijs", "Wiki.js"];
+    tags: ["wikidotjs", "Wiki.js"];
     deprecated: false;
     hex: "1976D2";
     source: "https://cdn.js.wiki/images/wikijs-butterfly-mono.svg";
@@ -44163,13 +44176,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  writeas: {
-    name: "writeas";
+  writedotas: {
+    name: "writedotas";
     label: "Write.as";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["writeas", "Write.as"];
+    tags: ["writedotas", "Write.as"];
     deprecated: false;
     hex: "5AC4EE";
     source: "https://write.as/brand";
@@ -44254,13 +44267,13 @@ export const icons: {
     guidelines: "https://about.x.com/en/who-we-are/brand-toolkit";
     license: null;
   };
-  xorg: {
-    name: "xorg";
+  xdotorg: {
+    name: "xdotorg";
     label: "X.Org";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["xorg", "X.Org"];
+    tags: ["xdotorg", "X.Org"];
     deprecated: false;
     hex: "F28834";
     source: "https://commons.wikimedia.org/wiki/File:X.Org_Logo.svg";
@@ -44828,13 +44841,13 @@ export const icons: {
     guidelines: null;
     license: null;
   };
-  zai: {
-    name: "zai";
+  zdotai: {
+    name: "zdotai";
     label: "Z.ai";
     provider: "simple-icons";
     aliases: [];
     categories: ["brand"];
-    tags: ["zai", "Z.ai"];
+    tags: ["zdotai", "Z.ai"];
     deprecated: false;
     hex: "2D2D2D";
     source: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg";

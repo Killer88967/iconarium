@@ -19,6 +19,8 @@ export interface FontAwesomeNormalized extends NormalizedBase {
 export interface DeviconNormalized extends NormalizedBase {
   provider: "devicons";
   variants: string[];
+  svgVariants: string[];
+  fontVariants: string[];
 }
 
 export interface SimpleIconNormalized extends NormalizedBase {

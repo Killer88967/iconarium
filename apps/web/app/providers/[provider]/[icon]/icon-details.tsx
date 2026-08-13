@@ -124,6 +124,41 @@ async function copyText(value: string) {
   await navigator.clipboard.writeText(value);
 }
 
+function LargeIconPreview({ icon }: { icon: Icon }) {
+  if (icon.provider === "font-awesome") {
+    return (
+      <div className="large-icon-preview">
+        <i className={icon.className} aria-hidden="true" />
+      </div>
+    );
+  }
+
+  if (icon.provider === "devicons") {
+    const variant =
+      icon.variants.find((variant) => variant.includes("original")) ??
+      icon.variants[0];
+
+    return (
+      <div className="large-icon-preview">
+        {variant ? (
+          <i className={`devicon-${icon.name}-${variant}`} aria-hidden="true" />
+        ) : (
+          <span>?</span>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div className="large-icon-preview">
+      <img
+        src={`https://cdn.simpleicons.org/${encodeURIComponent(icon.name)}/${icon.hex}`}
+        alt={`${icon.label} icon`}
+      />
+    </div>
+  );
+}
+
 export default function IconDetails({ provider, iconName }: IconDetailsProps) {
   const [metadata, setMetadata] = useState<ProviderMetadata | null>(null);
 
@@ -203,7 +238,9 @@ export default function IconDetails({ provider, iconName }: IconDetailsProps) {
   return (
     <section className="icon-details-page">
       <div className="icon-summary">
-        <div>
+        <LargeIconPreview icon={icon} />
+
+        <div className="icon-summary-copy">
           <span className="section-kicker">{metadata.providerInfo.name}</span>
 
           <h2>{icon.label}</h2>

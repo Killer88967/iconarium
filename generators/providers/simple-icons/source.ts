@@ -1,8 +1,7 @@
 import { fetchJson } from "../../core/http";
 import type { SourceResult } from "../../core/types";
 
-const BASE =
-  "https://raw.githubusercontent.com/simple-icons/simple-icons/develop";
+const BASE = "https://cdn.jsdelivr.net/npm/simple-icons@latest";
 
 export interface SimpleIconDuplicateAlias {
   title: string;

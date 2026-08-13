@@ -3,10 +3,14 @@ import type { DeviconSourceIcon } from "./source";
 
 export function normalizeDevicons(data: DeviconSourceIcon[]) {
   const icons: Record<string, DeviconNormalized> = {};
+
   for (const icon of data) {
-    const variants = Array.from(
-      new Set([...(icon.versions?.font ?? []), ...(icon.versions?.svg ?? [])]),
-    );
+    const svgVariants = Array.from(new Set(icon.versions?.svg ?? []));
+
+    const fontVariants = Array.from(new Set(icon.versions?.font ?? []));
+
+    const variants = Array.from(new Set([...svgVariants, ...fontVariants]));
+
     icons[icon.name] = {
       name: icon.name,
       label: icon.name,
@@ -18,7 +22,10 @@ export function normalizeDevicons(data: DeviconSourceIcon[]) {
       ),
       deprecated: false,
       variants,
+      svgVariants,
+      fontVariants,
     };
   }
+
   return icons;
 }

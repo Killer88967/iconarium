@@ -14,7 +14,9 @@ export const icons: {
       "arm64",
     ];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   adonisjs: {
     name: "adonisjs";
@@ -25,6 +27,8 @@ export const icons: {
     tags: ["adonisjs", "nodejs", "framework", "adonis"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   aerospike: {
     name: "aerospike";
@@ -35,6 +39,8 @@ export const icons: {
     tags: ["aerospike", "data", "database", "nosql"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   aframe: {
     name: "aframe";
@@ -44,7 +50,9 @@ export const icons: {
     categories: [];
     tags: ["aframe", "framework", "html", "javascript", "js", "web", "a-frame"];
     deprecated: false;
-    variants: ["original-wordmark", "plain", "original"];
+    variants: ["original", "original-wordmark", "plain"];
+    svgVariants: ["original", "original-wordmark", "plain"];
+    fontVariants: ["original-wordmark", "plain"];
   };
   aftereffects: {
     name: "aftereffects";
@@ -54,7 +62,9 @@ export const icons: {
     categories: [];
     tags: ["aftereffects", "video", "editor", "adobeaftereffects", "ae"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   akka: {
     name: "akka";
@@ -71,7 +81,9 @@ export const icons: {
       "akka-framework",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   algolia: {
     name: "algolia";
@@ -82,6 +94,8 @@ export const icons: {
     tags: ["algolia", "algorithms", "api", "documentation", "tool"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   almalinux: {
     name: "almalinux";
@@ -91,7 +105,9 @@ export const icons: {
     categories: [];
     tags: ["almalinux", "linux", "os", "open-source", "AlmaLinux OS"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   alpinejs: {
     name: "alpinejs";
@@ -102,6 +118,8 @@ export const icons: {
     tags: ["alpinejs", "framework", "javascript", "Alpine"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   amazonwebservices: {
     name: "amazonwebservices";
@@ -111,7 +129,9 @@ export const icons: {
     categories: [];
     tags: ["amazonwebservices", "cloud", "hosting", "server", "aws"];
     deprecated: false;
-    variants: ["plain-wordmark", "line-wordmark", "original-wordmark"];
+    variants: ["original-wordmark", "plain-wordmark", "line-wordmark"];
+    svgVariants: ["original-wordmark", "plain-wordmark", "line-wordmark"];
+    fontVariants: ["plain-wordmark", "line-wordmark"];
   };
   anaconda: {
     name: "anaconda";
@@ -122,6 +142,8 @@ export const icons: {
     tags: ["anaconda", "python", "data-science"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   android: {
     name: "android";
@@ -131,7 +153,9 @@ export const icons: {
     categories: [];
     tags: ["android", "os", "mobile"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   androidstudio: {
     name: "androidstudio";
@@ -149,7 +173,9 @@ export const icons: {
       "mobile",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   angular: {
     name: "angular";
@@ -159,7 +185,9 @@ export const icons: {
     categories: [];
     tags: ["angular", "framework", "javascript"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   angularjs: {
     name: "angularjs";
@@ -169,7 +197,9 @@ export const icons: {
     categories: [];
     tags: ["angularjs", "framework", "javascript"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   angularmaterial: {
     name: "angularmaterial";
@@ -179,7 +209,9 @@ export const icons: {
     categories: [];
     tags: ["angularmaterial", "framework", "javascript"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   ansible: {
     name: "ansible";
@@ -195,7 +227,9 @@ export const icons: {
       "continuous-delivery",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   ansys: {
     name: "ansys";
@@ -205,7 +239,9 @@ export const icons: {
     categories: [];
     tags: ["ansys", "simulation"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   antdesign: {
     name: "antdesign";
@@ -215,7 +251,9 @@ export const icons: {
     categories: [];
     tags: ["antdesign", "reactjs", "design", "language"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   apache: {
     name: "apache";
@@ -226,13 +264,22 @@ export const icons: {
     tags: ["apache", "php", "The Apache Software Foundation"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   apacheairflow: {
     name: "apacheairflow";
@@ -249,7 +296,9 @@ export const icons: {
       "Airflow",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   apachekafka: {
     name: "apachekafka";
@@ -260,6 +309,8 @@ export const icons: {
     tags: ["apachekafka", "streaming", "open-source"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   apachespark: {
     name: "apachespark";
@@ -274,7 +325,9 @@ export const icons: {
       "machine-learning",
     ];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   apex: {
     name: "apex";
@@ -285,6 +338,8 @@ export const icons: {
     tags: ["apex", "language"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   apl: {
     name: "apl";
@@ -301,7 +356,9 @@ export const icons: {
       "A Programming Language",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   apollographql: {
     name: "apollographql";
@@ -312,6 +369,8 @@ export const icons: {
     tags: ["apollographql", "platform", "graphql", "api", "Apollo"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   appcelerator: {
     name: "appcelerator";
@@ -321,7 +380,9 @@ export const icons: {
     categories: [];
     tags: ["appcelerator", "app", "mobile"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   apple: {
     name: "apple";
@@ -332,6 +393,8 @@ export const icons: {
     tags: ["apple", "brand", "mobile"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   appwrite: {
     name: "appwrite";
@@ -341,7 +404,9 @@ export const icons: {
     categories: [];
     tags: ["appwrite", "cloud", "platform", "server"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   archlinux: {
     name: "archlinux";
@@ -351,7 +416,9 @@ export const icons: {
     categories: [];
     tags: ["archlinux", "linux", "distribution", "desktop"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   arduino: {
     name: "arduino";
@@ -361,7 +428,9 @@ export const icons: {
     categories: [];
     tags: ["arduino", "microcontroller", "hardware"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   argocd: {
     name: "argocd";
@@ -371,7 +440,9 @@ export const icons: {
     categories: [];
     tags: ["argocd", "gitops", "continuous-delivery"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   artixlinux: {
     name: "artixlinux";
@@ -381,7 +452,9 @@ export const icons: {
     categories: [];
     tags: ["artixlinux", "linux", "os", "distribution", "desktop", "artix"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   astro: {
     name: "astro";
@@ -391,7 +464,9 @@ export const icons: {
     categories: [];
     tags: ["astro", "static site generator", "framework", "web-development"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   atom: {
     name: "atom";
@@ -402,6 +477,8 @@ export const icons: {
     tags: ["atom", "editor"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   awk: {
     name: "awk";
@@ -417,7 +494,9 @@ export const icons: {
       "the awk programming language",
     ];
     deprecated: false;
-    variants: ["plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["plain-wordmark"];
   };
   axios: {
     name: "axios";
@@ -428,6 +507,8 @@ export const icons: {
     tags: ["axios", "http", "promise", "nodejs"];
     deprecated: false;
     variants: ["plain", "plain-wordmark"];
+    svgVariants: ["plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   azure: {
     name: "azure";
@@ -437,7 +518,9 @@ export const icons: {
     categories: [];
     tags: ["azure", "cloud", "devops", "microsoftazure"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   azuredevops: {
     name: "azuredevops";
@@ -455,7 +538,9 @@ export const icons: {
       "azure-devops",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original"];
+    fontVariants: ["plain"];
   };
   azuresqldatabase: {
     name: "azuresqldatabase";
@@ -472,7 +557,9 @@ export const icons: {
       "azure-sql-database",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original"];
+    fontVariants: ["plain"];
   };
   babel: {
     name: "babel";
@@ -482,7 +569,9 @@ export const icons: {
     categories: [];
     tags: ["babel", "javascript", "transpiler", "babeljs"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   babylonjs: {
     name: "babylonjs";
@@ -492,7 +581,9 @@ export const icons: {
     categories: [];
     tags: ["babylonjs", "3d", "javascript", "library", "web", "babylon.js"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   backbonejs: {
     name: "backbonejs";
@@ -502,7 +593,9 @@ export const icons: {
     categories: [];
     tags: ["backbonejs", "javascript", "framework"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   ballerina: {
     name: "ballerina";
@@ -513,6 +606,8 @@ export const icons: {
     tags: ["ballerina", "java", "cloud", "server", "networking", "bal"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   bamboo: {
     name: "bamboo";
@@ -523,6 +618,8 @@ export const icons: {
     tags: ["bamboo", "platform", "integration", "server", "atlassianbamboo"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   bash: {
     name: "bash";
@@ -532,7 +629,9 @@ export const icons: {
     categories: [];
     tags: ["bash", "shell", "command", "scripting", "bourneagainshell"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   bazel: {
     name: "bazel";
@@ -542,7 +641,9 @@ export const icons: {
     categories: [];
     tags: ["bazel", "build", "automation", "open-source", "buildtoolbazel"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   beats: {
     name: "beats";
@@ -552,7 +653,9 @@ export const icons: {
     categories: [];
     tags: ["beats", "elastic", "data-transfer"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original"];
+    fontVariants: ["plain"];
   };
   behance: {
     name: "behance";
@@ -562,7 +665,9 @@ export const icons: {
     categories: [];
     tags: ["behance", "social", "website"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   bevyengine: {
     name: "bevyengine";
@@ -581,13 +686,22 @@ export const icons: {
     ];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   biome: {
     name: "biome";
@@ -609,11 +723,19 @@ export const icons: {
     deprecated: false;
     variants: [
       "original",
+      "original-wordmark",
       "plain-wordmark",
       "line",
       "line-wordmark",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original", "plain-wordmark", "line", "line-wordmark"];
   };
   bitbucket: {
     name: "bitbucket";
@@ -624,6 +746,8 @@ export const icons: {
     tags: ["bitbucket", "version-control", "atlassianbitbucket"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   blazor: {
     name: "blazor";
@@ -634,6 +758,8 @@ export const icons: {
     tags: ["blazor", "dotnet", ".net", "framework", "design", "ui"];
     deprecated: false;
     variants: ["original", "line"];
+    svgVariants: ["original", "line"];
+    fontVariants: ["original", "line"];
   };
   blender: {
     name: "blender";
@@ -644,6 +770,8 @@ export const icons: {
     tags: ["blender", "modelling", "python", "3d", "animation"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   bootstrap: {
     name: "bootstrap";
@@ -653,7 +781,9 @@ export const icons: {
     categories: [];
     tags: ["bootstrap", "css", "framework", "html", "javascript", "library"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   bower: {
     name: "bower";
@@ -664,13 +794,22 @@ export const icons: {
     tags: ["bower", "package", "manager"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   browserstack: {
     name: "browserstack";
@@ -681,13 +820,22 @@ export const icons: {
     tags: ["browserstack", "website", "app", "testing", "tool"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   bulma: {
     name: "bulma";
@@ -698,6 +846,8 @@ export const icons: {
     tags: ["bulma", "css", "framework", "bulmacss"];
     deprecated: false;
     variants: ["plain"];
+    svgVariants: ["plain"];
+    fontVariants: ["plain"];
   };
   bun: {
     name: "bun";
@@ -707,7 +857,9 @@ export const icons: {
     categories: [];
     tags: ["bun", "javascript", "zig", "language"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   c: {
     name: "c";
@@ -718,6 +870,8 @@ export const icons: {
     tags: ["c", "language"];
     deprecated: false;
     variants: ["original", "line"];
+    svgVariants: ["original", "line"];
+    fontVariants: ["original", "line"];
   };
   cairo: {
     name: "cairo";
@@ -727,7 +881,9 @@ export const icons: {
     categories: [];
     tags: ["cairo", "graphic", "library", "c", "open-source", "cairographics"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   cakephp: {
     name: "cakephp";
@@ -737,7 +893,9 @@ export const icons: {
     categories: [];
     tags: ["cakephp", "framework"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   canva: {
     name: "canva";
@@ -748,6 +906,8 @@ export const icons: {
     tags: ["canva", "design"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   capacitor: {
     name: "capacitor";
@@ -765,7 +925,9 @@ export const icons: {
       "capacitorjs",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   carbon: {
     name: "carbon";
@@ -776,6 +938,8 @@ export const icons: {
     tags: ["carbon", "programming", "language", "Carbon Language"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   cassandra: {
     name: "cassandra";
@@ -785,7 +949,9 @@ export const icons: {
     categories: [];
     tags: ["cassandra", "nosql", "database", "open-source", "Apache Cassandra"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   centos: {
     name: "centos";
@@ -795,7 +961,9 @@ export const icons: {
     categories: [];
     tags: ["centos", "server", "linux"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   ceylon: {
     name: "ceylon";
@@ -805,7 +973,9 @@ export const icons: {
     categories: [];
     tags: ["ceylon", "language", "eclipseceylon", "ceylonlang"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   chakraui: {
     name: "chakraui";
@@ -815,7 +985,9 @@ export const icons: {
     categories: [];
     tags: ["chakraui", "ui", "library", "chakra ui"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   chartjs: {
     name: "chartjs";
@@ -825,7 +997,9 @@ export const icons: {
     categories: [];
     tags: ["chartjs", "javascript", "chart", "framework", "chart.js"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   chrome: {
     name: "chrome";
@@ -835,7 +1009,9 @@ export const icons: {
     categories: [];
     tags: ["chrome", "browser", "googlechrome"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   circleci: {
     name: "circleci";
@@ -846,6 +1022,8 @@ export const icons: {
     tags: ["circleci", "integration", "platform"];
     deprecated: false;
     variants: ["plain", "plain-wordmark"];
+    svgVariants: ["plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   clarity: {
     name: "clarity";
@@ -855,7 +1033,9 @@ export const icons: {
     categories: [];
     tags: ["clarity", "programming", "language", "blockchain", "clarity-lang"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   clickhouse: {
     name: "clickhouse";
@@ -865,7 +1045,9 @@ export const icons: {
     categories: [];
     tags: ["clickhouse", "cloud", "column-oriented", "database", "warehouse"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   clion: {
     name: "clion";
@@ -875,7 +1057,9 @@ export const icons: {
     categories: [];
     tags: ["clion", "jetbrains", "editor", "c", "c++", "cpp", "cplusplus"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   clojure: {
     name: "clojure";
@@ -885,7 +1069,9 @@ export const icons: {
     categories: [];
     tags: ["clojure", "language", "jvm"];
     deprecated: false;
-    variants: ["line", "plain", "original"];
+    variants: ["original", "line", "plain"];
+    svgVariants: ["original", "line"];
+    fontVariants: ["line", "plain"];
   };
   clojurescript: {
     name: "clojurescript";
@@ -895,7 +1081,9 @@ export const icons: {
     categories: [];
     tags: ["clojurescript", "language"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   cloudflare: {
     name: "cloudflare";
@@ -905,7 +1093,9 @@ export const icons: {
     categories: [];
     tags: ["cloudflare", "web", "cdn", "dns", "proxy", "security"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   cloudflareworkers: {
     name: "cloudflareworkers";
@@ -923,7 +1113,9 @@ export const icons: {
       "Cloudflare Workers",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   cloudrun: {
     name: "cloudrun";
@@ -940,7 +1132,9 @@ export const icons: {
       "Cloud Run",
     ];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   cmake: {
     name: "cmake";
@@ -950,7 +1144,9 @@ export const icons: {
     categories: [];
     tags: ["cmake", "build"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   cobol: {
     name: "cobol";
@@ -961,6 +1157,8 @@ export const icons: {
     tags: ["cobol", "language"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   codeac: {
     name: "codeac";
@@ -971,6 +1169,8 @@ export const icons: {
     tags: ["codeac", "platform", "integration", "codeacio"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   codecov: {
     name: "codecov";
@@ -981,6 +1181,8 @@ export const icons: {
     tags: ["codecov", "platform", "integration"];
     deprecated: false;
     variants: ["plain"];
+    svgVariants: ["plain"];
+    fontVariants: ["plain"];
   };
   codeigniter: {
     name: "codeigniter";
@@ -991,6 +1193,8 @@ export const icons: {
     tags: ["codeigniter", "php", "framework"];
     deprecated: false;
     variants: ["plain", "plain-wordmark"];
+    svgVariants: ["plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   codepen: {
     name: "codepen";
@@ -1001,6 +1205,8 @@ export const icons: {
     tags: ["codepen", "social", "website", "editor"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   coffeescript: {
     name: "coffeescript";
@@ -1011,6 +1217,8 @@ export const icons: {
     tags: ["coffeescript", "javascript", "transpiler", "language"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   composer: {
     name: "composer";
@@ -1020,7 +1228,9 @@ export const icons: {
     categories: [];
     tags: ["composer", "package", "manager", "php"];
     deprecated: false;
-    variants: ["line", "line-wordmark", "original"];
+    variants: ["original", "line", "line-wordmark"];
+    svgVariants: ["original", "line", "line-wordmark"];
+    fontVariants: ["line", "line-wordmark"];
   };
   confluence: {
     name: "confluence";
@@ -1037,13 +1247,22 @@ export const icons: {
     ];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   consul: {
     name: "consul";
@@ -1060,7 +1279,9 @@ export const icons: {
       "HashiCorp Consul",
     ];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   contao: {
     name: "contao";
@@ -1071,6 +1292,8 @@ export const icons: {
     tags: ["contao", "cms"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   corejs: {
     name: "corejs";
@@ -1089,6 +1312,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   cosmosdb: {
     name: "cosmosdb";
@@ -1098,7 +1323,9 @@ export const icons: {
     categories: [];
     tags: ["cosmosdb", "database", "nosql", "cloud", "azure", "azurecosmosdb"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   couchbase: {
     name: "couchbase";
@@ -1108,7 +1335,9 @@ export const icons: {
     categories: [];
     tags: ["couchbase", "database", "nosql", "cloud"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   couchdb: {
     name: "couchdb";
@@ -1118,7 +1347,9 @@ export const icons: {
     categories: [];
     tags: ["couchdb", "database", "apachecouchdb"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   cpanel: {
     name: "cpanel";
@@ -1129,6 +1360,8 @@ export const icons: {
     tags: ["cpanel", "hosting", "web hosting", "server", "control panel"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   cplusplus: {
     name: "cplusplus";
@@ -1138,7 +1371,9 @@ export const icons: {
     categories: [];
     tags: ["cplusplus", "language", "c++", "cpp"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   crystal: {
     name: "crystal";
@@ -1149,6 +1384,8 @@ export const icons: {
     tags: ["crystal", "programming", "language", "crystallang"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   csharp: {
     name: "csharp";
@@ -1158,7 +1395,9 @@ export const icons: {
     categories: [];
     tags: ["csharp", "language", "c#"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "line", "line-wordmark", "original"];
+    variants: ["original", "plain", "line", "plain-wordmark", "line-wordmark"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   css3: {
     name: "css3";
@@ -1168,7 +1407,9 @@ export const icons: {
     categories: [];
     tags: ["css3", "language", "programming", "cascadingstylesheets3"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   cucumber: {
     name: "cucumber";
@@ -1179,6 +1420,8 @@ export const icons: {
     tags: ["cucumber", "framework", "cucumberjs"];
     deprecated: false;
     variants: ["plain", "plain-wordmark"];
+    svgVariants: ["plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   cypressio: {
     name: "cypressio";
@@ -1189,13 +1432,22 @@ export const icons: {
     tags: ["cypressio", "testing", "framework", "cypress"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   d3js: {
     name: "d3js";
@@ -1205,7 +1457,9 @@ export const icons: {
     categories: [];
     tags: ["d3js"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   dart: {
     name: "dart";
@@ -1215,7 +1469,9 @@ export const icons: {
     categories: [];
     tags: ["dart", "programming", "language", "googledart"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   datadog: {
     name: "datadog";
@@ -1226,6 +1482,8 @@ export const icons: {
     tags: ["datadog", "monitoring", "platform", "integration"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   datagrip: {
     name: "datagrip";
@@ -1235,7 +1493,9 @@ export const icons: {
     categories: [];
     tags: ["datagrip", "jetbrains", "ide", "sql", "database"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original"];
+    variants: ["original", "plain", "plain-wordmark"];
+    svgVariants: ["original", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   dataspell: {
     name: "dataspell";
@@ -1245,7 +1505,9 @@ export const icons: {
     categories: [];
     tags: ["dataspell", "jetbrains", "ide", "jupyter notebook", "data science"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   datatables: {
     name: "datatables";
@@ -1256,6 +1518,8 @@ export const icons: {
     tags: ["datatables", "css", "framework", "html", "javascript", "library"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   dbeaver: {
     name: "dbeaver";
@@ -1265,7 +1529,9 @@ export const icons: {
     categories: [];
     tags: ["dbeaver", "tool", "database"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original"];
+    fontVariants: ["plain"];
   };
   debian: {
     name: "debian";
@@ -1275,7 +1541,9 @@ export const icons: {
     categories: [];
     tags: ["debian", "os", "server"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   delphi: {
     name: "delphi";
@@ -1285,7 +1553,9 @@ export const icons: {
     categories: [];
     tags: ["delphi", "language", "embarcadero"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   denojs: {
     name: "denojs";
@@ -1296,6 +1566,8 @@ export const icons: {
     tags: ["denojs", "javascript", "rust", "runtime"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   detaspace: {
     name: "detaspace";
@@ -1305,7 +1577,9 @@ export const icons: {
     categories: [];
     tags: ["detaspace", "cloud", "hosting", "server", "Deta", "Deta Space"];
     deprecated: false;
-    variants: ["line", "line-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["line", "line-wordmark"];
   };
   devicon: {
     name: "devicon";
@@ -1316,13 +1590,22 @@ export const icons: {
     tags: ["devicon", "iconset"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   digitalocean: {
     name: "digitalocean";
@@ -1333,6 +1616,8 @@ export const icons: {
     tags: ["digitalocean", "cloud", "hosting", "database", "storage"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   discloud: {
     name: "discloud";
@@ -1342,7 +1627,9 @@ export const icons: {
     categories: [];
     tags: ["discloud", "cloud", "hosting", "database", "storage"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   discordjs: {
     name: "discordjs";
@@ -1352,7 +1639,9 @@ export const icons: {
     categories: [];
     tags: ["discordjs", "wrapper", "api_wrapper", "nodejs"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   django: {
     name: "django";
@@ -1363,6 +1652,8 @@ export const icons: {
     tags: ["django"];
     deprecated: false;
     variants: ["plain", "plain-wordmark"];
+    svgVariants: ["plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   djangorest: {
     name: "djangorest";
@@ -1381,13 +1672,22 @@ export const icons: {
     ];
     deprecated: false;
     variants: [
+      "original",
       "plain",
       "line",
+      "original-wordmark",
       "plain-wordmark",
       "line-wordmark",
-      "original",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "plain",
+      "line",
+      "original-wordmark",
+      "plain-wordmark",
+      "line-wordmark",
+    ];
+    fontVariants: ["plain", "line", "plain-wordmark", "line-wordmark"];
   };
   docker: {
     name: "docker";
@@ -1397,7 +1697,9 @@ export const icons: {
     categories: [];
     tags: ["docker", "platform", "deploy"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   doctrine: {
     name: "doctrine";
@@ -1408,13 +1710,22 @@ export const icons: {
     tags: ["doctrine"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   "dot-net": {
     name: "dot-net";
@@ -1424,7 +1735,9 @@ export const icons: {
     categories: [];
     tags: ["dot-net", "framework", "dotnet", ".net"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   dotnetcore: {
     name: "dotnetcore";
@@ -1434,7 +1747,9 @@ export const icons: {
     categories: [];
     tags: ["dotnetcore", "framework", ".netcore"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   dovecot: {
     name: "dovecot";
@@ -1444,7 +1759,9 @@ export const icons: {
     categories: [];
     tags: ["dovecot", "imap", "pop3", "e-mail"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   dreamweaver: {
     name: "dreamweaver";
@@ -1461,7 +1778,9 @@ export const icons: {
       "Adobe Dreamweaver",
     ];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   dropwizard: {
     name: "dropwizard";
@@ -1471,7 +1790,9 @@ export const icons: {
     categories: [];
     tags: ["dropwizard", "java", "framework"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   drupal: {
     name: "drupal";
@@ -1481,7 +1802,9 @@ export const icons: {
     categories: [];
     tags: ["drupal", "cms"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   duckdb: {
     name: "duckdb";
@@ -1491,7 +1814,9 @@ export const icons: {
     categories: [];
     tags: ["duckdb", "database", "sql"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   dyalog: {
     name: "dyalog";
@@ -1501,7 +1826,9 @@ export const icons: {
     categories: [];
     tags: ["dyalog", "language"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   dynamodb: {
     name: "dynamodb";
@@ -1511,7 +1838,9 @@ export const icons: {
     categories: [];
     tags: ["dynamodb", "key-value", "database", "java"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   dynatrace: {
     name: "dynatrace";
@@ -1522,13 +1851,22 @@ export const icons: {
     tags: ["dynatrace", "monitoring", "performance", "cloud"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   eclipse: {
     name: "eclipse";
@@ -1538,7 +1876,9 @@ export const icons: {
     categories: [];
     tags: ["eclipse", "editor", "IDE", "Eclipse IDE"];
     deprecated: false;
-    variants: ["plain-wordmark", "plain", "original-wordmark", "original"];
+    variants: ["original-wordmark", "original", "plain-wordmark", "plain"];
+    svgVariants: ["original-wordmark", "original"];
+    fontVariants: ["plain-wordmark", "plain"];
   };
   ecto: {
     name: "ecto";
@@ -1548,7 +1888,9 @@ export const icons: {
     categories: [];
     tags: ["ecto", "data", "elixir", "integration", "query"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   elasticsearch: {
     name: "elasticsearch";
@@ -1558,7 +1900,9 @@ export const icons: {
     categories: [];
     tags: ["elasticsearch", "elastic", "data", "logs"];
     deprecated: false;
-    variants: ["plain-wordmark", "plain", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain-wordmark", "plain"];
   };
   electron: {
     name: "electron";
@@ -1569,6 +1913,8 @@ export const icons: {
     tags: ["electron", "framework", "electronjs"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   eleventy: {
     name: "eleventy";
@@ -1578,7 +1924,9 @@ export const icons: {
     categories: [];
     tags: ["eleventy", "ssg", "static site generator", "11ty"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   elixir: {
     name: "elixir";
@@ -1588,7 +1936,9 @@ export const icons: {
     categories: [];
     tags: ["elixir", "language", "elexirlang"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   elm: {
     name: "elm";
@@ -1598,7 +1948,9 @@ export const icons: {
     categories: [];
     tags: ["elm", "framework", "elmlang"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   emacs: {
     name: "emacs";
@@ -1609,6 +1961,8 @@ export const icons: {
     tags: ["emacs", "editor", "editingmacros"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   embeddedc: {
     name: "embeddedc";
@@ -1618,7 +1972,9 @@ export const icons: {
     categories: [];
     tags: ["embeddedc", "language", "programming"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   ember: {
     name: "ember";
@@ -1636,7 +1992,9 @@ export const icons: {
       "emberjs",
     ];
     deprecated: false;
-    variants: ["original-wordmark", "plain", "original"];
+    variants: ["original", "original-wordmark", "plain"];
+    svgVariants: ["original", "original-wordmark", "plain"];
+    fontVariants: ["original-wordmark", "plain"];
   };
   entityframeworkcore: {
     name: "entityframeworkcore";
@@ -1654,7 +2012,9 @@ export const icons: {
       "entity framework core",
     ];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   envoy: {
     name: "envoy";
@@ -1664,7 +2024,9 @@ export const icons: {
     categories: [];
     tags: ["envoy", "proxy", "cloud", "envoyproxy"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   erlang: {
     name: "erlang";
@@ -1674,7 +2036,9 @@ export const icons: {
     categories: [];
     tags: ["erlang"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   eslint: {
     name: "eslint";
@@ -1685,13 +2049,22 @@ export const icons: {
     tags: ["eslint", "linter", "javascript", "code-quality", "coding-style"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   expo: {
     name: "expo";
@@ -1702,6 +2075,8 @@ export const icons: {
     tags: ["expo", "framework", "react", "react-native"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   express: {
     name: "express";
@@ -1712,6 +2087,8 @@ export const icons: {
     tags: ["express", "framework", "expressjs"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   facebook: {
     name: "facebook";
@@ -1721,7 +2098,9 @@ export const icons: {
     categories: [];
     tags: ["facebook", "auth"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   fastapi: {
     name: "fastapi";
@@ -1731,7 +2110,9 @@ export const icons: {
     categories: [];
     tags: ["fastapi", "python", "framework"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   fastify: {
     name: "fastify";
@@ -1748,7 +2129,9 @@ export const icons: {
       "performance",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   faunadb: {
     name: "faunadb";
@@ -1759,6 +2142,8 @@ export const icons: {
     tags: ["faunadb", "database", "fauna"];
     deprecated: false;
     variants: ["original-wordmark", "original", "line", "line-wordmark"];
+    svgVariants: ["original-wordmark", "original", "line", "line-wordmark"];
+    fontVariants: ["original-wordmark", "original", "line", "line-wordmark"];
   };
   feathersjs: {
     name: "feathersjs";
@@ -1769,6 +2154,8 @@ export const icons: {
     tags: ["feathersjs", "framework", "rest"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   fedora: {
     name: "fedora";
@@ -1778,7 +2165,9 @@ export const icons: {
     categories: [];
     tags: ["fedora", "linux", "distribution", "desktop"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   fiber: {
     name: "fiber";
@@ -1788,7 +2177,9 @@ export const icons: {
     categories: [];
     tags: ["fiber", "framework", "go", "web", "GoFiber"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   figma: {
     name: "figma";
@@ -1798,7 +2189,9 @@ export const icons: {
     categories: [];
     tags: ["figma", "design"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   filamentphp: {
     name: "filamentphp";
@@ -1809,6 +2202,8 @@ export const icons: {
     tags: ["filamentphp", "framework", "laravel"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   filezilla: {
     name: "filezilla";
@@ -1819,13 +2214,22 @@ export const icons: {
     tags: ["filezilla", "ftp"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   firebase: {
     name: "firebase";
@@ -1836,13 +2240,22 @@ export const icons: {
     tags: ["firebase", "auth", "hosting", "storage", "cloud"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   firebird: {
     name: "firebird";
@@ -1852,7 +2265,9 @@ export const icons: {
     categories: [];
     tags: ["firebird", "database"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   firefox: {
     name: "firefox";
@@ -1862,7 +2277,9 @@ export const icons: {
     categories: [];
     tags: ["firefox", "browser", "mozillafirefox"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   flask: {
     name: "flask";
@@ -1873,6 +2290,8 @@ export const icons: {
     tags: ["flask", "python", "framework"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   flutter: {
     name: "flutter";
@@ -1882,7 +2301,9 @@ export const icons: {
     categories: [];
     tags: ["flutter", "framework", "sdk"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   forgejo: {
     name: "forgejo";
@@ -1893,13 +2314,22 @@ export const icons: {
     tags: ["forgejo", "software", "git", "version-control"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   fortran: {
     name: "fortran";
@@ -1910,6 +2340,8 @@ export const icons: {
     tags: ["fortran", "programming", "language"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   foundation: {
     name: "foundation";
@@ -1919,7 +2351,9 @@ export const icons: {
     categories: [];
     tags: ["foundation", "framework", "css"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   framermotion: {
     name: "framermotion";
@@ -1938,6 +2372,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   framework7: {
     name: "framework7";
@@ -1957,6 +2393,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   fsharp: {
     name: "fsharp";
@@ -1966,7 +2404,9 @@ export const icons: {
     categories: [];
     tags: ["fsharp", "language", "f#"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   fusion: {
     name: "fusion";
@@ -1976,7 +2416,9 @@ export const icons: {
     categories: [];
     tags: ["fusion", "design", "Autodesk Fusion", "Autodesk Fusion 360"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   gardener: {
     name: "gardener";
@@ -1986,7 +2428,9 @@ export const icons: {
     categories: [];
     tags: ["gardener", "kubernetes", "cloud"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   gatling: {
     name: "gatling";
@@ -1998,11 +2442,19 @@ export const icons: {
     deprecated: false;
     variants: [
       "original",
+      "original-wordmark",
       "plain-wordmark",
       "line",
       "line-wordmark",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original", "plain-wordmark", "line", "line-wordmark"];
   };
   gatsby: {
     name: "gatsby";
@@ -2012,7 +2464,9 @@ export const icons: {
     categories: [];
     tags: ["gatsby", "reactjs", "framework", "gatsbyjs"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   gazebo: {
     name: "gazebo";
@@ -2022,7 +2476,9 @@ export const icons: {
     categories: [];
     tags: ["gazebo", "robotics", "3d"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   gcc: {
     name: "gcc";
@@ -2032,7 +2488,9 @@ export const icons: {
     categories: [];
     tags: ["gcc", "compiler", "linux", "gnucompilercollection"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   gentoo: {
     name: "gentoo";
@@ -2043,13 +2501,22 @@ export const icons: {
     tags: ["gentoo", "linux", "distribution", "desktop"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   ghost: {
     name: "ghost";
@@ -2060,6 +2527,8 @@ export const icons: {
     tags: ["ghost", "cms"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   gimp: {
     name: "gimp";
@@ -2070,13 +2539,22 @@ export const icons: {
     tags: ["gimp", "graphic"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   git: {
     name: "git";
@@ -2086,7 +2564,9 @@ export const icons: {
     categories: [];
     tags: ["git", "version-control"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   gitbook: {
     name: "gitbook";
@@ -2097,6 +2577,8 @@ export const icons: {
     tags: ["gitbook", "documentation", "pages", "git", "markup"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   github: {
     name: "github";
@@ -2107,6 +2589,8 @@ export const icons: {
     tags: ["github", "version-control"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   githubactions: {
     name: "githubactions";
@@ -2116,7 +2600,9 @@ export const icons: {
     categories: [];
     tags: ["githubactions", "devops", "integration", "GitHub Actions"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   githubcodespaces: {
     name: "githubcodespaces";
@@ -2134,7 +2620,9 @@ export const icons: {
       "GitHub Codespaces",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   gitkraken: {
     name: "gitkraken";
@@ -2144,7 +2632,9 @@ export const icons: {
     categories: [];
     tags: ["gitkraken", "git", "version-control"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   gitlab: {
     name: "gitlab";
@@ -2154,7 +2644,9 @@ export const icons: {
     categories: [];
     tags: ["gitlab", "version-control"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   gitpod: {
     name: "gitpod";
@@ -2171,7 +2663,9 @@ export const icons: {
       "gitpod-io",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   gitter: {
     name: "gitter";
@@ -2182,6 +2676,8 @@ export const icons: {
     tags: ["gitter", "social", "chat"];
     deprecated: false;
     variants: ["plain", "plain-wordmark"];
+    svgVariants: ["plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   gleam: {
     name: "gleam";
@@ -2191,7 +2687,9 @@ export const icons: {
     categories: [];
     tags: ["gleam", "language", "programming"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   glitch: {
     name: "glitch";
@@ -2207,7 +2705,9 @@ export const icons: {
       "collaborative-environment",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   go: {
     name: "go";
@@ -2217,7 +2717,9 @@ export const icons: {
     categories: [];
     tags: ["go", "language", "golang"];
     deprecated: false;
-    variants: ["original-wordmark", "plain", "line", "original"];
+    variants: ["original", "original-wordmark", "plain", "line"];
+    svgVariants: ["original", "original-wordmark", "plain", "line"];
+    fontVariants: ["original-wordmark", "plain", "line"];
   };
   godot: {
     name: "godot";
@@ -2227,7 +2729,9 @@ export const icons: {
     categories: [];
     tags: ["godot", "game-engine", "open-source"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   goland: {
     name: "goland";
@@ -2237,7 +2741,9 @@ export const icons: {
     categories: [];
     tags: ["goland", "jetbrains", "ide", "go"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original"];
+    variants: ["original", "plain", "plain-wordmark"];
+    svgVariants: ["original", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   google: {
     name: "google";
@@ -2247,7 +2753,9 @@ export const icons: {
     categories: [];
     tags: ["google", "auth"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   googlecloud: {
     name: "googlecloud";
@@ -2257,7 +2765,9 @@ export const icons: {
     categories: [];
     tags: ["googlecloud", "google", "cloud"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   googlecolab: {
     name: "googlecolab";
@@ -2276,7 +2786,9 @@ export const icons: {
       "googlecolaboratory",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   gradle: {
     name: "gradle";
@@ -2293,6 +2805,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   grafana: {
     name: "grafana";
@@ -2311,13 +2825,22 @@ export const icons: {
     ];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   grails: {
     name: "grails";
@@ -2335,7 +2858,9 @@ export const icons: {
       "Grails Framework",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   graphql: {
     name: "graphql";
@@ -2346,6 +2871,8 @@ export const icons: {
     tags: ["graphql", "language", "data", "query"];
     deprecated: false;
     variants: ["plain", "plain-wordmark"];
+    svgVariants: ["plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   groovy: {
     name: "groovy";
@@ -2362,7 +2889,9 @@ export const icons: {
       "apachegroovy",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   grpc: {
     name: "grpc";
@@ -2382,7 +2911,9 @@ export const icons: {
       "Google Remote Procedure Call",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   grunt: {
     name: "grunt";
@@ -2393,13 +2924,22 @@ export const icons: {
     tags: ["grunt", "task-runner", "nodejs", "gruntjs"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   gulp: {
     name: "gulp";
@@ -2410,6 +2950,8 @@ export const icons: {
     tags: ["gulp", "task-runner", "nodejs", "gulpjs"];
     deprecated: false;
     variants: ["plain"];
+    svgVariants: ["plain"];
+    fontVariants: ["plain"];
   };
   hadoop: {
     name: "hadoop";
@@ -2428,7 +2970,9 @@ export const icons: {
       "Apache Hadoop",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   handlebars: {
     name: "handlebars";
@@ -2439,6 +2983,8 @@ export const icons: {
     tags: ["handlebars", "framework", "handlebarsjs"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   harbor: {
     name: "harbor";
@@ -2449,13 +2995,22 @@ export const icons: {
     tags: ["harbor", "docker", "artifact", "oci", "registry"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   hardhat: {
     name: "hardhat";
@@ -2472,7 +3027,9 @@ export const icons: {
       "typescript",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   harvester: {
     name: "harvester";
@@ -2489,7 +3046,9 @@ export const icons: {
       "harvesterhci",
     ];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   haskell: {
     name: "haskell";
@@ -2499,7 +3058,9 @@ export const icons: {
     categories: [];
     tags: ["haskell", "language", "functional"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   haxe: {
     name: "haxe";
@@ -2509,7 +3070,9 @@ export const icons: {
     categories: [];
     tags: ["haxe", "language"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   helm: {
     name: "helm";
@@ -2520,6 +3083,8 @@ export const icons: {
     tags: ["helm", "package", "manager", "kubernetes"];
     deprecated: false;
     variants: ["original", "line"];
+    svgVariants: ["original", "line"];
+    fontVariants: ["original", "line"];
   };
   heroku: {
     name: "heroku";
@@ -2530,6 +3095,8 @@ export const icons: {
     tags: ["heroku", "cloud"];
     deprecated: false;
     variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
   };
   hibernate: {
     name: "hibernate";
@@ -2539,7 +3106,9 @@ export const icons: {
     categories: [];
     tags: ["hibernate", "database", "framework", "java"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   homebrew: {
     name: "homebrew";
@@ -2550,13 +3119,22 @@ export const icons: {
     tags: ["homebrew", "package", "manager", "linux", "apple", "os"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   hoppscotch: {
     name: "hoppscotch";
@@ -2566,7 +3144,9 @@ export const icons: {
     categories: [];
     tags: ["hoppscotch", "rest", "testing", "api"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   html5: {
     name: "html5";
@@ -2576,7 +3156,9 @@ export const icons: {
     categories: [];
     tags: ["html5", "programming", "language", "hypertextmarkdownlanguage5"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   htmx: {
     name: "htmx";
@@ -2587,13 +3169,22 @@ export const icons: {
     tags: ["htmx", "framework", "web", "html", "ui", "html ui framework"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   hugo: {
     name: "hugo";
@@ -2612,7 +3203,9 @@ export const icons: {
       "gohugo",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   hyperv: {
     name: "hyperv";
@@ -2622,7 +3215,9 @@ export const icons: {
     categories: [];
     tags: ["hyperv", "hypervisor", "operating-system", "hyper-v"];
     deprecated: false;
-    variants: ["original-wordmark", "plain", "original"];
+    variants: ["original", "original-wordmark", "plain"];
+    svgVariants: ["original", "original-wordmark", "plain"];
+    fontVariants: ["original-wordmark", "plain"];
   };
   ie10: {
     name: "ie10";
@@ -2633,6 +3228,8 @@ export const icons: {
     tags: ["ie10", "browser", "internetexplorer10"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   ifttt: {
     name: "ifttt";
@@ -2643,6 +3240,8 @@ export const icons: {
     tags: ["ifttt", "automation", "applets", "programming", "ifthisthenthat"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   illustrator: {
     name: "illustrator";
@@ -2652,7 +3251,9 @@ export const icons: {
     categories: [];
     tags: ["illustrator", "editor", "vector", "adobeillustrator"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   inertiajs: {
     name: "inertiajs";
@@ -2662,7 +3263,9 @@ export const icons: {
     categories: [];
     tags: ["inertiajs", "javascript", "js", "library", "inertia.js"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   influxdb: {
     name: "influxdb";
@@ -2673,6 +3276,8 @@ export const icons: {
     tags: ["influxdb", "database", "monitoring", "open-source", "api"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   inkscape: {
     name: "inkscape";
@@ -2682,7 +3287,9 @@ export const icons: {
     categories: [];
     tags: ["inkscape", "editor", "vector"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   insomnia: {
     name: "insomnia";
@@ -2699,7 +3306,9 @@ export const icons: {
       "Insomnia Rest Client",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   intellij: {
     name: "intellij";
@@ -2709,7 +3318,9 @@ export const icons: {
     categories: [];
     tags: ["intellij", "jetbrains", "editor", "java", "intellijidea"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original"];
+    variants: ["original", "plain", "plain-wordmark"];
+    svgVariants: ["original", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   ionic: {
     name: "ionic";
@@ -2720,6 +3331,8 @@ export const icons: {
     tags: ["ionic", "framework"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   jaegertracing: {
     name: "jaegertracing";
@@ -2729,7 +3342,9 @@ export const icons: {
     categories: [];
     tags: ["jaegertracing", "monitoring", "tracing", "jaeger"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   jamstack: {
     name: "jamstack";
@@ -2739,7 +3354,9 @@ export const icons: {
     categories: [];
     tags: ["jamstack", "javascript", "markup"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   jasmine: {
     name: "jasmine";
@@ -2750,6 +3367,8 @@ export const icons: {
     tags: ["jasmine", "testing", "jasminejs"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   java: {
     name: "java";
@@ -2759,7 +3378,9 @@ export const icons: {
     categories: [];
     tags: ["java", "programming", "language", "jvm"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   javascript: {
     name: "javascript";
@@ -2769,7 +3390,9 @@ export const icons: {
     categories: [];
     tags: ["javascript", "programming", "language", "js", "ecmascript"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   jeet: {
     name: "jeet";
@@ -2779,7 +3402,9 @@ export const icons: {
     categories: [];
     tags: ["jeet", "framework", "css"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   jekyll: {
     name: "jekyll";
@@ -2789,7 +3414,9 @@ export const icons: {
     categories: [];
     tags: ["jekyll", "ruby", "blog", "jestjs"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   jenkins: {
     name: "jenkins";
@@ -2799,7 +3426,9 @@ export const icons: {
     categories: [];
     tags: ["jenkins", "platform", "integration", "server", "hudson"];
     deprecated: false;
-    variants: ["line", "plain", "original"];
+    variants: ["line", "original", "plain"];
+    svgVariants: ["line", "original", "plain"];
+    fontVariants: ["line", "plain"];
   };
   jest: {
     name: "jest";
@@ -2810,6 +3439,8 @@ export const icons: {
     tags: ["jest", "testing", "javascript", "jestjs"];
     deprecated: false;
     variants: ["plain"];
+    svgVariants: ["plain"];
+    fontVariants: ["plain"];
   };
   jetbrains: {
     name: "jetbrains";
@@ -2819,7 +3450,9 @@ export const icons: {
     categories: [];
     tags: ["jetbrains", "ide", "intellijsoftware"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   jetpackcompose: {
     name: "jetpackcompose";
@@ -2830,13 +3463,22 @@ export const icons: {
     tags: ["jetpackcompose", "framework", "language", "kotlin", "android"];
     deprecated: false;
     variants: [
-      "plain-wordmark",
-      "plain",
-      "line",
-      "line-wordmark",
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["plain-wordmark", "plain", "line", "line-wordmark"];
   };
   jhipster: {
     name: "jhipster";
@@ -2855,7 +3497,9 @@ export const icons: {
       "web-development",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   jira: {
     name: "jira";
@@ -2865,7 +3509,9 @@ export const icons: {
     categories: [];
     tags: ["jira", "platform", "organize", "atlassianjira"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   jiraalign: {
     name: "jiraalign";
@@ -2875,7 +3521,9 @@ export const icons: {
     categories: [];
     tags: ["jiraalign", "development", "integration", "software", "Jira Align"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   jquery: {
     name: "jquery";
@@ -2885,7 +3533,9 @@ export const icons: {
     categories: [];
     tags: ["jquery", "library", "javascript", "jqueryjs"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   json: {
     name: "json";
@@ -2902,7 +3552,9 @@ export const icons: {
       "JavaScript Object Notation",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   jule: {
     name: "jule";
@@ -2913,6 +3565,8 @@ export const icons: {
     tags: ["jule", "programming", "language", "julelang"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   julia: {
     name: "julia";
@@ -2922,7 +3576,9 @@ export const icons: {
     categories: [];
     tags: ["julia", "programming", "language", "julialang"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   junit: {
     name: "junit";
@@ -2933,13 +3589,22 @@ export const icons: {
     tags: ["junit", "testing", "framework", "java"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   jupyter: {
     name: "jupyter";
@@ -2949,7 +3614,9 @@ export const icons: {
     categories: [];
     tags: ["jupyter", "programming", "language", "jupyternotebook"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   k3os: {
     name: "k3os";
@@ -2961,11 +3628,19 @@ export const icons: {
     deprecated: false;
     variants: [
       "original",
+      "original-wordmark",
       "plain-wordmark",
       "line",
       "line-wordmark",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original", "plain-wordmark", "line", "line-wordmark"];
   };
   k3s: {
     name: "k3s";
@@ -2975,7 +3650,9 @@ export const icons: {
     categories: [];
     tags: ["k3s", "kubernetes", "container", "platform"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   k6: {
     name: "k6";
@@ -2986,6 +3663,8 @@ export const icons: {
     tags: ["k6", "testing", "performance", "load"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   kaggle: {
     name: "kaggle";
@@ -2996,6 +3675,8 @@ export const icons: {
     tags: ["kaggle", "platform", "auth", "machine-learning"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   kaldi: {
     name: "kaldi";
@@ -3006,13 +3687,22 @@ export const icons: {
     tags: ["kaldi", "audio", "open-source", "library"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   kalilinux: {
     name: "kalilinux";
@@ -3024,11 +3714,19 @@ export const icons: {
     deprecated: false;
     variants: [
       "original",
+      "original-wordmark",
       "plain-wordmark",
       "line",
       "line-wordmark",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original", "plain-wordmark", "line", "line-wordmark"];
   };
   karatelabs: {
     name: "karatelabs";
@@ -3038,7 +3736,9 @@ export const icons: {
     categories: [];
     tags: ["karatelabs", "framework", "testing", "karate"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   karma: {
     name: "karma";
@@ -3048,7 +3748,9 @@ export const icons: {
     categories: [];
     tags: ["karma", "testing", "test-runner", "karmarunner", "karmajs"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   kdeneon: {
     name: "kdeneon";
@@ -3058,7 +3760,9 @@ export const icons: {
     categories: [];
     tags: ["kdeneon", "linux", "operating system", "open-source"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   keras: {
     name: "keras";
@@ -3069,13 +3773,22 @@ export const icons: {
     tags: ["keras", "machine-learning", "python", "library"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   kibana: {
     name: "kibana";
@@ -3085,7 +3798,9 @@ export const icons: {
     categories: [];
     tags: ["kibana", "elastic", "dashboard"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   knexjs: {
     name: "knexjs";
@@ -3095,7 +3810,9 @@ export const icons: {
     categories: [];
     tags: ["knexjs", "database", "query", "sql", "javascript", "library"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   knockout: {
     name: "knockout";
@@ -3106,6 +3823,8 @@ export const icons: {
     tags: ["knockout", "framework", "javascript", "knockoutjs"];
     deprecated: false;
     variants: ["plain-wordmark"];
+    svgVariants: ["plain-wordmark"];
+    fontVariants: ["plain-wordmark"];
   };
   kotlin: {
     name: "kotlin";
@@ -3115,7 +3834,9 @@ export const icons: {
     categories: [];
     tags: ["kotlin", "language", "jetbrains", "jvm", "kotlinlang"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   krakenjs: {
     name: "krakenjs";
@@ -3125,7 +3846,9 @@ export const icons: {
     categories: [];
     tags: ["krakenjs", "nodejs", "framework", "kraken"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   ktor: {
     name: "ktor";
@@ -3135,7 +3858,9 @@ export const icons: {
     categories: [];
     tags: ["ktor", "jetbrains", "kotlin", "framework"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   kubeflow: {
     name: "kubeflow";
@@ -3146,13 +3871,22 @@ export const icons: {
     tags: ["kubeflow", "kubernetes", "deployment", "machine-learning"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   kubernetes: {
     name: "kubernetes";
@@ -3163,13 +3897,22 @@ export const icons: {
     tags: ["kubernetes", "container", "deployment"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   labview: {
     name: "labview";
@@ -3179,7 +3922,9 @@ export const icons: {
     categories: [];
     tags: ["labview", "language"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   laminas: {
     name: "laminas";
@@ -3199,6 +3944,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   laravel: {
     name: "laravel";
@@ -3209,6 +3956,8 @@ export const icons: {
     tags: ["laravel", "php", "framework"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   laraveljetstream: {
     name: "laraveljetstream";
@@ -3226,7 +3975,9 @@ export const icons: {
       "Laravel Jetstream",
     ];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   latex: {
     name: "latex";
@@ -3237,6 +3988,8 @@ export const icons: {
     tags: ["latex", "latex3", "latex2e", "markup", "tex", "typesetting-system"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   leetcode: {
     name: "leetcode";
@@ -3255,13 +4008,22 @@ export const icons: {
     ];
     deprecated: false;
     variants: [
+      "original",
       "plain",
       "line",
+      "original-wordmark",
       "plain-wordmark",
       "line-wordmark",
-      "original",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "plain",
+      "line",
+      "original-wordmark",
+      "plain-wordmark",
+      "line-wordmark",
+    ];
+    fontVariants: ["plain", "line", "plain-wordmark", "line-wordmark"];
   };
   less: {
     name: "less";
@@ -3272,6 +4034,8 @@ export const icons: {
     tags: ["less", "css", "pre-processor", "lesscss"];
     deprecated: false;
     variants: ["plain-wordmark"];
+    svgVariants: ["plain-wordmark"];
+    fontVariants: ["plain-wordmark"];
   };
   libgdx: {
     name: "libgdx";
@@ -3288,7 +4052,9 @@ export const icons: {
       "open-source",
     ];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   linkedin: {
     name: "linkedin";
@@ -3298,7 +4064,9 @@ export const icons: {
     categories: [];
     tags: ["linkedin", "social", "auth"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   linux: {
     name: "linux";
@@ -3308,7 +4076,9 @@ export const icons: {
     categories: [];
     tags: ["linux", "os"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   linuxmint: {
     name: "linuxmint";
@@ -3318,7 +4088,9 @@ export const icons: {
     categories: [];
     tags: ["linuxmint", "os", "linux"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   liquibase: {
     name: "liquibase";
@@ -3329,6 +4101,8 @@ export const icons: {
     tags: ["liquibase", "tool", "database"];
     deprecated: false;
     variants: ["original-wordmark", "original"];
+    svgVariants: ["original-wordmark", "original"];
+    fontVariants: ["original-wordmark", "original"];
   };
   livewire: {
     name: "livewire";
@@ -3345,7 +4119,9 @@ export const icons: {
       "laravel-livewire",
     ];
     deprecated: false;
-    variants: ["plain-wordmark", "plain", "original-wordmark", "original"];
+    variants: ["original-wordmark", "original", "plain", "plain-wordmark"];
+    svgVariants: ["original-wordmark", "original", "plain", "plain-wordmark"];
+    fontVariants: ["plain-wordmark", "plain"];
   };
   llvm: {
     name: "llvm";
@@ -3362,7 +4138,9 @@ export const icons: {
       "Low Level Virtual Machine",
     ];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   lodash: {
     name: "lodash";
@@ -3372,7 +4150,9 @@ export const icons: {
     categories: [];
     tags: ["lodash", "javascript", "framework"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   logstash: {
     name: "logstash";
@@ -3382,7 +4162,9 @@ export const icons: {
     categories: [];
     tags: ["logstash", "logs", "elastic"];
     deprecated: false;
-    variants: ["plain-wordmark", "plain", "original-wordmark", "original"];
+    variants: ["original-wordmark", "original", "plain-wordmark", "plain"];
+    svgVariants: ["original-wordmark", "original", "plain-wordmark", "plain"];
+    fontVariants: ["plain-wordmark", "plain"];
   };
   love2d: {
     name: "love2d";
@@ -3392,7 +4174,9 @@ export const icons: {
     categories: [];
     tags: ["love2d", "programming", "game-engine", "löve"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   lua: {
     name: "lua";
@@ -3412,7 +4196,9 @@ export const icons: {
       "lualang",
     ];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   lumen: {
     name: "lumen";
@@ -3438,6 +4224,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   magento: {
     name: "magento";
@@ -3449,11 +4237,19 @@ export const icons: {
     deprecated: false;
     variants: [
       "original",
+      "original-wordmark",
       "plain-wordmark",
       "line",
       "line-wordmark",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original", "plain-wordmark", "line", "line-wordmark"];
   };
   mapbox: {
     name: "mapbox";
@@ -3464,6 +4260,8 @@ export const icons: {
     tags: ["mapbox", "map", "navigation", "data"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   mariadb: {
     name: "mariadb";
@@ -3474,6 +4272,8 @@ export const icons: {
     tags: ["mariadb", "database", "sql", "open-source"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   markdown: {
     name: "markdown";
@@ -3484,6 +4284,8 @@ export const icons: {
     tags: ["markdown", "markup", "language", "md"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   materializecss: {
     name: "materializecss";
@@ -3502,7 +4304,9 @@ export const icons: {
       "materialize css",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   materialui: {
     name: "materialui";
@@ -3512,7 +4316,9 @@ export const icons: {
     categories: [];
     tags: ["materialui", "framework", "design", "ui", "mui"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   matlab: {
     name: "matlab";
@@ -3522,7 +4328,9 @@ export const icons: {
     categories: [];
     tags: ["matlab", "programming", "language"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   matplotlib: {
     name: "matplotlib";
@@ -3540,7 +4348,9 @@ export const icons: {
       "api",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   mattermost: {
     name: "mattermost";
@@ -3558,6 +4368,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   maven: {
     name: "maven";
@@ -3567,7 +4379,9 @@ export const icons: {
     categories: [];
     tags: ["maven", "build", "apachemaven", "mvn"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   maya: {
     name: "maya";
@@ -3589,7 +4403,9 @@ export const icons: {
       "animation",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   memcached: {
     name: "memcached";
@@ -3600,13 +4416,22 @@ export const icons: {
     tags: ["memcached", "data", "database", "nosql"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   mercurial: {
     name: "mercurial";
@@ -3616,7 +4441,9 @@ export const icons: {
     categories: [];
     tags: ["mercurial", "version-control"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   meteor: {
     name: "meteor";
@@ -3626,7 +4453,9 @@ export const icons: {
     categories: [];
     tags: ["meteor", "javascript", "framework", "meteorjs"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   microsoftsqlserver: {
     name: "microsoftsqlserver";
@@ -3645,13 +4474,22 @@ export const icons: {
     ];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   minitab: {
     name: "minitab";
@@ -3661,7 +4499,9 @@ export const icons: {
     categories: [];
     tags: ["minitab", "package", "statistics"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   mithril: {
     name: "mithril";
@@ -3679,6 +4519,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "line"];
+    svgVariants: ["original", "line"];
+    fontVariants: ["original", "line"];
   };
   mobx: {
     name: "mobx";
@@ -3695,7 +4537,9 @@ export const icons: {
       "mobxjs",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   mocha: {
     name: "mocha";
@@ -3705,7 +4549,9 @@ export const icons: {
     categories: [];
     tags: ["mocha", "testing"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   modx: {
     name: "modx";
@@ -3715,7 +4561,9 @@ export const icons: {
     categories: [];
     tags: ["modx", "cms", "php", "framework"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   moleculer: {
     name: "moleculer";
@@ -3736,6 +4584,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   mongodb: {
     name: "mongodb";
@@ -3745,7 +4595,9 @@ export const icons: {
     categories: [];
     tags: ["mongodb", "database"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   mongoose: {
     name: "mongoose";
@@ -3756,6 +4608,8 @@ export const icons: {
     tags: ["mongoose", "data-model", "nodejs", "mongoosejs"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   monogame: {
     name: "monogame";
@@ -3767,11 +4621,19 @@ export const icons: {
     deprecated: false;
     variants: [
       "original",
-      "line",
-      "line-wordmark",
       "original-wordmark",
       "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original", "line", "line-wordmark"];
   };
   moodle: {
     name: "moodle";
@@ -3781,7 +4643,9 @@ export const icons: {
     categories: [];
     tags: ["moodle", "platform"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   msdos: {
     name: "msdos";
@@ -3791,7 +4655,9 @@ export const icons: {
     categories: [];
     tags: ["msdos", "os", "microsoftdiskoperatingsystem"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   mysql: {
     name: "mysql";
@@ -3801,7 +4667,9 @@ export const icons: {
     categories: [];
     tags: ["mysql", "database", "language", "mystructuredquerylanguage"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   nano: {
     name: "nano";
@@ -3819,7 +4687,9 @@ export const icons: {
       "GNU nano",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   nats: {
     name: "nats";
@@ -3838,7 +4708,9 @@ export const icons: {
       "NATS.io",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   neo4j: {
     name: "neo4j";
@@ -3848,7 +4720,9 @@ export const icons: {
     categories: [];
     tags: ["neo4j", "database"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   neovim: {
     name: "neovim";
@@ -3859,13 +4733,22 @@ export const icons: {
     tags: ["neovim", "text editor", "editor", "ide", "IDE", "open-source"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   nestjs: {
     name: "nestjs";
@@ -3876,6 +4759,8 @@ export const icons: {
     tags: ["nestjs", "framework"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   netbeans: {
     name: "netbeans";
@@ -3885,7 +4770,9 @@ export const icons: {
     categories: [];
     tags: ["netbeans", "ide", "java", "open-source"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   netbox: {
     name: "netbox";
@@ -3896,13 +4783,22 @@ export const icons: {
     tags: ["netbox", "network", "automation", "infrastructure", "open-source"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   netlify: {
     name: "netlify";
@@ -3919,7 +4815,9 @@ export const icons: {
       "open-source",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   networkx: {
     name: "networkx";
@@ -3930,13 +4828,22 @@ export const icons: {
     tags: ["networkx", "graph", "library", "python"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   newrelic: {
     name: "newrelic";
@@ -3946,7 +4853,9 @@ export const icons: {
     categories: [];
     tags: ["newrelic", "monitoring", "observability", "analysis"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   nextjs: {
     name: "nextjs";
@@ -3957,12 +4866,20 @@ export const icons: {
     tags: ["nextjs", "framework"];
     deprecated: false;
     variants: [
+      "original",
       "original-wordmark",
       "plain",
       "line",
       "line-wordmark",
-      "original",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original-wordmark", "plain", "line", "line-wordmark"];
   };
   nginx: {
     name: "nginx";
@@ -3973,6 +4890,8 @@ export const icons: {
     tags: ["nginx", "server"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   ngrok: {
     name: "ngrok";
@@ -3983,6 +4902,8 @@ export const icons: {
     tags: ["ngrok", "networking", "server"];
     deprecated: false;
     variants: ["original", "line"];
+    svgVariants: ["original", "line"];
+    fontVariants: ["original", "line"];
   };
   ngrx: {
     name: "ngrx";
@@ -3999,7 +4920,9 @@ export const icons: {
       "javascript",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   nhibernate: {
     name: "nhibernate";
@@ -4019,13 +4942,22 @@ export const icons: {
     ];
     deprecated: false;
     variants: [
+      "original-wordmark",
+      "original",
       "plain-wordmark",
       "plain",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original-wordmark",
       "original",
+      "plain-wordmark",
+      "plain",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain-wordmark", "plain", "line", "line-wordmark"];
   };
   nim: {
     name: "nim";
@@ -4043,13 +4975,22 @@ export const icons: {
     ];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   nimble: {
     name: "nimble";
@@ -4059,7 +5000,9 @@ export const icons: {
     categories: [];
     tags: ["nimble", "package-manager"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   nixos: {
     name: "nixos";
@@ -4069,7 +5012,9 @@ export const icons: {
     categories: [];
     tags: ["nixos", "os"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   nodejs: {
     name: "nodejs";
@@ -4080,13 +5025,22 @@ export const icons: {
     tags: ["nodejs", "javascript", "language"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   nodemon: {
     name: "nodemon";
@@ -4096,7 +5050,9 @@ export const icons: {
     categories: [];
     tags: ["nodemon", "nodejs", "tool", "javascript", "nodemonjs"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   nodered: {
     name: "nodered";
@@ -4106,7 +5062,9 @@ export const icons: {
     categories: [];
     tags: ["nodered", "programming", "tool", "node-red"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   nodewebkit: {
     name: "nodewebkit";
@@ -4117,13 +5075,22 @@ export const icons: {
     tags: ["nodewebkit", "nwjs"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   nomad: {
     name: "nomad";
@@ -4139,7 +5106,9 @@ export const icons: {
       "HashiCorp Nomad",
     ];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   norg: {
     name: "norg";
@@ -4149,7 +5118,9 @@ export const icons: {
     categories: [];
     tags: ["norg", "note-taking", "organization", "neorg"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   notion: {
     name: "notion";
@@ -4159,7 +5130,9 @@ export const icons: {
     categories: [];
     tags: ["notion", "project-management"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   npm: {
     name: "npm";
@@ -4169,7 +5142,9 @@ export const icons: {
     categories: [];
     tags: ["npm", "package", "manager", "npmjs", "nodepackagemanager"];
     deprecated: false;
-    variants: ["original-wordmark", "plain", "original"];
+    variants: ["original", "original-wordmark", "plain"];
+    svgVariants: ["original", "original-wordmark", "plain"];
+    fontVariants: ["original-wordmark", "plain"];
   };
   npss: {
     name: "npss";
@@ -4179,7 +5154,9 @@ export const icons: {
     categories: [];
     tags: ["npss"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   nuget: {
     name: "nuget";
@@ -4190,6 +5167,8 @@ export const icons: {
     tags: ["nuget", "package", "manager"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   numpy: {
     name: "numpy";
@@ -4200,13 +5179,22 @@ export const icons: {
     tags: ["numpy", "library", "python"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   nuxt: {
     name: "nuxt";
@@ -4216,7 +5204,9 @@ export const icons: {
     categories: [];
     tags: ["nuxt", "js", "javascript", "framework", "fullstack", "vuejs"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   nuxtjs: {
     name: "nuxtjs";
@@ -4226,7 +5216,9 @@ export const icons: {
     categories: [];
     tags: ["nuxtjs", "js", "javascript", "framework", "frontend", "vuejs"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   oauth: {
     name: "oauth";
@@ -4236,7 +5228,9 @@ export const icons: {
     categories: [];
     tags: ["oauth", "authentication", "security"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   objectivec: {
     name: "objectivec";
@@ -4247,6 +5241,8 @@ export const icons: {
     tags: ["objectivec", "programming", "language"];
     deprecated: false;
     variants: ["plain"];
+    svgVariants: ["plain"];
+    fontVariants: ["plain"];
   };
   ocaml: {
     name: "ocaml";
@@ -4256,7 +5252,9 @@ export const icons: {
     categories: [];
     tags: ["ocaml", "programming", "language"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   ohmyzsh: {
     name: "ohmyzsh";
@@ -4276,7 +5274,9 @@ export const icons: {
       "Oh My Zsh",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   okta: {
     name: "okta";
@@ -4286,7 +5286,9 @@ export const icons: {
     categories: [];
     tags: ["okta", "auth", "security", "okta developer"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   openal: {
     name: "openal";
@@ -4296,7 +5298,9 @@ export const icons: {
     categories: [];
     tags: ["openal", "library", "audio", "game", "3d"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   openapi: {
     name: "openapi";
@@ -4307,13 +5311,22 @@ export const icons: {
     tags: ["openapi", "specification", "api", "open-source"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   opencl: {
     name: "opencl";
@@ -4332,7 +5345,9 @@ export const icons: {
       "programming",
     ];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   opencv: {
     name: "opencv";
@@ -4342,7 +5357,9 @@ export const icons: {
     categories: [];
     tags: ["opencv", "library", "c/c++", "computer-vision"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   opengl: {
     name: "opengl";
@@ -4359,7 +5376,9 @@ export const icons: {
       "opengraphicslibrary",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   openstack: {
     name: "openstack";
@@ -4373,7 +5392,9 @@ export const icons: {
       "cloud-computing-platform",
     ];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   opensuse: {
     name: "opensuse";
@@ -4384,6 +5405,8 @@ export const icons: {
     tags: ["opensuse", "linux", "distribution", "desktop"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   opentelemetry: {
     name: "opentelemetry";
@@ -4393,7 +5416,9 @@ export const icons: {
     categories: [];
     tags: ["opentelemetry", "telemetry"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   opera: {
     name: "opera";
@@ -4403,7 +5428,9 @@ export const icons: {
     categories: [];
     tags: ["opera", "browser"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   oracle: {
     name: "oracle";
@@ -4414,6 +5441,8 @@ export const icons: {
     tags: ["oracle", "database", "oracledatabase"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   ory: {
     name: "ory";
@@ -4424,6 +5453,8 @@ export const icons: {
     tags: ["ory", "library", "open-source", "security"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   p5js: {
     name: "p5js";
@@ -4434,6 +5465,8 @@ export const icons: {
     tags: ["p5js", "javascript", "js", "library", "p5.js"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   packer: {
     name: "packer";
@@ -4449,13 +5482,22 @@ export const icons: {
     ];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   pandas: {
     name: "pandas";
@@ -4466,13 +5508,22 @@ export const icons: {
     tags: ["pandas", "library", "python"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   passport: {
     name: "passport";
@@ -4482,7 +5533,9 @@ export const icons: {
     categories: [];
     tags: ["passport", "authentication", "security", "passportjs"];
     deprecated: false;
-    variants: ["plain", "original-wordmark", "original"];
+    variants: ["original", "original-wordmark", "plain"];
+    svgVariants: ["original", "original-wordmark", "plain"];
+    fontVariants: ["plain", "original-wordmark"];
   };
   perl: {
     name: "perl";
@@ -4492,7 +5545,9 @@ export const icons: {
     categories: [];
     tags: ["perl", "programming", "language"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   pfsense: {
     name: "pfsense";
@@ -4511,6 +5566,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   phalcon: {
     name: "phalcon";
@@ -4520,7 +5577,9 @@ export const icons: {
     categories: [];
     tags: ["phalcon", "php", "framework"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   phoenix: {
     name: "phoenix";
@@ -4539,7 +5598,9 @@ export const icons: {
       "Phoenix Framework",
     ];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   photonengine: {
     name: "photonengine";
@@ -4549,7 +5610,9 @@ export const icons: {
     categories: [];
     tags: ["photonengine", "game", "game-engine", "photon"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   photoshop: {
     name: "photoshop";
@@ -4559,7 +5622,9 @@ export const icons: {
     categories: [];
     tags: ["photoshop", "editor", "graphic", "adobephotoshop"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   php: {
     name: "php";
@@ -4575,7 +5640,9 @@ export const icons: {
       "Personal Home Page",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   phpstorm: {
     name: "phpstorm";
@@ -4585,7 +5652,9 @@ export const icons: {
     categories: [];
     tags: ["phpstorm", "jetbrains", "editor", "php", "web", "html"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original"];
+    variants: ["original", "plain", "plain-wordmark"];
+    svgVariants: ["original", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   pixijs: {
     name: "pixijs";
@@ -4604,7 +5673,9 @@ export const icons: {
       "ui",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   playwright: {
     name: "playwright";
@@ -4614,7 +5685,9 @@ export const icons: {
     categories: [];
     tags: ["playwright", "testing", "framework"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   plotly: {
     name: "plotly";
@@ -4624,7 +5697,9 @@ export const icons: {
     categories: [];
     tags: ["plotly", "frontend", "machine-learning", "dashboard"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   pm2: {
     name: "pm2";
@@ -4635,13 +5710,22 @@ export const icons: {
     tags: ["pm2", "nodejs", "javascript", "js", "manager", "monitoring"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   pnpm: {
     name: "pnpm";
@@ -4651,7 +5735,9 @@ export const icons: {
     categories: [];
     tags: ["pnpm", "package", "manager", "performant npm"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   podman: {
     name: "podman";
@@ -4661,7 +5747,9 @@ export const icons: {
     categories: [];
     tags: ["podman", "container", "pods", "docker"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   poetry: {
     name: "poetry";
@@ -4671,7 +5759,9 @@ export const icons: {
     categories: [];
     tags: ["poetry", "package-manager", "python", "python-poetry"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original"];
+    fontVariants: ["plain"];
   };
   polygon: {
     name: "polygon";
@@ -4681,7 +5771,9 @@ export const icons: {
     categories: [];
     tags: ["polygon", "ethereum", "erc20", "blockchain"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   portainer: {
     name: "portainer";
@@ -4692,6 +5784,8 @@ export const icons: {
     tags: ["portainer", "docker", "kubernetes", "orchestrator"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   postcss: {
     name: "postcss";
@@ -4701,7 +5795,9 @@ export const icons: {
     categories: [];
     tags: ["postcss", "pre-processor", "css", "framework"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   postgresql: {
     name: "postgresql";
@@ -4711,7 +5807,9 @@ export const icons: {
     categories: [];
     tags: ["postgresql", "database"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   postman: {
     name: "postman";
@@ -4721,7 +5819,9 @@ export const icons: {
     categories: [];
     tags: ["postman", "tool", "testing"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   powershell: {
     name: "powershell";
@@ -4740,7 +5840,9 @@ export const icons: {
       "ps",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   premierepro: {
     name: "premierepro";
@@ -4751,6 +5853,8 @@ export const icons: {
     tags: ["premierepro", "editor", "video", "adobepremierepro"];
     deprecated: false;
     variants: ["plain", "original"];
+    svgVariants: ["plain", "original"];
+    fontVariants: ["plain"];
   };
   primeng: {
     name: "primeng";
@@ -4760,7 +5864,9 @@ export const icons: {
     categories: [];
     tags: ["primeng", "angular", "ui", "component", "library", "framework"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   prisma: {
     name: "prisma";
@@ -4771,6 +5877,8 @@ export const icons: {
     tags: ["prisma", "orm", "nodejs", "typescript"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   processing: {
     name: "processing";
@@ -4789,7 +5897,9 @@ export const icons: {
       "processingpy",
     ];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   processwire: {
     name: "processwire";
@@ -4799,7 +5909,9 @@ export const icons: {
     categories: [];
     tags: ["processwire", "cms", "php", "framework"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   prolog: {
     name: "prolog";
@@ -4816,7 +5928,9 @@ export const icons: {
       "swi-prolog",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   prometheus: {
     name: "prometheus";
@@ -4828,11 +5942,19 @@ export const icons: {
     deprecated: false;
     variants: [
       "original",
+      "original-wordmark",
       "plain-wordmark",
       "line",
       "line-wordmark",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original", "plain-wordmark", "line", "line-wordmark"];
   };
   protractor: {
     name: "protractor";
@@ -4849,13 +5971,22 @@ export const icons: {
     ];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   proxmox: {
     name: "proxmox";
@@ -4865,7 +5996,9 @@ export const icons: {
     categories: [];
     tags: ["proxmox", "container", "lxc", "virtual machine"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   pug: {
     name: "pug";
@@ -4875,7 +6008,9 @@ export const icons: {
     categories: [];
     tags: ["pug", "framework", "javascript", "nodejs", "pugjs"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   pulsar: {
     name: "pulsar";
@@ -4886,6 +6021,8 @@ export const icons: {
     tags: ["pulsar", "open-source", "cross-platform", "editor", "Pulsar Edit"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   pulumi: {
     name: "pulumi";
@@ -4895,7 +6032,9 @@ export const icons: {
     categories: [];
     tags: ["pulumi", "infrastructure-as-code", "cloud"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   puppeteer: {
     name: "puppeteer";
@@ -4911,7 +6050,9 @@ export const icons: {
       "extension",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   purescript: {
     name: "purescript";
@@ -4922,6 +6063,8 @@ export const icons: {
     tags: ["purescript", "functional", "programming", "javascript"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   putty: {
     name: "putty";
@@ -4931,7 +6074,9 @@ export const icons: {
     categories: [];
     tags: ["putty", "ssh", "server"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   pycharm: {
     name: "pycharm";
@@ -4941,7 +6086,9 @@ export const icons: {
     categories: [];
     tags: ["pycharm", "jetbrains", "editor"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   pypi: {
     name: "pypi";
@@ -4951,7 +6098,9 @@ export const icons: {
     categories: [];
     tags: ["pypi", "python", "package", "programming", "Python Package Index"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   pyscript: {
     name: "pyscript";
@@ -4961,7 +6110,9 @@ export const icons: {
     categories: [];
     tags: ["pyscript", "browser", "python", "html", "framework"];
     deprecated: false;
-    variants: ["plain-wordmark", "original-wordmark"];
+    variants: ["original-wordmark", "plain-wordmark"];
+    svgVariants: ["original-wordmark", "plain-wordmark"];
+    fontVariants: ["plain-wordmark"];
   };
   pytest: {
     name: "pytest";
@@ -4971,7 +6122,9 @@ export const icons: {
     categories: [];
     tags: ["pytest", "python", "framework", "testing"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   python: {
     name: "python";
@@ -4981,7 +6134,9 @@ export const icons: {
     categories: [];
     tags: ["python", "programming", "language"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   pytorch: {
     name: "pytorch";
@@ -4991,7 +6146,9 @@ export const icons: {
     categories: [];
     tags: ["pytorch", "programming", "framework", "machine-learning", "python"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   qodana: {
     name: "qodana";
@@ -5001,7 +6158,9 @@ export const icons: {
     categories: [];
     tags: ["qodana", "jetbrains", "code quality", "security"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original"];
+    variants: ["original", "plain", "plain-wordmark"];
+    svgVariants: ["original", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   qt: {
     name: "qt";
@@ -5012,6 +6171,8 @@ export const icons: {
     tags: ["qt", "framework"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   qtest: {
     name: "qtest";
@@ -5022,6 +6183,8 @@ export const icons: {
     tags: ["qtest", "testing"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   quarkus: {
     name: "quarkus";
@@ -5031,7 +6194,9 @@ export const icons: {
     categories: [];
     tags: ["quarkus", "java", "framework"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   quasar: {
     name: "quasar";
@@ -5041,7 +6206,9 @@ export const icons: {
     categories: [];
     tags: ["quasar", "framework", "javascript"];
     deprecated: false;
-    variants: ["plain-wordmark", "plain", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain-wordmark", "plain"];
   };
   qwik: {
     name: "qwik";
@@ -5051,7 +6218,9 @@ export const icons: {
     categories: [];
     tags: ["qwik", "framework", "open-source"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   r: {
     name: "r";
@@ -5061,7 +6230,9 @@ export const icons: {
     categories: [];
     tags: ["r", "programming", "language", "rlang"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   rabbitmq: {
     name: "rabbitmq";
@@ -5071,7 +6242,9 @@ export const icons: {
     categories: [];
     tags: ["rabbitmq", "message-broker", "open-source"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   racket: {
     name: "racket";
@@ -5081,7 +6254,9 @@ export const icons: {
     categories: [];
     tags: ["racket", "programming", "language"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   radstudio: {
     name: "radstudio";
@@ -5091,7 +6266,9 @@ export const icons: {
     categories: [];
     tags: ["radstudio", "editor", "IDE", "RAD Studio"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   rails: {
     name: "rails";
@@ -5101,7 +6278,9 @@ export const icons: {
     categories: [];
     tags: ["rails", "framework", "rubyonrails"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original-wordmark"];
+    variants: ["original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   railway: {
     name: "railway";
@@ -5112,6 +6291,8 @@ export const icons: {
     tags: ["railway", "hosting", "platform", "deployment"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   rancher: {
     name: "rancher";
@@ -5123,11 +6304,19 @@ export const icons: {
     deprecated: false;
     variants: [
       "original",
+      "original-wordmark",
       "plain-wordmark",
       "line",
       "line-wordmark",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original", "plain-wordmark", "line", "line-wordmark"];
   };
   raspberrypi: {
     name: "raspberrypi";
@@ -5138,13 +6327,22 @@ export const icons: {
     tags: ["raspberrypi", "arm", "computer", "rpi"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   reach: {
     name: "reach";
@@ -5154,7 +6352,9 @@ export const icons: {
     categories: [];
     tags: ["reach", "web3", "blockchain", "development", "Reach Lang"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   react: {
     name: "react";
@@ -5165,6 +6365,8 @@ export const icons: {
     tags: ["react", "framework", "reactjs"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   reactbootstrap: {
     name: "reactbootstrap";
@@ -5184,6 +6386,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   reactnative: {
     name: "reactnative";
@@ -5194,6 +6398,8 @@ export const icons: {
     tags: ["reactnative", "framework", "react-native"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   reactnavigation: {
     name: "reactnavigation";
@@ -5211,6 +6417,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   reactrouter: {
     name: "reactrouter";
@@ -5220,7 +6428,9 @@ export const icons: {
     categories: [];
     tags: ["reactrouter", "framework", "react"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   readthedocs: {
     name: "readthedocs";
@@ -5237,6 +6447,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "original-wordmark", "line"];
+    svgVariants: ["original", "original-wordmark", "line"];
+    fontVariants: ["original", "original-wordmark", "line"];
   };
   realm: {
     name: "realm";
@@ -5246,7 +6458,9 @@ export const icons: {
     categories: [];
     tags: ["realm", "sql", "database", "cloud"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   rect: {
     name: "rect";
@@ -5256,7 +6470,9 @@ export const icons: {
     categories: [];
     tags: ["rect", "programming", "language", "rectlang"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   redhat: {
     name: "redhat";
@@ -5266,7 +6482,9 @@ export const icons: {
     categories: [];
     tags: ["redhat", "server", "linux"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   redis: {
     name: "redis";
@@ -5276,7 +6494,9 @@ export const icons: {
     categories: [];
     tags: ["redis", "server", "remotedictionaryserver"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   redux: {
     name: "redux";
@@ -5287,6 +6507,8 @@ export const icons: {
     tags: ["redux", "framework", "reduxjs"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   reflex: {
     name: "reflex";
@@ -5296,7 +6518,9 @@ export const icons: {
     categories: [];
     tags: ["reflex", "framework", "python", "web"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   remix: {
     name: "remix";
@@ -5307,6 +6531,8 @@ export const icons: {
     tags: ["remix", "framework", "fullstack", "web", "remix.run"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   renpy: {
     name: "renpy";
@@ -5316,7 +6542,9 @@ export const icons: {
     categories: [];
     tags: ["renpy", "programming", "game-engine", "engine", "python", "Ren'Py"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   replit: {
     name: "replit";
@@ -5326,7 +6554,9 @@ export const icons: {
     categories: [];
     tags: ["replit", "software"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   rexx: {
     name: "rexx";
@@ -5336,7 +6566,9 @@ export const icons: {
     categories: [];
     tags: ["rexx", "language"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   rider: {
     name: "rider";
@@ -5346,7 +6578,9 @@ export const icons: {
     categories: [];
     tags: ["rider", "jetbrains", "ide", "editor", "dotnet"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   rocksdb: {
     name: "rocksdb";
@@ -5356,7 +6590,9 @@ export const icons: {
     categories: [];
     tags: ["rocksdb", "database"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   rockylinux: {
     name: "rockylinux";
@@ -5366,7 +6602,9 @@ export const icons: {
     categories: [];
     tags: ["rockylinux", "os", "open-source", "linux", "rocky"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   rollup: {
     name: "rollup";
@@ -5377,13 +6615,22 @@ export const icons: {
     tags: ["rollup", "bundler", "build", "javascript", "rollupjs", "rollup.js"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   ros: {
     name: "ros";
@@ -5394,6 +6641,8 @@ export const icons: {
     tags: ["ros", "robotics", "robotoperatingsystem"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   rspec: {
     name: "rspec";
@@ -5404,13 +6653,22 @@ export const icons: {
     tags: ["rspec", "ruby", "framework", "testing"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   rstudio: {
     name: "rstudio";
@@ -5420,7 +6678,9 @@ export const icons: {
     categories: [];
     tags: ["rstudio", "editor", "package", "statistics"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   ruby: {
     name: "ruby";
@@ -5430,7 +6690,9 @@ export const icons: {
     categories: [];
     tags: ["ruby", "programming", "language", "rubylang"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   rubymine: {
     name: "rubymine";
@@ -5440,7 +6702,9 @@ export const icons: {
     categories: [];
     tags: ["rubymine", "jetbrains", "editor"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   rust: {
     name: "rust";
@@ -5451,6 +6715,8 @@ export const icons: {
     tags: ["rust", "programming", "language", "rustlang"];
     deprecated: false;
     variants: ["original", "line"];
+    svgVariants: ["original", "line"];
+    fontVariants: ["original", "line"];
   };
   rxjs: {
     name: "rxjs";
@@ -5466,7 +6732,9 @@ export const icons: {
       "Reactive Extensions for JavaScript",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   safari: {
     name: "safari";
@@ -5477,13 +6745,22 @@ export const icons: {
     tags: ["safari", "browser", "applesafari"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line-wordmark",
       "line",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line-wordmark",
+      "line",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line-wordmark", "line"];
   };
   salesforce: {
     name: "salesforce";
@@ -5493,7 +6770,9 @@ export const icons: {
     categories: [];
     tags: ["salesforce", "platform", "ecommerce"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   sanity: {
     name: "sanity";
@@ -5503,7 +6782,9 @@ export const icons: {
     categories: [];
     tags: ["sanity", "CMS"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   sass: {
     name: "sass";
@@ -5514,6 +6795,8 @@ export const icons: {
     tags: ["sass", "pre-processor", "css", "scss"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   scala: {
     name: "scala";
@@ -5523,7 +6806,9 @@ export const icons: {
     categories: [];
     tags: ["scala", "programming", "language", "jvm", "scalalang"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   scalingo: {
     name: "scalingo";
@@ -5534,13 +6819,22 @@ export const icons: {
     tags: ["scalingo", "cloud", "platform", "hosting"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   scikitlearn: {
     name: "scikitlearn";
@@ -5559,7 +6853,9 @@ export const icons: {
       "sklearn",
     ];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   sdl: {
     name: "sdl";
@@ -5576,7 +6872,9 @@ export const icons: {
       "simpledirectmedialayer",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   selenium: {
     name: "selenium";
@@ -5587,6 +6885,8 @@ export const icons: {
     tags: ["selenium", "webdrive", "automation"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   sema: {
     name: "sema";
@@ -5605,6 +6905,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   sentry: {
     name: "sentry";
@@ -5615,6 +6917,8 @@ export const icons: {
     tags: ["sentry", "monitoring", "analytics", "metrics"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   sequelize: {
     name: "sequelize";
@@ -5624,7 +6928,9 @@ export const icons: {
     categories: [];
     tags: ["sequelize", "database", "language", "sequelizejs"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   shopware: {
     name: "shopware";
@@ -5635,6 +6941,8 @@ export const icons: {
     tags: ["shopware", "cloud", "platform"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   shotgrid: {
     name: "shotgrid";
@@ -5652,7 +6960,9 @@ export const icons: {
       "production-tracking",
     ];
     deprecated: false;
-    variants: ["plain", "original-wordmark", "original"];
+    variants: ["original", "original-wordmark", "plain"];
+    svgVariants: ["original", "original-wordmark", "plain"];
+    fontVariants: ["plain", "original-wordmark"];
   };
   sketch: {
     name: "sketch";
@@ -5663,13 +6973,22 @@ export const icons: {
     tags: ["sketch", "application"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   slack: {
     name: "slack";
@@ -5679,7 +6998,9 @@ export const icons: {
     categories: [];
     tags: ["slack", "chat"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   socketio: {
     name: "socketio";
@@ -5690,6 +7011,8 @@ export const icons: {
     tags: ["socketio", "library", "networking", "websockets"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   solidity: {
     name: "solidity";
@@ -5699,7 +7022,9 @@ export const icons: {
     categories: [];
     tags: ["solidity", "programming", "language", "blockchain", "soliditylang"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   solidjs: {
     name: "solidjs";
@@ -5709,7 +7034,9 @@ export const icons: {
     categories: [];
     tags: ["solidjs", "javascript", "framework", "frontend"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   sonarqube: {
     name: "sonarqube";
@@ -5721,11 +7048,19 @@ export const icons: {
     deprecated: false;
     variants: [
       "original",
+      "original-wordmark",
       "plain-wordmark",
       "line",
       "line-wordmark",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original", "plain-wordmark", "line", "line-wordmark"];
   };
   sourceengine: {
     name: "sourceengine";
@@ -5741,7 +7076,9 @@ export const icons: {
       "source engine",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   sourcetree: {
     name: "sourcetree";
@@ -5752,6 +7089,8 @@ export const icons: {
     tags: ["sourcetree", "version-control"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   spack: {
     name: "spack";
@@ -5768,7 +7107,9 @@ export const icons: {
       "open-source",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   spicedb: {
     name: "spicedb";
@@ -5784,7 +7125,9 @@ export const icons: {
       "Zanzibar",
     ];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   splunk: {
     name: "splunk";
@@ -5795,6 +7138,8 @@ export const icons: {
     tags: ["splunk", "platform", "data", "log", "monitoring"];
     deprecated: false;
     variants: ["original-wordmark"];
+    svgVariants: ["original-wordmark"];
+    fontVariants: ["original-wordmark"];
   };
   spring: {
     name: "spring";
@@ -5805,6 +7150,8 @@ export const icons: {
     tags: ["spring", "framework", "springframework"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   spss: {
     name: "spss";
@@ -5814,7 +7161,9 @@ export const icons: {
     categories: [];
     tags: ["spss", "package", "statistics", "ibmspss"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   spyder: {
     name: "spyder";
@@ -5824,7 +7173,9 @@ export const icons: {
     categories: [];
     tags: ["spyder", "python", "ide", "editor", "data-science"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   sqlalchemy: {
     name: "sqlalchemy";
@@ -5834,7 +7185,9 @@ export const icons: {
     categories: [];
     tags: ["sqlalchemy", "python", "orm"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   sqldeveloper: {
     name: "sqldeveloper";
@@ -5844,7 +7197,9 @@ export const icons: {
     categories: [];
     tags: ["sqldeveloper", "tool", "database"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   sqlite: {
     name: "sqlite";
@@ -5854,7 +7209,9 @@ export const icons: {
     categories: [];
     tags: ["sqlite", "sql", "database", "db"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   ssh: {
     name: "ssh";
@@ -5865,6 +7222,8 @@ export const icons: {
     tags: ["ssh", "security", "secureshell"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   stackblitz: {
     name: "stackblitz";
@@ -5876,11 +7235,19 @@ export const icons: {
     deprecated: false;
     variants: [
       "original",
+      "original-wordmark",
       "plain-wordmark",
       "line",
       "line-wordmark",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original", "plain-wordmark", "line", "line-wordmark"];
   };
   stackoverflow: {
     name: "stackoverflow";
@@ -5897,13 +7264,22 @@ export const icons: {
     ];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   stata: {
     name: "stata";
@@ -5921,6 +7297,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original-wordmark"];
+    svgVariants: ["original-wordmark"];
+    fontVariants: ["original-wordmark"];
   };
   stenciljs: {
     name: "stenciljs";
@@ -5930,7 +7308,9 @@ export const icons: {
     categories: [];
     tags: ["stenciljs", "framework", "ui", "stencil"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   storybook: {
     name: "storybook";
@@ -5940,7 +7320,9 @@ export const icons: {
     categories: [];
     tags: ["storybook", "framework", "documentation", "ui", "storybookjs"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   streamlit: {
     name: "streamlit";
@@ -5950,7 +7332,9 @@ export const icons: {
     categories: [];
     tags: ["streamlit", "python", "machine-learning", "data-science"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   styledcomponents: {
     name: "styledcomponents";
@@ -5970,7 +7354,9 @@ export const icons: {
       "styled-components",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   stylus: {
     name: "stylus";
@@ -5981,6 +7367,8 @@ export const icons: {
     tags: ["stylus", "css", "pre-processor", "styluslang"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   subversion: {
     name: "subversion";
@@ -5990,7 +7378,9 @@ export const icons: {
     categories: [];
     tags: ["subversion", "svn", "version", "apachesubversion"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   sulu: {
     name: "sulu";
@@ -6001,6 +7391,8 @@ export const icons: {
     tags: ["sulu", "cms", "platform"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   supabase: {
     name: "supabase";
@@ -6016,7 +7408,9 @@ export const icons: {
       "storage",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   surrealdb: {
     name: "surrealdb";
@@ -6026,7 +7420,9 @@ export const icons: {
     categories: [];
     tags: ["surrealdb", "db", "database", "storage"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   svelte: {
     name: "svelte";
@@ -6036,7 +7432,9 @@ export const icons: {
     categories: [];
     tags: ["svelte", "javascript", "framework", "compiler", "sveltejs"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   svgo: {
     name: "svgo";
@@ -6055,13 +7453,22 @@ export const icons: {
     ];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   swagger: {
     name: "swagger";
@@ -6071,7 +7478,9 @@ export const icons: {
     categories: [];
     tags: ["swagger", "development", "software", "tool", "Swagger"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   swift: {
     name: "swift";
@@ -6081,7 +7490,9 @@ export const icons: {
     categories: [];
     tags: ["swift", "language"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   swiper: {
     name: "swiper";
@@ -6092,6 +7503,8 @@ export const icons: {
     tags: ["swiper", "library", "javascript", "open-source"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   symfony: {
     name: "symfony";
@@ -6102,6 +7515,8 @@ export const icons: {
     tags: ["symfony", "framework", "php"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   tailwindcss: {
     name: "tailwindcss";
@@ -6111,7 +7526,9 @@ export const icons: {
     categories: [];
     tags: ["tailwindcss", "css", "framework"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original-wordmark", "original", "plain-wordmark"];
+    svgVariants: ["original-wordmark", "original", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   talos: {
     name: "talos";
@@ -6121,7 +7538,9 @@ export const icons: {
     categories: [];
     tags: ["talos", "container", "linux", "distribution"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   tauri: {
     name: "tauri";
@@ -6131,7 +7550,9 @@ export const icons: {
     categories: [];
     tags: ["tauri", "nodejs", "rust", "desktop", "framework", "programming"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   teleport: {
     name: "teleport";
@@ -6149,6 +7570,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   tensorflow: {
     name: "tensorflow";
@@ -6159,6 +7582,8 @@ export const icons: {
     tags: ["tensorflow", "library", "machine-learning", "deep-learning"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   terraform: {
     name: "terraform";
@@ -6168,7 +7593,9 @@ export const icons: {
     categories: [];
     tags: ["terraform", "deployment", "architecture", "automation"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   terramate: {
     name: "terramate";
@@ -6179,6 +7606,8 @@ export const icons: {
     tags: ["terramate", "deployment", "devops", "automation"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   tex: {
     name: "tex";
@@ -6189,6 +7618,8 @@ export const icons: {
     tags: ["tex", "typesetting-system", "markup"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   thealgorithms: {
     name: "thealgorithms";
@@ -6198,7 +7629,9 @@ export const icons: {
     categories: [];
     tags: ["thealgorithms", "organization", "algorithms"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   threedsmax: {
     name: "threedsmax";
@@ -6219,7 +7652,9 @@ export const icons: {
       "3dsmax",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   threejs: {
     name: "threejs";
@@ -6230,6 +7665,8 @@ export const icons: {
     tags: ["threejs", "javascript", "framework"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   thymeleaf: {
     name: "thymeleaf";
@@ -6239,7 +7676,9 @@ export const icons: {
     categories: [];
     tags: ["thymeleaf", "engine", "html", "java", "server"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   titaniumsdk: {
     name: "titaniumsdk";
@@ -6257,6 +7696,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   tmux: {
     name: "tmux";
@@ -6266,7 +7707,9 @@ export const icons: {
     categories: [];
     tags: ["tmux", "cli", "terminal", "multiplexer"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   tomcat: {
     name: "tomcat";
@@ -6276,7 +7719,9 @@ export const icons: {
     categories: [];
     tags: ["tomcat", "server"];
     deprecated: false;
-    variants: ["line", "line-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["line", "line-wordmark"];
   };
   tortoisegit: {
     name: "tortoisegit";
@@ -6286,7 +7731,9 @@ export const icons: {
     categories: [];
     tags: ["tortoisegit", "git"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   towergit: {
     name: "towergit";
@@ -6296,7 +7743,9 @@ export const icons: {
     categories: [];
     tags: ["towergit", "git", "towergitclient"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   traefikmesh: {
     name: "traefikmesh";
@@ -6308,11 +7757,19 @@ export const icons: {
     deprecated: false;
     variants: [
       "original",
+      "original-wordmark",
       "plain-wordmark",
       "line",
       "line-wordmark",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original", "plain-wordmark", "line", "line-wordmark"];
   };
   traefikproxy: {
     name: "traefikproxy";
@@ -6324,11 +7781,19 @@ export const icons: {
     deprecated: false;
     variants: [
       "original",
+      "original-wordmark",
       "plain-wordmark",
       "line",
       "line-wordmark",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original", "plain-wordmark", "line", "line-wordmark"];
   };
   travis: {
     name: "travis";
@@ -6339,13 +7804,22 @@ export const icons: {
     tags: ["travis", "platform", "integration", "travisci"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   trello: {
     name: "trello";
@@ -6356,13 +7830,22 @@ export const icons: {
     tags: ["trello", "platform", "organize", "atlassiantrello"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   trpc: {
     name: "trpc";
@@ -6379,7 +7862,9 @@ export const icons: {
       "Typescript Remote Procedure Call",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   turbo: {
     name: "turbo";
@@ -6389,7 +7874,9 @@ export const icons: {
     categories: [];
     tags: ["turbo", "spa", "js"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   twilio: {
     name: "twilio";
@@ -6400,6 +7887,8 @@ export const icons: {
     tags: ["twilio", "api", "automation", "platform"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   twitter: {
     name: "twitter";
@@ -6410,6 +7899,8 @@ export const icons: {
     tags: ["twitter", "auth", "x"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   typescript: {
     name: "typescript";
@@ -6426,7 +7917,9 @@ export const icons: {
       "ts",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   typo3: {
     name: "typo3";
@@ -6438,11 +7931,19 @@ export const icons: {
     deprecated: false;
     variants: [
       "original",
+      "original-wordmark",
       "plain-wordmark",
       "line",
       "line-wordmark",
-      "original-wordmark",
     ];
+    svgVariants: [
+      "original",
+      "original-wordmark",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
+    ];
+    fontVariants: ["original", "plain-wordmark", "line", "line-wordmark"];
   };
   ubuntu: {
     name: "ubuntu";
@@ -6452,7 +7953,9 @@ export const icons: {
     categories: [];
     tags: ["ubuntu", "os", "open-source", "linux"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   unifiedmodelinglanguage: {
     name: "unifiedmodelinglanguage";
@@ -6469,7 +7972,9 @@ export const icons: {
       "unified modeling language",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   unity: {
     name: "unity";
@@ -6480,13 +7985,22 @@ export const icons: {
     tags: ["unity", "C#", "c-sharp", "csharp", "engine", "game-engine"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   unix: {
     name: "unix";
@@ -6497,6 +8011,8 @@ export const icons: {
     tags: ["unix", "os"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   unrealengine: {
     name: "unrealengine";
@@ -6507,6 +8023,8 @@ export const icons: {
     tags: ["unrealengine", "c++", "engine", "game-engine"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   uwsgi: {
     name: "uwsgi";
@@ -6516,7 +8034,9 @@ export const icons: {
     categories: [];
     tags: ["uwsgi", "hosting", "uwebservergatewayinterface"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   v8: {
     name: "v8";
@@ -6534,7 +8054,9 @@ export const icons: {
       "v8 engine",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   vaadin: {
     name: "vaadin";
@@ -6545,6 +8067,8 @@ export const icons: {
     tags: ["vaadin", "framework", "java", "web"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original"];
   };
   vagrant: {
     name: "vagrant";
@@ -6554,7 +8078,9 @@ export const icons: {
     categories: [];
     tags: ["vagrant", "platform"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   vala: {
     name: "vala";
@@ -6564,7 +8090,9 @@ export const icons: {
     categories: [];
     tags: ["vala", "programming", "language"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   vault: {
     name: "vault";
@@ -6574,7 +8102,9 @@ export const icons: {
     categories: [];
     tags: ["vault", "tool", "security", "infrastructure", "HashiCorp Vault"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   veevalidate: {
     name: "veevalidate";
@@ -6585,6 +8115,8 @@ export const icons: {
     tags: ["veevalidate", "vuejs", "vuejs-library", "package"];
     deprecated: false;
     variants: ["original", "line"];
+    svgVariants: ["original", "line"];
+    fontVariants: ["original", "line"];
   };
   vercel: {
     name: "vercel";
@@ -6595,6 +8127,8 @@ export const icons: {
     tags: ["vercel", "hosting", "platform", "deployment", "git"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   vertx: {
     name: "vertx";
@@ -6605,13 +8139,22 @@ export const icons: {
     tags: ["vertx", "sdk", "java", "framework", "eclipsevertx"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   vim: {
     name: "vim";
@@ -6621,7 +8164,9 @@ export const icons: {
     categories: [];
     tags: ["vim", "editor", "viimproved"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   visualbasic: {
     name: "visualbasic";
@@ -6631,7 +8176,9 @@ export const icons: {
     categories: [];
     tags: ["visualbasic", "programming", "language", "vb"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   visualstudio: {
     name: "visualstudio";
@@ -6641,7 +8188,9 @@ export const icons: {
     categories: [];
     tags: ["visualstudio", "editor", "vs"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   vite: {
     name: "vite";
@@ -6652,6 +8201,8 @@ export const icons: {
     tags: ["vite", "web3", "blockchain", "DAG"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   vitejs: {
     name: "vitejs";
@@ -6669,7 +8220,9 @@ export const icons: {
       "Vite",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   vitess: {
     name: "vitess";
@@ -6679,7 +8232,9 @@ export const icons: {
     categories: [];
     tags: ["vitess", "sharding", "database", "mysql"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   vitest: {
     name: "vitest";
@@ -6689,7 +8244,9 @@ export const icons: {
     categories: [];
     tags: ["vitest", "framework", "open-source", "testing", "vite"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   vscode: {
     name: "vscode";
@@ -6699,7 +8256,9 @@ export const icons: {
     categories: [];
     tags: ["vscode", "editor", "ide", "visualstudiocode"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   vscodium: {
     name: "vscodium";
@@ -6709,7 +8268,9 @@ export const icons: {
     categories: [];
     tags: ["vscodium", "editor", "ide", "open-source"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   vsphere: {
     name: "vsphere";
@@ -6726,13 +8287,22 @@ export const icons: {
     ];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   vuejs: {
     name: "vuejs";
@@ -6743,13 +8313,22 @@ export const icons: {
     tags: ["vuejs", "framework"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   vuestorefront: {
     name: "vuestorefront";
@@ -6759,7 +8338,9 @@ export const icons: {
     categories: [];
     tags: ["vuestorefront", "framework"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   vuetify: {
     name: "vuetify";
@@ -6769,7 +8350,9 @@ export const icons: {
     categories: [];
     tags: ["vuetify", "css", "framework", "vuejs-library", "material-design"];
     deprecated: false;
-    variants: ["line", "plain", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["line", "plain"];
   };
   vulkan: {
     name: "vulkan";
@@ -6780,6 +8363,8 @@ export const icons: {
     tags: ["vulkan", "api", "3d", "library", "graphics", "game"];
     deprecated: false;
     variants: ["original", "line"];
+    svgVariants: ["original", "line"];
+    fontVariants: ["original", "line"];
   };
   vyper: {
     name: "vyper";
@@ -6798,6 +8383,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   waku: {
     name: "waku";
@@ -6807,7 +8394,9 @@ export const icons: {
     categories: [];
     tags: ["waku", "react", "javascript", "framework", "web"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   wasm: {
     name: "wasm";
@@ -6825,7 +8414,9 @@ export const icons: {
       "WebAssembly",
     ];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   web3js: {
     name: "web3js";
@@ -6835,7 +8426,9 @@ export const icons: {
     categories: [];
     tags: ["web3js", "blockchain", "ecommerce", "web3.js"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   webflow: {
     name: "webflow";
@@ -6846,6 +8439,8 @@ export const icons: {
     tags: ["webflow", "cms", "ecommerce"];
     deprecated: false;
     variants: ["original"];
+    svgVariants: ["original"];
+    fontVariants: ["original"];
   };
   webgpu: {
     name: "webgpu";
@@ -6856,13 +8451,22 @@ export const icons: {
     tags: ["webgpu", "graphics", "framework", "web"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   weblate: {
     name: "weblate";
@@ -6872,7 +8476,9 @@ export const icons: {
     categories: [];
     tags: ["weblate", "localization"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   webpack: {
     name: "webpack";
@@ -6882,7 +8488,9 @@ export const icons: {
     categories: [];
     tags: ["webpack", "package", "manager", "webpackjs"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   webstorm: {
     name: "webstorm";
@@ -6892,7 +8500,9 @@ export const icons: {
     categories: [];
     tags: ["webstorm", "jetbrains", "editor"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   windows11: {
     name: "windows11";
@@ -6903,6 +8513,8 @@ export const icons: {
     tags: ["windows11", "os"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   windows8: {
     name: "windows8";
@@ -6913,6 +8525,8 @@ export const icons: {
     tags: ["windows8", "os"];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   wolfram: {
     name: "wolfram";
@@ -6928,7 +8542,9 @@ export const icons: {
       "wolframlanguage",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   woocommerce: {
     name: "woocommerce";
@@ -6938,7 +8554,9 @@ export const icons: {
     categories: [];
     tags: ["woocommerce", "ecommerce"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "plain", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   wordpress: {
     name: "wordpress";
@@ -6948,7 +8566,9 @@ export const icons: {
     categories: [];
     tags: ["wordpress", "cms"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original"];
+    variants: ["original", "plain", "plain-wordmark"];
+    svgVariants: ["original", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   xamarin: {
     name: "xamarin";
@@ -6970,6 +8590,8 @@ export const icons: {
     ];
     deprecated: false;
     variants: ["original", "original-wordmark"];
+    svgVariants: ["original", "original-wordmark"];
+    fontVariants: ["original", "original-wordmark"];
   };
   xcode: {
     name: "xcode";
@@ -6988,7 +8610,9 @@ export const icons: {
       "apple",
     ];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   xd: {
     name: "xd";
@@ -6998,7 +8622,9 @@ export const icons: {
     categories: [];
     tags: ["xd", "design", "editor", "ui", "adobexd"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   xml: {
     name: "xml";
@@ -7008,7 +8634,9 @@ export const icons: {
     categories: [];
     tags: ["xml", "markup", "language", "extensiblemarkuplanguage"];
     deprecated: false;
-    variants: ["plain", "line", "original"];
+    variants: ["original", "plain", "line"];
+    svgVariants: ["original", "plain", "line"];
+    fontVariants: ["plain", "line"];
   };
   yaml: {
     name: "yaml";
@@ -7018,7 +8646,9 @@ export const icons: {
     categories: [];
     tags: ["yaml", "data", "language", "YAML Ain't Markup Language"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   yarn: {
     name: "yarn";
@@ -7029,6 +8659,8 @@ export const icons: {
     tags: ["yarn", "package", "manager", "javascript", "js"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   yii: {
     name: "yii";
@@ -7038,7 +8670,9 @@ export const icons: {
     categories: [];
     tags: ["yii", "php", "framework", "yesitis"];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   yugabytedb: {
     name: "yugabytedb";
@@ -7055,7 +8689,9 @@ export const icons: {
       "open-source",
     ];
     deprecated: false;
-    variants: ["plain", "plain-wordmark", "original", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain", "plain-wordmark"];
+    fontVariants: ["plain", "plain-wordmark"];
   };
   yunohost: {
     name: "yunohost";
@@ -7065,7 +8701,9 @@ export const icons: {
     categories: [];
     tags: ["yunohost", "os"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
   zend: {
     name: "zend";
@@ -7076,6 +8714,8 @@ export const icons: {
     tags: ["zend", "php", "framework"];
     deprecated: false;
     variants: ["original", "original-wordmark", "line", "line-wordmark"];
+    svgVariants: ["original", "original-wordmark", "line", "line-wordmark"];
+    fontVariants: ["original", "original-wordmark", "line", "line-wordmark"];
   };
   zig: {
     name: "zig";
@@ -7085,7 +8725,9 @@ export const icons: {
     categories: [];
     tags: ["zig", "language", "ziglang"];
     deprecated: false;
-    variants: ["original", "plain-wordmark", "original-wordmark"];
+    variants: ["original", "original-wordmark", "plain-wordmark"];
+    svgVariants: ["original", "original-wordmark", "plain-wordmark"];
+    fontVariants: ["original", "plain-wordmark"];
   };
   zsh: {
     name: "zsh";
@@ -7096,13 +8738,22 @@ export const icons: {
     tags: ["zsh", "shell", "script", "scripting", "language", "command"];
     deprecated: false;
     variants: [
+      "original",
+      "original-wordmark",
       "plain",
       "plain-wordmark",
       "line",
       "line-wordmark",
+    ];
+    svgVariants: [
       "original",
       "original-wordmark",
+      "plain",
+      "plain-wordmark",
+      "line",
+      "line-wordmark",
     ];
+    fontVariants: ["plain", "plain-wordmark", "line", "line-wordmark"];
   };
   zustand: {
     name: "zustand";
@@ -7112,7 +8763,9 @@ export const icons: {
     categories: [];
     tags: ["zustand", "framework"];
     deprecated: false;
-    variants: ["plain", "original"];
+    variants: ["original", "plain"];
+    svgVariants: ["original", "plain"];
+    fontVariants: ["plain"];
   };
 };
 export const providerInfo: {
