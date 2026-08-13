@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import ProviderBrowser from "./provider-browser";
+import ProviderAssets from "./provider-assets";
 
 const providers = {
   "font-awesome": {
@@ -61,6 +62,8 @@ export default async function ProviderPage({ params }: PageProps) {
           </code>
         </pre>
       </section>
+
+      <ProviderAssets provider={providerName} />
 
       <ProviderBrowser provider={providerName} />
     </main>
