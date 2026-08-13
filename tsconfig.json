@@ -19,5 +19,12 @@
       "@iconarium/devicons": ["./packages/devicons/src/index.ts"],
       "@iconarium/simple-icons": ["./packages/simple-icons/src/index.ts"]
     }
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules",
+    "**/.next",
+    "**/dist",
+    "apps/web/public/packages"
+  ]
 }

@@ -102,15 +102,53 @@ function providerName(provider: Provider) {
   }
 }
 
+function SearchIconPreview({ icon }: { icon: Icon }) {
+  let src: string | null = null;
+
+  if (icon.provider === "font-awesome") {
+    src = `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/svgs/${icon.style}/${icon.name}.svg`;
+  }
+
+  if (icon.provider === "devicons") {
+    const svgVariants = icon.svgVariants ?? icon.variants ?? [];
+
+    const variant =
+      svgVariants.find((value) => value.includes("original")) ?? svgVariants[0];
+
+    if (variant) {
+      src = `https://cdn.jsdelivr.net/npm/devicon@latest/icons/${icon.name}/${icon.name}-${variant}.svg`;
+    }
+  }
+
+  if (icon.provider === "simple-icons") {
+    src = `https://cdn.simpleicons.org/${encodeURIComponent(icon.name)}/${icon.hex}`;
+  }
+
+  return (
+    <div className="global-search-icon">
+      {src ? (
+        <img
+          src={src}
+          alt=""
+          loading="lazy"
+          className={
+            icon.provider === "font-awesome"
+              ? "global-search-icon-image font-awesome"
+              : "global-search-icon-image"
+          }
+        />
+      ) : (
+        <span>?</span>
+      )}
+    </div>
+  );
+}
+
 export default function GlobalSearch() {
   const [icons, setIcons] = useState<SearchIcon[]>([]);
-
   const [query, setQuery] = useState("");
-
   const [provider, setProvider] = useState<Provider | "all">("all");
-
   const [loading, setLoading] = useState(true);
-
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -201,11 +239,8 @@ export default function GlobalSearch() {
           }
         >
           <option value="all">All providers</option>
-
           <option value="font-awesome">Font Awesome</option>
-
           <option value="devicons">Devicons</option>
-
           <option value="simple-icons">Simple Icons</option>
         </select>
       </div>
@@ -238,13 +273,17 @@ export default function GlobalSearch() {
                 className="global-search-result"
                 href={`/providers/${icon.provider}/${encodeURIComponent(icon.name)}`}
               >
-                <div>
+                <SearchIconPreview icon={icon} />
+
+                <div className="global-search-result-copy">
                   <strong>{icon.label}</strong>
 
                   <code>{icon.name}</code>
                 </div>
 
-                <span>{providerName(icon.provider)}</span>
+                <span className="global-search-provider">
+                  {providerName(icon.provider)}
+                </span>
               </a>
             ))}
           </div>
