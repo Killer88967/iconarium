@@ -1,5 +1,5 @@
 {
-  "name": "@icon-meta/core",
+  "name": "@iconarium/core",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",

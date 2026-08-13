@@ -1,11 +1,11 @@
 {
-  "name": "icon-meta",
+  "name": "iconarium",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@10.15.0",
   "scripts": {
-    "dev": "pnpm --filter @icon-meta/web dev",
+    "dev": "pnpm --filter @iconarium/web dev",
     "build": "pnpm generate && pnpm -r --if-present build",
     "generate": "tsx generators/generate-all.ts",
     "generate:font-awesome": "tsx generators/providers/font-awesome/generate.ts",

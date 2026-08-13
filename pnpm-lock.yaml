@@ -43,19 +43,19 @@ importers:
 
   packages/devicons:
     dependencies:
-      "@icon-meta/core":
+      "@iconarium/core":
         specifier: workspace:*
         version: link:../core
 
   packages/font-awesome:
     dependencies:
-      "@icon-meta/core":
+      "@iconarium/core":
         specifier: workspace:*
         version: link:../core
 
   packages/simple-icons:
     dependencies:
-      "@icon-meta/core":
+      "@iconarium/core":
         specifier: workspace:*
         version: link:../core
 

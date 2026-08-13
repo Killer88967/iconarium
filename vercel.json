@@ -1,6 +1,6 @@
 {
   "framework": "nextjs",
-  "buildCommand": "pnpm generate && pnpm --filter @icon-meta/web build",
+  "buildCommand": "pnpm generate && pnpm --filter @iconarium/web build",
   "headers": [
     {
       "source": "/packages/:provider/:version/:file*",

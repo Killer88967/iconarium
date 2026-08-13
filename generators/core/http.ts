@@ -1,6 +1,6 @@
 export async function fetchJson<T>(url: string): Promise<T> {
   const response = await fetch(url, {
-    headers: { "User-Agent": "icon-meta-generator/0.1" },
+    headers: { "User-Agent": "iconarium-generator/0.1" },
   });
 
   if (!response.ok) {

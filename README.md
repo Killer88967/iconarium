@@ -15,7 +15,7 @@ The project generates typed runtime maps, JSON metadata, ESM browser modules, an
 The API is intentionally modeled after the same idea that makes `document.createElement()` pleasant to use: one key narrows the valid values that follow it.
 
 ```ts
-import { getIcon } from "@icon-meta/font-awesome";
+import { getIcon } from "@iconarium/font-awesome";
 
 getIcon("brands", "facebook");
 //                  ^ editor suggestions are brand icons only

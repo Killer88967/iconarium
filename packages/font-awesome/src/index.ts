@@ -1,4 +1,4 @@
-import { searchRecord } from "@icon-meta/core";
+import { searchRecord } from "@iconarium/core";
 import { icons, providerInfo } from "../generated/icons";
 
 export { icons, providerInfo };

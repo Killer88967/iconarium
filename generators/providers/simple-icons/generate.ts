@@ -7,13 +7,17 @@ import { normalizeSimpleIcons } from "./normalize";
 export async function generateSimpleIcons() {
   const source = await loadSimpleIconsSource();
   const icons = normalizeSimpleIcons(source.data);
+  const iconNames = Object.keys(icons);
+  const iconNameUnion = iconNames
+    .map((name) => JSON.stringify(name))
+    .join(" | ");
   const providerInfo = {
     id: "simple-icons",
     name: "Simple Icons",
     version: source.version,
     source: source.source,
   };
-  const generated = `// Generated file. Do not edit.\nexport const icons = ${JSON.stringify(icons, null, 2)} as const;\n\nexport const providerInfo = ${JSON.stringify(providerInfo, null, 2)} as const;\n`;
+  const generated = `// Generated file. Do not edit.\n\nimport type { SimpleIconMetadata } from "@iconarium/core";\n\nexport type SimpleIconName = ${iconNameUnion};\n\nexport const icons: Readonly<Record<SimpleIconName, SimpleIconMetadata>> = ${JSON.stringify(icons, null, 2)};\n\nexport const providerInfo = ${JSON.stringify(providerInfo, null, 2)} as const;`;
   const out = "packages/simple-icons/generated/icons.ts";
   await mkdir(dirname(out), { recursive: true });
   await writeFile(out, generated, "utf8");
