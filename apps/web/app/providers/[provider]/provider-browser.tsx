@@ -162,10 +162,11 @@ function IconPreview({ icon, version }: { icon: Icon; version: string }) {
 
 export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
   const [metadata, setMetadata] = useState<ProviderMetadata | null>(null);
-
   const [error, setError] = useState<string | null>(null);
-
   const [query, setQuery] = useState("");
+  const [fontAwesomeStyle, setFontAwesomeStyle] = useState("all");
+  const [deviconVariant, setDeviconVariant] = useState("all");
+  const [simpleIconCategory, setSimpleIconCategory] = useState("all");
 
   useEffect(() => {
     const controller = new AbortController();
@@ -214,11 +215,87 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
     return flattenIcons(provider, metadata.icons);
   }, [metadata, provider]);
 
+  const fontAwesomeStyles = useMemo(() => {
+    if (provider !== "font-awesome") {
+      return [];
+    }
+
+    return Array.from(
+      new Set(
+        icons
+          .filter(
+            (icon): icon is FontAwesomeIcon => icon.provider === "font-awesome",
+          )
+          .map((icon) => icon.style),
+      ),
+    ).sort();
+  }, [icons, provider]);
+
+  const deviconVariants = useMemo(() => {
+    if (provider !== "devicons") {
+      return [];
+    }
+
+    return Array.from(
+      new Set(
+        icons
+          .filter((icon): icon is DeviconIcon => icon.provider === "devicons")
+          .flatMap((icon) => icon.variants),
+      ),
+    ).sort();
+  }, [icons, provider]);
+
+  const simpleIconCategories = useMemo(() => {
+    if (provider !== "simple-icons") {
+      return [];
+    }
+
+    return Array.from(
+      new Set(
+        icons
+          .filter(
+            (icon): icon is SimpleIcon => icon.provider === "simple-icons",
+          )
+          .flatMap((icon) => icon.categories),
+      ),
+    ).sort();
+  }, [icons, provider]);
+
   const filteredIcons = useMemo(() => {
     const search = query.trim().toLowerCase();
 
-    return icons.filter((icon) => matchesSearch(icon, search));
-  }, [icons, query]);
+    return icons.filter((icon) => {
+      if (!matchesSearch(icon, search)) {
+        return false;
+      }
+
+      if (
+        icon.provider === "font-awesome" &&
+        fontAwesomeStyle !== "all" &&
+        icon.style !== fontAwesomeStyle
+      ) {
+        return false;
+      }
+
+      if (
+        icon.provider === "devicons" &&
+        deviconVariant !== "all" &&
+        !icon.variants.includes(deviconVariant)
+      ) {
+        return false;
+      }
+
+      if (
+        icon.provider === "simple-icons" &&
+        simpleIconCategory !== "all" &&
+        !icon.categories.includes(simpleIconCategory)
+      ) {
+        return false;
+      }
+
+      return true;
+    });
+  }, [icons, query, fontAwesomeStyle, deviconVariant, simpleIconCategory]);
 
   if (error) {
     return (
@@ -251,13 +328,63 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
           <h2>{icons.length.toLocaleString()} icons</h2>
         </div>
 
-        <input
-          type="search"
-          value={query}
-          placeholder="Search icons…"
-          aria-label="Search icons"
-          onChange={(event) => setQuery(event.target.value)}
-        />
+        <div className="browser-controls">
+          <input
+            type="search"
+            value={query}
+            placeholder="Search icons…"
+            aria-label="Search icons"
+            onChange={(event) => setQuery(event.target.value)}
+          />
+
+          {provider === "font-awesome" && (
+            <select
+              value={fontAwesomeStyle}
+              aria-label="Filter by Font Awesome style"
+              onChange={(event) => setFontAwesomeStyle(event.target.value)}
+            >
+              <option value="all">All styles</option>
+
+              {fontAwesomeStyles.map((style) => (
+                <option value={style} key={style}>
+                  {style}
+                </option>
+              ))}
+            </select>
+          )}
+
+          {provider === "devicons" && (
+            <select
+              value={deviconVariant}
+              aria-label="Filter by Devicon variant"
+              onChange={(event) => setDeviconVariant(event.target.value)}
+            >
+              <option value="all">All variants</option>
+
+              {deviconVariants.map((variant) => (
+                <option value={variant} key={variant}>
+                  {variant}
+                </option>
+              ))}
+            </select>
+          )}
+
+          {provider === "simple-icons" && simpleIconCategories.length > 0 && (
+            <select
+              value={simpleIconCategory}
+              aria-label="Filter by category"
+              onChange={(event) => setSimpleIconCategory(event.target.value)}
+            >
+              <option value="all">All categories</option>
+
+              {simpleIconCategories.map((category) => (
+                <option value={category} key={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+          )}
+        </div>
       </div>
 
       <p className="result-count">

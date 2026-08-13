@@ -270,6 +270,33 @@ a:hover {
   margin-top: 8px;
 }
 
+.browser-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.browser-controls select {
+  min-width: 150px;
+  padding: 15px 40px 15px 16px;
+
+  border: 1px solid #2a3240;
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #0c1017;
+  color: #f7f8fa;
+
+  font: inherit;
+  cursor: pointer;
+}
+
+.browser-controls select:focus {
+  border-color: #718ec9;
+}
+
 .browser-toolbar input {
   width: min(420px, 100%);
   padding: 15px 18px;
@@ -663,6 +690,16 @@ a:hover {
   }
 
   .browser-toolbar input {
+    width: 100%;
+  }
+
+  .browser-controls {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .browser-controls select {
     width: 100%;
   }
 }
