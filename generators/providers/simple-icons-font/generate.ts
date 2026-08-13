@@ -1,4 +1,5 @@
 import { fetchJson } from "../../core/http";
+import { writeAssetManifest } from "../../core/asset-manifest";
 import { mirrorNpmAssets } from "../../core/npm-assets";
 
 interface PackageJson {
@@ -6,6 +7,7 @@ interface PackageJson {
 }
 
 const PACKAGE_NAME = "simple-icons-font";
+const PROVIDER = "simple-icons-font";
 
 export async function generateSimpleIconsFont() {
   const pkg = await fetchJson<PackageJson>(
@@ -13,7 +15,7 @@ export async function generateSimpleIconsFont() {
   );
 
   const assets = await mirrorNpmAssets({
-    provider: "simple-icons-font",
+    provider: PROVIDER,
     packageName: PACKAGE_NAME,
     version: pkg.version,
 
@@ -21,6 +23,8 @@ export async function generateSimpleIconsFont() {
       return path.startsWith("/font/");
     },
   });
+
+  await writeAssetManifest(PROVIDER, pkg.version, assets);
 
   console.log(
     `Mirrored Simple Icons Font ${pkg.version}: ${assets.length} files`,

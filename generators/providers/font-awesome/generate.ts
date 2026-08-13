@@ -3,6 +3,7 @@ import { dirname } from "node:path";
 import { mkdir } from "node:fs/promises";
 import { writePublicProvider } from "../../core/public-output";
 import { mirrorNpmAssets } from "../../core/npm-assets";
+import { writeAssetManifest } from "../../core/asset-manifest";
 import { loadFontAwesomeSource } from "./source";
 import { normalizeFontAwesome } from "./normalize";
 
@@ -48,6 +49,8 @@ export async function generateFontAwesome() {
       return path.startsWith("/css/") || path.startsWith("/webfonts/");
     },
   });
+
+  await writeAssetManifest("font-awesome", source.version, assets);
 
   console.log(`Mirrored Font Awesome assets: ${assets.length} files`);
 }

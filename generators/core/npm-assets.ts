@@ -42,5 +42,5 @@ export async function mirrorNpmAssets({
     }
   }
 
-  return files.map((file) => file.name);
+  return files.map((file) => file.name.replace(/^\/+/, ""));
 }

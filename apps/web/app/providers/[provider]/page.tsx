@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import ProviderBrowser from "./provider-browser";
-import ProviderAssets from "./provider-assets";
 
 const providers = {
   "font-awesome": {
@@ -63,7 +62,24 @@ export default async function ProviderPage({ params }: PageProps) {
         </pre>
       </section>
 
-      <ProviderAssets provider={providerName} />
+      <a
+        className="provider-assets-link"
+        href={
+          provider === "simple-icons"
+            ? "/assets/simple-icons-font"
+            : `/assets/${provider}`
+        }
+      >
+        <div>
+          <span className="section-kicker">CDN Assets</span>
+
+          <h2>Stylesheets &amp; fonts</h2>
+
+          <p>Browse mirrored CSS, font files, and versioned CDN URLs.</p>
+        </div>
+
+        <span className="provider-assets-arrow">→</span>
+      </a>
 
       <ProviderBrowser provider={providerName} />
     </main>

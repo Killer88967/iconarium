@@ -1,0 +1,24 @@
+{
+  "provider": "simple-icons-font",
+  "version": "16.28.0",
+  "assets": {
+    "css": ["font/simple-icons.css", "font/simple-icons.min.css"],
+    "fonts": [
+      "font/SimpleIcons-Fit.eot",
+      "font/SimpleIcons-Fit.otf",
+      "font/SimpleIcons-Fit.ttf",
+      "font/SimpleIcons-Fit.woff",
+      "font/SimpleIcons-Fit.woff2",
+      "font/SimpleIcons.eot",
+      "font/SimpleIcons.otf",
+      "font/SimpleIcons.ttf",
+      "font/SimpleIcons.woff",
+      "font/SimpleIcons.woff2"
+    ],
+    "other": [
+      "font/SimpleIcons-Fit.svg",
+      "font/simple-icons.json",
+      "font/simple-icons.min.json"
+    ]
+  }
+}

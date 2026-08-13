@@ -1,0 +1,9 @@
+{
+  "provider": "devicons",
+  "version": "2.17.0",
+  "assets": {
+    "css": ["devicon.min.css"],
+    "fonts": ["fonts/devicon.eot", "fonts/devicon.ttf", "fonts/devicon.woff"],
+    "other": ["fonts/devicon.svg"]
+  }
+}

@@ -2,6 +2,7 @@ import { writeFile, mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
 import { writePublicProvider } from "../../core/public-output";
 import { mirrorNpmAssets } from "../../core/npm-assets";
+import { writeAssetManifest } from "../../core/asset-manifest";
 import { loadDeviconsSource } from "./source";
 import { normalizeDevicons } from "./normalize";
 
@@ -46,6 +47,8 @@ export async function generateDevicons() {
       );
     },
   });
+
+  await writeAssetManifest("devicons", source.version, assets);
 
   console.log(`Mirrored Devicon assets: ${assets.length} files`);
 }
