@@ -67,6 +67,20 @@ const config: NextConfig = {
             key: "Access-Control-Allow-Origin",
             value: "*",
           },
+          {
+            key: "Content-Type",
+            value: "application/typescript; charset=utf-8",
+          },
+        ],
+      },
+
+      {
+        source: "/packages/:provider/latest/index.d.ts",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=300, s-maxage=300",
+          },
         ],
       },
     ];
