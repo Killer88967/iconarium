@@ -144,12 +144,20 @@ function LargeIconPreview({ icon, version }: { icon: Icon; version: string }) {
   }
 
   if (icon.provider === "simple-icons") {
-    src = `https://cdn.jsdelivr.net/npm/simple-icons@${version}/icons/${icon.name}.svg`;
+    src = `https://cdn.simpleicons.org/${encodeURIComponent(icon.name)}/${icon.hex}`;
   }
 
   return (
     <div className="large-icon-preview">
-      {src ? <img src={src} alt={`${icon.label} icon`} /> : <span>?</span>}
+      {src ? (
+        <img
+          src={src}
+          alt={`${icon.label} icon`}
+          className={`icon-preview-image ${icon.provider}`}
+        />
+      ) : (
+        <span>?</span>
+      )}
     </div>
   );
 }

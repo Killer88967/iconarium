@@ -141,12 +141,21 @@ function IconPreview({ icon, version }: { icon: Icon; version: string }) {
   }
 
   if (icon.provider === "simple-icons") {
-    src = `https://cdn.jsdelivr.net/npm/simple-icons@${version}/icons/${icon.name}.svg`;
+    src = `https://cdn.simpleicons.org/${encodeURIComponent(icon.name)}/${icon.hex}`;
   }
 
   return (
     <div className="icon-preview">
-      {src ? <img src={src} alt="" loading="lazy" /> : <span>?</span>}
+      {src ? (
+        <img
+          src={src}
+          alt=""
+          loading="lazy"
+          className={`icon-preview-image ${icon.provider}`}
+        />
+      ) : (
+        <span>?</span>
+      )}
     </div>
   );
 }

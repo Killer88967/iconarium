@@ -576,6 +576,39 @@ a:hover {
   flex: 1;
 }
 
+.icon-preview-image {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.large-icon-image {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+}
+
+/* Font Awesome SVGs are generally monochrome black. */
+.font-awesome {
+  filter: brightness(0) invert(1);
+}
+
+/*
+ * Devicons may already contain actual colors.
+ * Leave them untouched.
+ */
+.devicons {
+  filter: none;
+}
+
+/*
+ * Simple Icons should ideally be served using their known brand hex
+ * in the URL, so no filter is needed here either.
+ */
+.simple-icons {
+  filter: none;
+}
+
 @media (max-width: 550px) {
   .large-icon-preview {
     width: 96px;
