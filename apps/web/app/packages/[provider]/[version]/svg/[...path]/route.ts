@@ -141,26 +141,59 @@ async function getSimpleIconBrandColor(
   }
 }
 
-function applySvgColor(svg: string, color: string) {
+function applySvgColor(svg: string, color: string, force = false) {
+  let result = svg;
+
   /*
-   * Setting fill on the root SVG works naturally for
-   * monochrome SVGs whose paths inherit their fill.
-   *
-   * SVGs that explicitly define their own child fills,
-   * such as many colored Devicons, keep those colors.
+   * Replace currentColor references.
    */
-  return svg.replace(/<svg\b([^>]*)>/i, (match, attributes: string) => {
-    if (/\sfill\s*=/i.test(attributes)) {
-      const updated = attributes.replace(
+  result = result.replace(/fill=(["'])currentColor\1/gi, `fill="${color}"`);
+
+  result = result.replace(/color=(["'])currentColor\1/gi, `color="${color}"`);
+
+  /*
+   * If explicitly forcing a color, replace
+   * literal fill values on child elements too.
+   *
+   * This is useful for Devicons where paths often
+   * contain fill="#fff", fill="#000", etc.
+   */
+  if (force) {
+    result = result.replace(
+      /fill=(["'])(?!none\b)[^"']+\1/gi,
+      `fill="${color}"`,
+    );
+  }
+
+  /*
+   * Set root fill + color as a fallback for
+   * inherited monochrome SVGs.
+   */
+  result = result.replace(/<svg\b([^>]*)>/i, (_match, attributes: string) => {
+    let updated = attributes;
+
+    if (/\sfill\s*=/i.test(updated)) {
+      updated = updated.replace(
         /\sfill\s*=\s*["'][^"']*["']/i,
         ` fill="${color}"`,
       );
-
-      return `<svg${updated}>`;
+    } else {
+      updated += ` fill="${color}"`;
     }
 
-    return `<svg${attributes} fill="${color}">`;
+    if (/\scolor\s*=/i.test(updated)) {
+      updated = updated.replace(
+        /\scolor\s*=\s*["'][^"']*["']/i,
+        ` color="${color}"`,
+      );
+    } else {
+      updated += ` color="${color}"`;
+    }
+
+    return `<svg${updated}>`;
   });
+
+  return result;
 }
 
 export async function GET(request: NextRequest, context: RouteContext) {
@@ -239,7 +272,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
       }
     }
 
-    svg = applySvgColor(svg, color);
+    svg = applySvgColor(svg, color, provider === "devicons");
   }
 
   const headers = new Headers();
