@@ -1,0 +1,17 @@
+{
+  "name": "@icon-meta/font-awesome",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./metadata": "./src/metadata/index.ts",
+    "./types": "./src/types/index.ts",
+    "./functions": "./src/functions/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@icon-meta/core": "workspace:*"
+  }
+}
