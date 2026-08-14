@@ -12,6 +12,9 @@
     "generate:devicons": "tsx generators/providers/devicons/generate.ts",
     "generate:simple-icons": "tsx generators/providers/simple-icons/generate.ts",
     "generate:octicons": "tsx generators/providers/octicons/generate.ts",
+    "generate:used": "tsx generators/web/generate-used-octicons.ts",
+    "generate:used:dev": "tsx watch --clear-screen=false --include \"apps/web/**/*.tsx\" generators/web/generate-used-octicons.ts",
+    "format:used": "prettier -w ./apps/web/generated/",
     "typecheck": "pnpm -r --if-present typecheck",
     "clean": "node scripts/clean.mjs"
   },

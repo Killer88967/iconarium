@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Octicon from "@/components/octicon";
 import type { ProviderId } from "@/lib/providers";
 
 interface ProviderInfo {
@@ -202,17 +203,11 @@ function IconPreview({ icon, version }: { icon: Icon; version: string }) {
 
 export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
   const [metadata, setMetadata] = useState<ProviderMetadata | null>(null);
-
   const [error, setError] = useState<string | null>(null);
-
   const [query, setQuery] = useState("");
-
   const [fontAwesomeStyle, setFontAwesomeStyle] = useState("all");
-
   const [deviconVariant, setDeviconVariant] = useState("all");
-
   const [simpleIconCategory, setSimpleIconCategory] = useState("all");
-
   const [octiconSize, setOcticonSize] = useState("all");
 
   useEffect(() => {
@@ -395,24 +390,34 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
 
   return (
     <section className="icon-browser">
-      <div className="browser-toolbar">
+      <div className="browser-header">
         <div>
           <span className="section-kicker">
-            {metadata.providerInfo.version}
+            Version {metadata.providerInfo.version}
           </span>
 
-          <h2>{icons.length.toLocaleString()} icons</h2>
+          <h2>{metadata.providerInfo.name}</h2>
         </div>
 
-        <div className="browser-controls">
+        <span className="browser-count-badge">
+          {icons.length.toLocaleString()} icons
+        </span>
+      </div>
+
+      <div className="browser-toolbar">
+        <div className="browser-search">
+          <Octicon name="search" size={16} />
+
           <input
             type="search"
             value={query}
-            placeholder="Search icons…"
+            placeholder={`Search ${metadata.providerInfo.name}…`}
             aria-label="Search icons"
             onChange={(event) => setQuery(event.target.value)}
           />
+        </div>
 
+        <div className="browser-controls">
           {provider === "font-awesome" && (
             <select
               value={fontAwesomeStyle}
@@ -479,10 +484,18 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
         </div>
       </div>
 
-      <p className="result-count">
-        Showing {filteredIcons.length.toLocaleString()} of{" "}
-        {icons.length.toLocaleString()}
-      </p>
+      <div className="browser-results-bar">
+        <span>
+          {filteredIcons.length.toLocaleString()} result
+          {filteredIcons.length === 1 ? "" : "s"}
+        </span>
+
+        {query && (
+          <span>
+            Matching <code>{query}</code>
+          </span>
+        )}
+      </div>
 
       <div className="icon-grid">
         {filteredIcons.map((icon) => (
@@ -491,25 +504,23 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
             key={`${icon.provider}-${"style" in icon ? icon.style : ""}-${icon.name}`}
             href={`/providers/${provider}/${encodeURIComponent(icon.name)}`}
           >
-            <IconPreview icon={icon} version={metadata.providerInfo.version} />
-
-            <div className="icon-card-heading">
-              <strong>{icon.label}</strong>
-
-              <span>{icon.name}</span>
+            <div className="icon-card-preview">
+              <IconPreview
+                icon={icon}
+                version={metadata.providerInfo.version}
+              />
             </div>
 
-            <div className="icon-card-details">
-              <IconDetails icon={icon} />
-            </div>
-
-            {icon.tags.length > 0 && (
-              <div className="tag-list">
-                {icon.tags.slice(0, 4).map((tag) => (
-                  <span key={tag}>{tag}</span>
-                ))}
+            <div className="icon-card-content">
+              <div className="icon-card-heading">
+                <strong>{icon.label}</strong>
+                <code>{icon.name}</code>
               </div>
-            )}
+
+              <div className="icon-card-details">
+                <IconDetails icon={icon} />
+              </div>
+            </div>
           </a>
         ))}
       </div>
