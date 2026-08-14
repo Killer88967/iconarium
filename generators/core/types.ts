@@ -31,6 +31,11 @@ export interface SimpleIconNormalized extends NormalizedBase {
   license: { type: string; url?: string } | null;
 }
 
+export interface OcticonNormalized extends NormalizedBase {
+  provider: "octicons";
+  sizes: number[];
+}
+
 export interface SourceResult<T> {
   version: string;
   source: string;

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@11.21.0+sha512.521705bce689924eac72f5a3587122f362689ef6571e55ba80076fd637c11132ecffada26fad4ea79c485bfddbfd3d5a2a5b05805a77e893de71ec8a6cca3bb1",
   "scripts": {
     "dev": "pnpm --filter @iconarium/web dev",
     "build": "pnpm generate && pnpm -r --if-present build",
@@ -11,6 +11,7 @@
     "generate:font-awesome": "tsx generators/providers/font-awesome/generate.ts",
     "generate:devicons": "tsx generators/providers/devicons/generate.ts",
     "generate:simple-icons": "tsx generators/providers/simple-icons/generate.ts",
+    "generate:octicons": "tsx generators/providers/octicons/generate.ts",
     "typecheck": "pnpm -r --if-present typecheck",
     "clean": "node scripts/clean.mjs"
   },
