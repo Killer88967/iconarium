@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-type Provider = "font-awesome" | "devicons" | "simple-icons";
+type Provider = "font-awesome" | "devicons" | "simple-icons" | "octicons";
 
 interface ProviderInfo {
   id: Provider;
@@ -47,7 +47,12 @@ interface SimpleIcon extends BaseIcon {
   } | null;
 }
 
-type Icon = FontAwesomeIcon | DeviconIcon | SimpleIcon;
+interface OcticonIcon extends BaseIcon {
+  provider: "octicons";
+  sizes: number[];
+}
+
+type Icon = FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon;
 
 type FlatIcons = Record<string, Icon>;
 
@@ -55,7 +60,6 @@ type FontAwesomeIcons = Record<string, Record<string, FontAwesomeIcon>>;
 
 interface ProviderMetadata {
   providerInfo: ProviderInfo;
-
   icons: FlatIcons | FontAwesomeIcons;
 }
 
@@ -80,6 +84,14 @@ function findIcon(
   }
 
   return null;
+}
+
+function getPreferredOcticonSize(icon: OcticonIcon) {
+  return icon.sizes.includes(24)
+    ? 24
+    : icon.sizes.includes(16)
+      ? 16
+      : icon.sizes[0];
 }
 
 function makeUsage(icon: Icon, version: string) {
@@ -108,6 +120,20 @@ const icon = getIcon("${icon.name}", "${variant}");`,
       pinned: `import { getIcon } from "${base}/devicons/${version}";
 
 const icon = getIcon("${icon.name}", "${variant}");`,
+    };
+  }
+
+  if (icon.provider === "octicons") {
+    const size = getPreferredOcticonSize(icon);
+
+    return {
+      latest: `import { getIcon } from "${base}/octicons/latest";
+
+const icon = getIcon("${icon.name}", ${size});`,
+
+      pinned: `import { getIcon } from "${base}/octicons/${version}";
+
+const icon = getIcon("${icon.name}", ${size});`,
     };
   }
 
@@ -146,6 +172,14 @@ function LargeIconPreview({ icon, version }: { icon: Icon; version: string }) {
 
   if (icon.provider === "simple-icons") {
     src = `/packages/simple-icons/${version}/svg/${icon.name}.svg`;
+  }
+
+  if (icon.provider === "octicons") {
+    const size = getPreferredOcticonSize(icon);
+
+    if (size) {
+      src = `/packages/octicons/${version}/svg/${icon.name}/${size}.svg`;
+    }
   }
 
   return (
@@ -281,7 +315,23 @@ export default function IconDetails({ provider, iconName }: IconDetailsProps) {
         )}
 
         {icon.provider === "devicons" && (
-          <Metadata label="Variants" value={icon.variants.join(", ")} />
+          <>
+            <Metadata label="Variants" value={icon.variants.join(", ")} />
+
+            <Metadata
+              label="SVG Variants"
+              value={
+                icon.svgVariants.length ? icon.svgVariants.join(", ") : "—"
+              }
+            />
+
+            <Metadata
+              label="Font Variants"
+              value={
+                icon.fontVariants.length ? icon.fontVariants.join(", ") : "—"
+              }
+            />
+          </>
         )}
 
         {icon.provider === "simple-icons" && (
@@ -292,6 +342,17 @@ export default function IconDetails({ provider, iconName }: IconDetailsProps) {
 
             <Metadata label="License" value={icon.license?.type ?? "—"} />
           </>
+        )}
+
+        {icon.provider === "octicons" && (
+          <Metadata
+            label="Sizes"
+            value={
+              icon.sizes.length
+                ? icon.sizes.map((size) => `${size}px`).join(", ")
+                : "—"
+            }
+          />
         )}
 
         <Metadata

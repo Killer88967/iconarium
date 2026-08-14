@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-type Provider = "font-awesome" | "devicons" | "simple-icons";
+type Provider = "font-awesome" | "devicons" | "simple-icons" | "octicons";
 
 interface ProviderInfo {
   id: Provider;
@@ -47,7 +47,12 @@ interface SimpleIcon extends BaseIcon {
   } | null;
 }
 
-type Icon = FontAwesomeIcon | DeviconIcon | SimpleIcon;
+interface OcticonIcon extends BaseIcon {
+  provider: "octicons";
+  sizes: number[];
+}
+
+type Icon = FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon;
 
 type FlatIcons = Record<string, Icon>;
 
@@ -55,7 +60,6 @@ type FontAwesomeIcons = Record<string, Record<string, FontAwesomeIcon>>;
 
 interface ProviderMetadata {
   providerInfo: ProviderInfo;
-
   icons: FlatIcons | FontAwesomeIcons;
 }
 
@@ -115,10 +119,26 @@ function IconDetails({ icon }: { icon: Icon }) {
     );
   }
 
+  if (icon.provider === "simple-icons") {
+    return (
+      <>
+        <span>#{icon.hex}</span>
+        <code>{icon.name}</code>
+      </>
+    );
+  }
+
   return (
     <>
-      <span>#{icon.hex}</span>
-      <code>{icon.name}</code>
+      <span>
+        {icon.sizes.length} {icon.sizes.length === 1 ? "size" : "sizes"}
+      </span>
+
+      <code>
+        {icon.sizes.length > 0
+          ? icon.sizes.map((size) => `${size}px`).join(", ")
+          : "—"}
+      </code>
     </>
   );
 }
@@ -127,7 +147,9 @@ function IconPreview({ icon, version }: { icon: Icon; version: string }) {
   let src: string | null = null;
 
   if (icon.provider === "font-awesome") {
-    src = `/packages/font-awesome/${version}/svg/${icon.style}/${icon.name}.svg`;
+    src =
+      `/packages/font-awesome/${version}/svg/` +
+      `${icon.style}/${icon.name}.svg`;
   }
 
   if (icon.provider === "devicons") {
@@ -137,12 +159,25 @@ function IconPreview({ icon, version }: { icon: Icon; version: string }) {
       svgVariants.find((value) => value.includes("original")) ?? svgVariants[0];
 
     if (variant) {
-      src = `/packages/devicons/${version}/svg/${icon.name}/${variant}.svg`;
+      src =
+        `/packages/devicons/${version}/svg/` + `${icon.name}/${variant}.svg`;
     }
   }
 
   if (icon.provider === "simple-icons") {
-    src = `/packages/simple-icons/${version}/svg/${icon.name}.svg`;
+    src = `/packages/simple-icons/${version}/svg/` + `${icon.name}.svg`;
+  }
+
+  if (icon.provider === "octicons") {
+    const size = icon.sizes.includes(24)
+      ? 24
+      : icon.sizes.includes(16)
+        ? 16
+        : icon.sizes[0];
+
+    if (size) {
+      src = `/packages/octicons/${version}/svg/` + `${icon.name}/${size}.svg`;
+    }
   }
 
   return (
@@ -163,11 +198,18 @@ function IconPreview({ icon, version }: { icon: Icon; version: string }) {
 
 export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
   const [metadata, setMetadata] = useState<ProviderMetadata | null>(null);
+
   const [error, setError] = useState<string | null>(null);
+
   const [query, setQuery] = useState("");
+
   const [fontAwesomeStyle, setFontAwesomeStyle] = useState("all");
+
   const [deviconVariant, setDeviconVariant] = useState("all");
+
   const [simpleIconCategory, setSimpleIconCategory] = useState("all");
+
+  const [octiconSize, setOcticonSize] = useState("all");
 
   useEffect(() => {
     const controller = new AbortController();
@@ -262,6 +304,20 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
     ).sort();
   }, [icons, provider]);
 
+  const octiconSizes = useMemo(() => {
+    if (provider !== "octicons") {
+      return [];
+    }
+
+    return Array.from(
+      new Set(
+        icons
+          .filter((icon): icon is OcticonIcon => icon.provider === "octicons")
+          .flatMap((icon) => icon.sizes),
+      ),
+    ).sort((a, b) => a - b);
+  }, [icons, provider]);
+
   const filteredIcons = useMemo(() => {
     const search = query.trim().toLowerCase();
 
@@ -294,9 +350,24 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
         return false;
       }
 
+      if (
+        icon.provider === "octicons" &&
+        octiconSize !== "all" &&
+        !icon.sizes.includes(Number(octiconSize))
+      ) {
+        return false;
+      }
+
       return true;
     });
-  }, [icons, query, fontAwesomeStyle, deviconVariant, simpleIconCategory]);
+  }, [
+    icons,
+    query,
+    fontAwesomeStyle,
+    deviconVariant,
+    simpleIconCategory,
+    octiconSize,
+  ]);
 
   if (error) {
     return (
@@ -381,6 +452,22 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
               {simpleIconCategories.map((category) => (
                 <option value={category} key={category}>
                   {category}
+                </option>
+              ))}
+            </select>
+          )}
+
+          {provider === "octicons" && octiconSizes.length > 0 && (
+            <select
+              value={octiconSize}
+              aria-label="Filter by Octicon size"
+              onChange={(event) => setOcticonSize(event.target.value)}
+            >
+              <option value="all">All sizes</option>
+
+              {octiconSizes.map((size) => (
+                <option value={size} key={size}>
+                  {size}px
                 </option>
               ))}
             </select>

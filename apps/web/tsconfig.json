@@ -6,12 +6,17 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
   },
   "include": [
     "next-env.d.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
+    "lib/**/*.ts",
+    "lib/**/*.tsx",
     "proxy.ts",
     "next.config.ts",
     ".next/types/**/*.ts"

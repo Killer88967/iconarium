@@ -10,7 +10,12 @@ interface RouteContext {
   }>;
 }
 
-const PROVIDERS = ["font-awesome", "devicons", "simple-icons"] as const;
+const PROVIDERS = [
+  "font-awesome",
+  "devicons",
+  "simple-icons",
+  "octicons",
+] as const;
 
 type Provider = (typeof PROVIDERS)[number];
 
@@ -84,6 +89,37 @@ function upstreamUrl(provider: Provider, version: string, path: string[]) {
       "https://cdn.jsdelivr.net/npm/" +
       `devicon@${packageVersion}` +
       `/icons/${name}/${name}-${variant}.svg`
+    );
+  }
+
+  if (provider === "octicons") {
+    /*
+     * Iconarium:
+     * /svg/mark-github/24.svg
+     *
+     * Upstream:
+     * /icons/mark-github-24.svg
+     */
+    if (path.length !== 2) {
+      return null;
+    }
+
+    const [name, sizeFile] = path;
+
+    const match = sizeFile.match(/^(\d+)\.svg$/i);
+
+    if (!match) {
+      return null;
+    }
+
+    const size = match[1];
+
+    const ref = version === "latest" ? "main" : `v${version}`;
+
+    return (
+      "https://raw.githubusercontent.com/" +
+      `primer/octicons/${ref}` +
+      `/icons/${name}-${size}.svg`
     );
   }
 

@@ -1,24 +1,7 @@
 import { notFound } from "next/navigation";
 import ProviderBrowser from "./provider-browser";
 
-const providers = {
-  "font-awesome": {
-    name: "Font Awesome",
-    description: "Browse Font Awesome Free brand, solid, and regular icons.",
-  },
-
-  devicons: {
-    name: "Devicons",
-    description: "Browse development icons and all available variants.",
-  },
-
-  "simple-icons": {
-    name: "Simple Icons",
-    description: "Browse thousands of brand icons and their metadata.",
-  },
-} as const;
-
-type ProviderName = keyof typeof providers;
+import { getProvider, isProviderId, providerIds } from "@/lib/providers";
 
 interface PageProps {
   params: Promise<{
@@ -27,7 +10,7 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return Object.keys(providers).map((provider) => ({
+  return providerIds.map((provider) => ({
     provider,
   }));
 }
@@ -35,12 +18,15 @@ export function generateStaticParams() {
 export default async function ProviderPage({ params }: PageProps) {
   const { provider } = await params;
 
-  if (!(provider in providers)) {
+  if (!isProviderId(provider)) {
     notFound();
   }
 
-  const providerName = provider as ProviderName;
-  const info = providers[providerName];
+  const info = getProvider(provider);
+
+  if (!info) {
+    notFound();
+  }
 
   return (
     <main>
@@ -62,26 +48,24 @@ export default async function ProviderPage({ params }: PageProps) {
         </pre>
       </section>
 
-      <a
-        className="provider-assets-link"
-        href={
-          provider === "simple-icons"
-            ? "/assets/simple-icons-font"
-            : `/assets/${provider}`
-        }
-      >
-        <div>
-          <span className="section-kicker">CDN Assets</span>
+      {info.hasAssets && info.assetsProvider && (
+        <a
+          className="provider-assets-link"
+          href={`/assets/${info.assetsProvider}`}
+        >
+          <div>
+            <span className="section-kicker">CDN Assets</span>
 
-          <h2>Stylesheets &amp; fonts</h2>
+            <h2>Stylesheets &amp; package files</h2>
 
-          <p>Browse mirrored CSS, font files, and versioned CDN URLs.</p>
-        </div>
+            <p>Browse mirrored package assets and versioned CDN URLs.</p>
+          </div>
 
-        <span className="provider-assets-arrow">→</span>
-      </a>
+          <span className="provider-assets-arrow">→</span>
+        </a>
+      )}
 
-      <ProviderBrowser provider={providerName} />
+      <ProviderBrowser provider={provider} />
     </main>
   );
 }

@@ -1,15 +1,13 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
-
 import { writePublicProvider } from "../../core/public-output";
-
+import { mirrorNpmAssets } from "../../core/npm-assets";
+import { writeAssetManifest } from "../../core/asset-manifest";
 import { loadOcticonsSource } from "./source";
-
 import { normalizeOcticons } from "./normalize";
 
 export async function generateOcticons() {
   const source = await loadOcticonsSource();
-
   const icons = normalizeOcticons(source.data);
 
   const providerInfo = {
@@ -67,6 +65,20 @@ export async function generateOcticons() {
     esmRuntime: runtime,
     declarations,
   });
+
+  const assets = await mirrorNpmAssets({
+    provider: "octicons",
+    packageName: "@primer/octicons",
+    version: source.version,
+
+    include: (path) =>
+      path === "/index.js" ||
+      path === "/index.scss" ||
+      path === "/build/build.css" ||
+      path === "/build/data.json",
+  });
+
+  await writeAssetManifest("octicons", source.version, assets);
 
   console.log(
     `Generated Octicons ${source.version}: ${Object.keys(icons).length} icons`,
