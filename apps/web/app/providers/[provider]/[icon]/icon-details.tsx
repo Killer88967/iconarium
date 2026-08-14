@@ -171,7 +171,7 @@ function LargeIconPreview({ icon, version }: { icon: Icon; version: string }) {
   }
 
   if (icon.provider === "simple-icons") {
-    src = `/packages/simple-icons/${version}/svg/${icon.name}.svg`;
+    src = `/packages/simple-icons/${version}/svg/${icon.name}.svg?color=${icon.hex}`;
   }
 
   if (icon.provider === "octicons") {
@@ -188,7 +188,7 @@ function LargeIconPreview({ icon, version }: { icon: Icon; version: string }) {
         <img
           src={src}
           alt={`${icon.label} icon`}
-          className={`icon-preview-image ${icon.provider}`}
+          className={`large-icon-image ${icon.provider}`}
         />
       ) : (
         <span>?</span>
