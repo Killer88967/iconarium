@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { providerIds, providers, type ProviderId } from "@/lib/providers";
+import Octicon from "@/components/octicon";
 
 interface BaseIcon {
   name: string;
@@ -143,11 +144,7 @@ function SearchIconPreview({ icon }: { icon: Icon }) {
           src={src}
           alt=""
           loading="lazy"
-          className={
-            icon.provider === "font-awesome"
-              ? "global-search-icon-image font-awesome"
-              : "global-search-icon-image"
-          }
+          className={`global-search-icon-image ${icon.provider}`}
         />
       ) : (
         <span>?</span>
@@ -235,49 +232,74 @@ export default function GlobalSearch() {
 
   return (
     <section className="global-search">
-      <div className="global-search-controls">
-        <input
-          type="search"
-          value={query}
-          placeholder="Search GitHub, TypeScript, Facebook..."
-          autoFocus
-          onChange={(event) => setQuery(event.target.value)}
-        />
+      <div className="global-search-toolbar">
+        <div className="global-search-input">
+          <Octicon name="search" size={16} />
+
+          <input
+            type="search"
+            value={query}
+            placeholder="Search GitHub, TypeScript, Facebook..."
+            autoFocus
+            aria-label="Search icons"
+            onChange={(event) => setQuery(event.target.value)}
+          />
+        </div>
 
         <select
           value={provider}
+          aria-label="Filter by provider"
           onChange={(event) =>
             setProvider(event.target.value as ProviderId | "all")
           }
         >
           <option value="all">All providers</option>
-          <option value="font-awesome">Font Awesome</option>
-          <option value="devicons">Devicons</option>
-          <option value="simple-icons">Simple Icons</option>
-          <option value="octicons">Octicons</option>
+
+          {providerIds.map((providerId) => (
+            <option value={providerId} key={providerId}>
+              {providers[providerId].name}
+            </option>
+          ))}
         </select>
       </div>
 
-      {loading && <p>Loading icons…</p>}
+      {loading && (
+        <div className="search-placeholder">
+          <Octicon name="sync" size={16} />
+          <p>Loading icon metadata…</p>
+        </div>
+      )}
 
       {error && <div className="browser-error">{error}</div>}
 
       {!loading && !error && !query.trim() && (
         <div className="search-placeholder">
-          <p>
-            Search across {icons.length.toLocaleString()} generated icon
-            entries.
-          </p>
+          <Octicon name="search" size={16} />
+
+          <div>
+            <strong>Search Iconarium</strong>
+
+            <p>
+              Search across {icons.length.toLocaleString()} generated icon
+              entries from {providerIds.length} providers.
+            </p>
+          </div>
         </div>
       )}
 
       {query.trim() && (
         <>
-          <p className="result-count">
-            Showing {results.length.toLocaleString()} result
-            {results.length === 1 ? "" : "s"}
-            {results.length === 200 ? " (first 200)" : ""}
-          </p>
+          <div className="global-search-results-header">
+            <span>
+              {results.length.toLocaleString()} result
+              {results.length === 1 ? "" : "s"}
+              {results.length === 200 ? " · first 200" : ""}
+            </span>
+
+            <span>
+              Search: <code>{query}</code>
+            </span>
+          </div>
 
           <div className="global-search-results">
             {results.map(({ key, icon }) => (
@@ -290,13 +312,16 @@ export default function GlobalSearch() {
 
                 <div className="global-search-result-copy">
                   <strong>{icon.label}</strong>
-
                   <code>{icon.name}</code>
                 </div>
 
-                <span className="global-search-provider">
-                  {providers[icon.provider].name}
-                </span>
+                <div className="global-search-result-meta">
+                  <span className="global-search-provider">
+                    {providers[icon.provider].name}
+                  </span>
+
+                  <Octicon name="chevron-right" size={16} />
+                </div>
               </a>
             ))}
           </div>

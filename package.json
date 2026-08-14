@@ -16,7 +16,8 @@
     "generate:used:dev": "tsx watch --clear-screen=false --include \"apps/web/**/*.tsx\" generators/web/generate-used-octicons.ts",
     "format:used": "prettier -w ./apps/web/generated/",
     "typecheck": "pnpm -r --if-present typecheck",
-    "clean": "node scripts/clean.mjs"
+    "clean": "node scripts/clean.mjs",
+    "git": "git add . && git commit -m \"Update\" && git push"
   },
   "devDependencies": {
     "@types/node": "^22.15.0",
