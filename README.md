@@ -1,10 +1,10 @@
 # Iconarium
 
 [![Build](https://github.com/Killer88967/iconarium/actions/workflows/build.yml/badge.svg)](https://github.com/Killer88967/iconarium/actions/workflows/build.yml)
-[![GitHub License](https://img.shields.io/github/license/Killer88967/iconarium)](LICENSE)
+<!-- [![GitHub License](https://img.shields.io/github/license/Killer88967/iconarium)](LICENSE)
 [![GitHub Issues](https://img.shields.io/github/issues/Killer88967/iconarium)](https://github.com/Killer88967/iconarium/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/Killer88967/iconarium)](https://github.com/Killer88967/iconarium/stargazers)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/Killer88967/iconarium)](https://github.com/Killer88967/iconarium/commits/main)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/Killer88967/iconarium)](https://github.com/Killer88967/iconarium/commits/main) -->
 [![pnpm](https://img.shields.io/badge/pnpm-11.21.0-F69220?logo=pnpm&logoColor=white)](https://pnpm.io/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
