@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import type { ProviderId } from "@/lib/providers";
+import Octicon from "@/components/octicon";
 
 interface ProviderInfo {
   id: ProviderId;
@@ -414,10 +415,15 @@ function UsageBlock({ title, value }: { title: string; value: string }) {
   return (
     <div className="usage-block">
       <div className="usage-block-heading">
-        <h3>{title}</h3>
+        <div className="usage-block-title">
+          <Octicon name="code" size={16} />
+          <h3>{title}</h3>
+        </div>
 
         <button type="button" onClick={copy}>
-          {copied ? "Copied!" : "Copy"}
+          <Octicon name={copied ? "check" : "copy"} size={16} />
+
+          <span>{copied ? "Copied" : "Copy"}</span>
         </button>
       </div>
 
