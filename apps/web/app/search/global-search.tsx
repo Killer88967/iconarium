@@ -1,13 +1,12 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-
-type Provider = "font-awesome" | "devicons" | "simple-icons" | "octicons";
+import { providerIds, providers, type ProviderId } from "@/lib/providers";
 
 interface BaseIcon {
   name: string;
   label: string;
-  provider: Provider;
+  provider: ProviderId;
   aliases: string[];
   categories: string[];
   tags: string[];
@@ -42,7 +41,7 @@ interface OcticonIcon extends BaseIcon {
 type Icon = FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon;
 
 interface ProviderInfo {
-  id: Provider;
+  id: ProviderId;
   name: string;
   version: string;
 }
@@ -57,14 +56,10 @@ interface SearchIcon {
   icon: Icon;
 }
 
-const providers: Provider[] = [
-  "font-awesome",
-  "devicons",
-  "simple-icons",
-  "octicons",
-];
-
-function flattenMetadata(provider: Provider, metadata: Metadata): SearchIcon[] {
+function flattenMetadata(
+  provider: ProviderId,
+  metadata: Metadata,
+): SearchIcon[] {
   if (provider === "font-awesome") {
     const styles = metadata.icons as Record<
       string,
@@ -97,22 +92,6 @@ function matchesSearch(icon: Icon, query: string) {
   ];
 
   return values.some((value) => value.toLowerCase().includes(query));
-}
-
-function providerName(provider: Provider) {
-  switch (provider) {
-    case "font-awesome":
-      return "Font Awesome";
-
-    case "devicons":
-      return "Devicons";
-
-    case "simple-icons":
-      return "Simple Icons";
-
-    case "octicons":
-      return "Octicons";
-  }
 }
 
 function SearchIconPreview({ icon }: { icon: Icon }) {
@@ -180,7 +159,7 @@ function SearchIconPreview({ icon }: { icon: Icon }) {
 export default function GlobalSearch() {
   const [icons, setIcons] = useState<SearchIcon[]>([]);
   const [query, setQuery] = useState("");
-  const [provider, setProvider] = useState<Provider | "all">("all");
+  const [provider, setProvider] = useState<ProviderId | "all">("all");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -193,7 +172,7 @@ export default function GlobalSearch() {
         setError(null);
 
         const responses = await Promise.all(
-          providers.map(async (provider) => {
+          providerIds.map(async (provider) => {
             const response = await fetch(
               `/packages/${provider}/latest/metadata.json`,
               {
@@ -268,7 +247,7 @@ export default function GlobalSearch() {
         <select
           value={provider}
           onChange={(event) =>
-            setProvider(event.target.value as Provider | "all")
+            setProvider(event.target.value as ProviderId | "all")
           }
         >
           <option value="all">All providers</option>
@@ -316,7 +295,7 @@ export default function GlobalSearch() {
                 </div>
 
                 <span className="global-search-provider">
-                  {providerName(icon.provider)}
+                  {providers[icon.provider].name}
                 </span>
               </a>
             ))}

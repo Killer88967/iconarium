@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-
-type Provider = "font-awesome" | "devicons" | "simple-icons" | "octicons";
+import type { ProviderId } from "@/lib/providers";
 
 interface ProviderInfo {
-  id: Provider;
+  id: ProviderId;
   name: string;
   version: string;
   source: string;
@@ -14,7 +13,7 @@ interface ProviderInfo {
 interface BaseIcon {
   name: string;
   label: string;
-  provider: Provider;
+  provider: ProviderId;
   aliases: string[];
   categories: string[];
   tags: string[];
@@ -64,11 +63,11 @@ interface ProviderMetadata {
 }
 
 interface ProviderBrowserProps {
-  provider: Provider;
+  provider: ProviderId;
 }
 
 function flattenIcons(
-  provider: Provider,
+  provider: ProviderId,
   icons: ProviderMetadata["icons"],
 ): Icon[] {
   if (provider !== "font-awesome") {

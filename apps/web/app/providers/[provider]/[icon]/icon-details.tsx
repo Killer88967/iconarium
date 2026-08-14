@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-
-type Provider = "font-awesome" | "devicons" | "simple-icons" | "octicons";
+import type { ProviderId } from "@/lib/providers";
 
 interface ProviderInfo {
-  id: Provider;
+  id: ProviderId;
   name: string;
   version: string;
   source: string;
@@ -14,7 +13,7 @@ interface ProviderInfo {
 interface BaseIcon {
   name: string;
   label: string;
-  provider: Provider;
+  provider: ProviderId;
   aliases: string[];
   categories: string[];
   tags: string[];
@@ -64,12 +63,12 @@ interface ProviderMetadata {
 }
 
 interface IconDetailsProps {
-  provider: Provider;
+  provider: ProviderId;
   iconName: string;
 }
 
 function findIcon(
-  provider: Provider,
+  provider: ProviderId,
   iconName: string,
   icons: ProviderMetadata["icons"],
 ): Icon | null {
