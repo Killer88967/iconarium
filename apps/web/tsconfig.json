@@ -16,7 +16,9 @@
     "app/**/*.ts",
     "app/**/*.tsx",
     "lib/**/*.ts",
-    "lib/**/*.tsx",
+    "lib/**/*.ts",
+    "components/**/*.tsx",
+    "components/**/*.tsx",
     "proxy.ts",
     "next.config.ts",
     ".next/types/**/*.ts"

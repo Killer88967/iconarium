@@ -1,65 +1,113 @@
+import Octicon from "@/components/octicon";
 import { providerIds, providers } from "@/lib/providers";
 
 export default function Home() {
   return (
     <main>
-      <section className="hero">
-        <span className="eyebrow">JavaScript-first · TypeScript-enhanced</span>
+      <section className="home-hero">
+        <div className="home-hero-copy">
+          <span className="eyebrow">Icon metadata infrastructure</span>
 
-        <h1>Iconarium</h1>
-
-        <p className="hero-copy">
-          One predictable interface for icon ecosystems. Import metadata,
-          helpers, and typed icon catalogs directly from the web.
-        </p>
-
-        <pre className="hero-code">
-          <code>{`import { getIcon } from "https://iconarium.vercel.app/packages/font-awesome/latest";
-
-const facebook = getIcon("brands", "facebook");`}</code>
-        </pre>
-      </section>
-
-      <section>
-        <div className="section-heading">
-          <div>
-            <span className="section-kicker">Providers</span>
-
-            <h2>One API, multiple ecosystems</h2>
-          </div>
+          <h1>Iconarium</h1>
 
           <p>
-            Each provider keeps the structure that makes sense for its own icon
-            library.
+            Unified icon metadata, strongly typed helpers, browser-ready ESM,
+            SVG access, and mirrored package assets across multiple icon
+            ecosystems.
           </p>
+
+          <div className="home-actions">
+            <a className="ui-button ui-button-primary" href="/search">
+              <Octicon name="search" size={16} />
+              <span>Search icons</span>
+            </a>
+
+            <a className="ui-button" href="#providers">
+              <Octicon name="package" size={16} />
+              <span>Browse providers</span>
+            </a>
+
+            <a
+              className="ui-button"
+              href="https://github.com/Killer88967/iconarium"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Octicon name="mark-github" size={16} />
+              <span>View repository</span>
+            </a>
+          </div>
         </div>
 
-        <div className="grid">
+        <div className="quick-start">
+          <div className="panel-header">
+            <div className="panel-title">
+              <Octicon name="code" size={16} />
+              <span>Quick start</span>
+            </div>
+
+            <span className="panel-meta">Octicons</span>
+          </div>
+
+          <pre>
+            <code>{`import { getIcon } from "https://iconarium.vercel.app/packages/octicons/latest";
+
+const mark = getIcon("mark-github", 24);
+
+console.log(mark.fileName);`}</code>
+          </pre>
+        </div>
+      </section>
+
+      <section id="providers">
+        <div className="section-heading github-section-heading">
+          <div>
+            <span className="section-kicker">Providers</span>
+            <h2>Supported icon libraries</h2>
+          </div>
+
+          <span className="provider-count">{providerIds.length} providers</span>
+        </div>
+
+        <div className="provider-grid">
           {providerIds.map((providerId) => {
             const provider = providers[providerId];
 
             return (
-              <article key={provider.id}>
-                <div className="provider-heading">
-                  <span className="provider-dot" />
+              <article className="provider-panel" key={provider.id}>
+                <div className="provider-panel-header">
+                  <div className="provider-panel-title">
+                    <Octicon name="package" size={16} />
 
-                  <h3>{provider.name}</h3>
+                    <a href={`/providers/${provider.id}`}>{provider.name}</a>
+                  </div>
+
+                  <span className="status-badge">Provider</span>
                 </div>
 
-                <p>{provider.homepageDescription}</p>
+                <div className="provider-panel-body">
+                  <p>{provider.description}</p>
 
-                <pre className="provider-code">
-                  <code>{provider.example}</code>
-                </pre>
+                  <pre className="provider-code">
+                    <code>{provider.example}</code>
+                  </pre>
+                </div>
 
-                <div className="provider-links">
-                  <a href={`/providers/${provider.id}`}>Browse icons →</a>
+                <div className="provider-panel-footer">
+                  <a href={`/providers/${provider.id}`}>
+                    Browse
+                    <Octicon name="chevron-right" size={16} />
+                  </a>
 
-                  <a href={`/packages/${provider.id}/latest`}>ESM module →</a>
+                  <a href={`/packages/${provider.id}/latest`}>ESM</a>
 
                   <a href={`/packages/${provider.id}/latest/metadata.json`}>
-                    metadata.json →
+                    Metadata
                   </a>
+
+                  {provider.hasAssets && (
+                    <a href={`/assets/${provider.assetsProvider}`}>Assets</a>
+                  )}
                 </div>
               </article>
             );
@@ -67,50 +115,108 @@ const facebook = getIcon("brands", "facebook");`}</code>
         </div>
       </section>
 
-      <section className="usage">
-        <span className="section-kicker">Usage</span>
-
-        <h2>Use the version you want</h2>
-
-        <div className="usage-grid">
+      <section>
+        <div className="section-heading github-section-heading">
           <div>
-            <h3>Latest</h3>
+            <span className="section-kicker">Distribution</span>
+            <h2>Latest or version-pinned</h2>
+          </div>
+        </div>
 
-            <pre>
+        <div className="info-panel-grid">
+          <article className="info-panel">
+            <div className="panel-header">
+              <div className="panel-title">
+                <Octicon name="versions" size={16} />
+                <span>Latest</span>
+              </div>
+            </div>
+
+            <div className="panel-body">
               <code>
                 https://iconarium.vercel.app/packages/font-awesome/latest
               </code>
-            </pre>
 
-            <p>
-              Tracks the newest generated provider release and uses a short
-              cache lifetime.
-            </p>
-          </div>
+              <p>
+                Resolves to the newest provider version currently generated by
+                Iconarium.
+              </p>
+            </div>
+          </article>
 
-          <div>
-            <h3>Pinned</h3>
+          <article className="info-panel">
+            <div className="panel-header">
+              <div className="panel-title">
+                <Octicon name="repo" size={16} />
+                <span>Pinned</span>
+              </div>
+            </div>
 
-            <pre>
+            <div className="panel-body">
               <code>
                 https://iconarium.vercel.app/packages/font-awesome/7.3.1
               </code>
-            </pre>
 
-            <p>
-              Immutable versioned URLs are suitable for production builds and
-              long-term caching.
-            </p>
-          </div>
+              <p>
+                Immutable version URLs are ideal when you need reproducible
+                production imports.
+              </p>
+            </div>
+          </article>
         </div>
       </section>
 
-      <section className="footer-section">
-        <p>
-          Generated from provider metadata and served as ESM, JSON, browser
-          bundles, and TypeScript declarations.
-        </p>
+      <section>
+        <div className="section-heading github-section-heading">
+          <div>
+            <span className="section-kicker">Output</span>
+            <h2>Built for multiple use cases</h2>
+          </div>
+        </div>
+
+        <div className="info-panel-grid">
+          <article className="info-panel">
+            <div className="panel-header">
+              <div className="panel-title">
+                <Octicon name="file-code" size={16} />
+                <span>JavaScript & TypeScript</span>
+              </div>
+            </div>
+
+            <div className="panel-body">
+              <p>
+                Browser-ready ESM modules with strongly typed icon names,
+                styles, variants, sizes, and metadata.
+              </p>
+            </div>
+          </article>
+
+          <article className="info-panel">
+            <div className="panel-header">
+              <div className="panel-title">
+                <Octicon name="stack" size={16} />
+                <span>Metadata & assets</span>
+              </div>
+            </div>
+
+            <div className="panel-body">
+              <p>
+                Generated JSON metadata and mirrored upstream package assets
+                exposed through predictable versioned URLs.
+              </p>
+            </div>
+          </article>
+        </div>
       </section>
+
+      <footer className="home-footer">
+        <Octicon name="code-square" size={16} />
+
+        <p>
+          Generated from upstream provider metadata and distributed as ESM,
+          JSON, TypeScript declarations, SVG endpoints, and package assets.
+        </p>
+      </footer>
     </main>
   );
 }
