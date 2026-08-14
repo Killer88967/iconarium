@@ -1,38 +1,4 @@
-const providers = [
-  {
-    name: "Font Awesome",
-    slug: "font-awesome",
-    description:
-      "Browse brands, solid, and regular icons with style-aware autocomplete.",
-    example: `import { getIcon } from "https://iconarium.vercel.app/packages/font-awesome/latest";
-
-const facebook = getIcon("brands", "facebook");
-
-console.log(facebook.className);`,
-  },
-  {
-    name: "Devicons",
-    slug: "devicons",
-    description:
-      "Access development-focused icons with icon-aware variant autocomplete.",
-    example: `import { getIcon } from "https://iconarium.vercel.app/packages/devicons/latest";
-
-const typescript = getIcon("typescript", "original");
-
-console.log(typescript.className);`,
-  },
-  {
-    name: "Simple Icons",
-    slug: "simple-icons",
-    description:
-      "Use thousands of brand icons with strongly typed icon names and metadata.",
-    example: `import { getIcon } from "https://iconarium.vercel.app/packages/simple-icons/latest";
-
-const github = getIcon("github");
-
-console.log(github.hex);`,
-  },
-] as const;
+import { providerIds, providers } from "@/lib/providers";
 
 export default function Home() {
   return (
@@ -58,6 +24,7 @@ const facebook = getIcon("brands", "facebook");`}</code>
         <div className="section-heading">
           <div>
             <span className="section-kicker">Providers</span>
+
             <h2>One API, multiple ecosystems</h2>
           </div>
 
@@ -68,33 +35,41 @@ const facebook = getIcon("brands", "facebook");`}</code>
         </div>
 
         <div className="grid">
-          {providers.map((provider) => (
-            <article key={provider.slug}>
-              <div className="provider-heading">
-                <span className="provider-dot" />
-                <h3>{provider.name}</h3>
-              </div>
+          {providerIds.map((providerId) => {
+            const provider = providers[providerId];
 
-              <p>{provider.description}</p>
+            return (
+              <article key={provider.id}>
+                <div className="provider-heading">
+                  <span className="provider-dot" />
 
-              <pre className="provider-code">
-                <code>{provider.example}</code>
-              </pre>
+                  <h3>{provider.name}</h3>
+                </div>
 
-              <div className="provider-links">
-                <a href={`/packages/${provider.slug}/latest`}>ESM module →</a>
+                <p>{provider.homepageDescription}</p>
 
-                <a href={`/packages/${provider.slug}/latest/metadata.json`}>
-                  metadata.json →
-                </a>
-              </div>
-            </article>
-          ))}
+                <pre className="provider-code">
+                  <code>{provider.example}</code>
+                </pre>
+
+                <div className="provider-links">
+                  <a href={`/providers/${provider.id}`}>Browse icons →</a>
+
+                  <a href={`/packages/${provider.id}/latest`}>ESM module →</a>
+
+                  <a href={`/packages/${provider.id}/latest/metadata.json`}>
+                    metadata.json →
+                  </a>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
 
       <section className="usage">
         <span className="section-kicker">Usage</span>
+
         <h2>Use the version you want</h2>
 
         <div className="usage-grid">

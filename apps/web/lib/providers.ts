@@ -7,6 +7,15 @@ export const providers = {
     assetsProvider: "font-awesome",
     hasAssets: true,
     hasSvg: true,
+
+    homepageDescription:
+      "Browse brands, solid, and regular icons with style-aware autocomplete.",
+
+    example: `import { getIcon } from "https://iconarium.vercel.app/packages/font-awesome/latest";
+
+const facebook = getIcon("brands", "facebook");
+
+console.log(facebook.className);`,
   },
 
   devicons: {
@@ -17,6 +26,15 @@ export const providers = {
     assetsProvider: "devicons",
     hasAssets: true,
     hasSvg: true,
+
+    homepageDescription:
+      "Access development-focused icons with icon-aware variant autocomplete.",
+
+    example: `import { getIcon } from "https://iconarium.vercel.app/packages/devicons/latest";
+
+const typescript = getIcon("typescript", "original");
+
+console.log(typescript.className);`,
   },
 
   "simple-icons": {
@@ -27,6 +45,15 @@ export const providers = {
     assetsProvider: "simple-icons-font",
     hasAssets: true,
     hasSvg: true,
+
+    homepageDescription:
+      "Use thousands of brand icons with strongly typed icon names and metadata.",
+
+    example: `import { getIcon } from "https://iconarium.vercel.app/packages/simple-icons/latest";
+
+const github = getIcon("github");
+
+console.log(github.hex);`,
   },
 
   octicons: {
@@ -37,6 +64,15 @@ export const providers = {
     assetsProvider: "octicons",
     hasAssets: true,
     hasSvg: true,
+
+    homepageDescription:
+      "Use GitHub's icon system with icon-aware size autocomplete.",
+
+    example: `import { getIcon } from "https://iconarium.vercel.app/packages/octicons/latest";
+
+const mark = getIcon("mark-github", 24);
+
+console.log(mark.fileName);`,
   },
 } as const;
 
