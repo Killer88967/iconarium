@@ -1,4 +1,12 @@
-# Icon Meta
+# Iconarium
+
+[![Build](https://github.com/Killer88967/iconarium/actions/workflows/build.yml/badge.svg)](https://github.com/Killer88967/iconarium/actions/workflows/build.yml)
+[![GitHub License](https://img.shields.io/github/license/Killer88967/iconarium)](LICENSE)
+[![GitHub Issues](https://img.shields.io/github/issues/Killer88967/iconarium)](https://github.com/Killer88967/iconarium/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/Killer88967/iconarium)](https://github.com/Killer88967/iconarium/stargazers)
+[![GitHub Last Commit](https://img.shields.io/github/last-commit/Killer88967/iconarium)](https://github.com/Killer88967/iconarium/commits/main)
+[![pnpm](https://img.shields.io/badge/pnpm-11.21.0-F69220?logo=pnpm&logoColor=white)](https://pnpm.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
 A JavaScript-first, TypeScript-enhanced metadata layer for icon providers.
 
@@ -9,6 +17,7 @@ The project generates typed runtime maps, JSON metadata, ESM browser modules, an
 - Font Awesome Free
 - Devicons
 - Simple Icons
+- Octicons
 
 ## Why
 
@@ -24,7 +33,7 @@ getIcon("brands", "facebook");
 Plain JavaScript uses the exact same runtime API:
 
 ```js
-import { getIcon } from "https://your-domain.example/packages/font-awesome/latest/index.js";
+import { getIcon } from "https://iconarium.vercel.app/packages/font-awesome/latest";
 
 console.log(getIcon("brands", "facebook"));
 ```
@@ -32,7 +41,7 @@ console.log(getIcon("brands", "facebook"));
 Or with a classic script:
 
 ```html
-<script src="https://your-domain.example/packages/font-awesome/latest/browser.js"></script>
+<script src="https://iconarium.vercel.app/packages/font-awesome/latest/browser.js"></script>
 <script>
   console.log(IconMeta.fontAwesome.getIcon("brands", "facebook"));
 </script>
