@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "pnpm --filter @iconarium/web dev",
     "build": "pnpm generate && pnpm -r --if-present build",
-    "generate": "tsx generators/generate-all.ts",
+    "generate": "tsx generators/generate-all.ts && pnpm dlx prettier -w ./",
     "generate:font-awesome": "tsx generators/providers/font-awesome/generate.ts",
     "generate:devicons": "tsx generators/providers/devicons/generate.ts",
     "generate:simple-icons": "tsx generators/providers/simple-icons/generate.ts",

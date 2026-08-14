@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
-import AssetBrowser from "./asset-browser";
 import { providers } from "@/lib/providers";
+import Octicon from "@/components/octicon";
+import AssetBrowser from "./asset-browser";
 
 const assetProviders = {
   "font-awesome": {
@@ -53,22 +54,34 @@ export default async function AssetPage({ params }: PageProps) {
 
   return (
     <main>
-      <section className="assets-hero">
-        <a className="back-link" href="/assets">
-          ← All assets
-        </a>
+      <section className="asset-page-header">
+        <nav className="breadcrumb" aria-label="Breadcrumb">
+          <a href="/" aria-label="Home">
+            <Octicon name="home" size={16} />
+          </a>
 
-        <span className="section-kicker">CDN Assets</span>
+          <Octicon name="chevron-right" size={16} />
 
-        <h1 className="asset-page-title">{info.name}</h1>
+          <a href="/assets">Assets</a>
 
-        <p className="hero-copy">
-          Mirrored package files served directly through Iconarium.
-        </p>
+          <Octicon name="chevron-right" size={16} />
 
-        <a className="asset-provider-source-link" href={info.providerPage}>
-          Browse icons →
-        </a>
+          <span>{info.name}</span>
+        </nav>
+
+        <div className="asset-page-heading">
+          <div>
+            <span className="section-kicker">CDN Assets</span>
+            <h1>{info.name}</h1>
+
+            <p>Mirrored package files served directly through Iconarium.</p>
+          </div>
+
+          <a className="ui-button" href={info.providerPage}>
+            <Octicon name="link-external" size={16} />
+            <span>Browse icons</span>
+          </a>
+        </div>
       </section>
 
       <AssetBrowser provider={provider} />

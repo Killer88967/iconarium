@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Octicon from "@/components/octicon";
 
 type AssetProvider =
   "font-awesome" | "devicons" | "simple-icons-font" | "octicons";
@@ -26,11 +27,8 @@ const BASE = "https://iconarium.vercel.app/packages";
 
 export default function AssetBrowser({ provider }: AssetBrowserProps) {
   const [manifest, setManifest] = useState<AssetManifest | null>(null);
-
   const [error, setError] = useState<string | null>(null);
-
   const [query, setQuery] = useState("");
-
   const [group, setGroup] = useState<AssetGroup>("css");
 
   useEffect(() => {
@@ -89,7 +87,6 @@ export default function AssetBrowser({ provider }: AssetBrowserProps) {
       <section>
         <div className="browser-error">
           <strong>Could not load assets.</strong>
-
           <code>{error}</code>
         </div>
       </section>
@@ -98,7 +95,7 @@ export default function AssetBrowser({ provider }: AssetBrowserProps) {
 
   if (!manifest) {
     return (
-      <section>
+      <section className="asset-loading">
         <p>Loading assets…</p>
       </section>
     );
@@ -106,48 +103,66 @@ export default function AssetBrowser({ provider }: AssetBrowserProps) {
 
   return (
     <section className="asset-browser">
-      <div className="asset-browser-toolbar">
+      <div className="asset-browser-header">
         <div>
           <span className="section-kicker">Version</span>
-
           <h2>{manifest.version}</h2>
         </div>
 
-        <input
-          type="search"
-          placeholder="Search files…"
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-        />
+        <span className="browser-count-badge">
+          {Object.values(manifest.assets).flat().length.toLocaleString()} files
+        </span>
       </div>
 
-      <div className="asset-tabs">
-        <AssetTab
-          label="CSS"
-          count={manifest.assets.css.length}
-          active={group === "css"}
-          onClick={() => setGroup("css")}
-        />
+      <div className="asset-browser-toolbar">
+        <div className="asset-search">
+          <Octicon name="search" size={16} />
 
-        <AssetTab
-          label="Fonts"
-          count={manifest.assets.fonts.length}
-          active={group === "fonts"}
-          onClick={() => setGroup("fonts")}
-        />
+          <input
+            type="search"
+            placeholder="Search files…"
+            value={query}
+            aria-label="Search asset files"
+            onChange={(event) => setQuery(event.target.value)}
+          />
+        </div>
 
-        <AssetTab
-          label="Other"
-          count={manifest.assets.other.length}
-          active={group === "other"}
-          onClick={() => setGroup("other")}
-        />
+        <div className="asset-tabs">
+          <AssetTab
+            label="CSS"
+            count={manifest.assets.css.length}
+            active={group === "css"}
+            onClick={() => setGroup("css")}
+          />
+
+          <AssetTab
+            label="Fonts"
+            count={manifest.assets.fonts.length}
+            active={group === "fonts"}
+            onClick={() => setGroup("fonts")}
+          />
+
+          <AssetTab
+            label="Other"
+            count={manifest.assets.other.length}
+            active={group === "other"}
+            onClick={() => setGroup("other")}
+          />
+        </div>
       </div>
 
-      <p className="result-count">
-        Showing {files.length.toLocaleString()}{" "}
-        {files.length === 1 ? "file" : "files"}
-      </p>
+      <div className="asset-results-bar">
+        <span>
+          {files.length.toLocaleString()}{" "}
+          {files.length === 1 ? "file" : "files"}
+        </span>
+
+        {query && (
+          <span>
+            Matching <code>{query}</code>
+          </span>
+        )}
+      </div>
 
       <div className="asset-file-list">
         {files.map((file) => (
@@ -186,7 +201,6 @@ function AssetTab({
       onClick={onClick}
     >
       {label}
-
       <span>{count}</span>
     </button>
   );
@@ -206,24 +220,28 @@ function AssetFile({
   const filename = file.split("/").at(-1) ?? file;
 
   const latest = `${BASE}/${provider}/latest/${file}`;
-
   const pinned = `${BASE}/${provider}/${version}/${file}`;
 
   return (
     <article className="asset-file">
       <div className="asset-file-heading">
-        <div>
-          <strong>{filename}</strong>
+        <div className="asset-file-name">
+          <Octicon name="file" size={16} />
 
-          <code>{file}</code>
+          <div>
+            <strong>{filename}</strong>
+            <code>{file}</code>
+          </div>
         </div>
 
         <span className="asset-file-type">{group}</span>
       </div>
 
-      <AssetUrl label="Latest" url={latest} stylesheet={group === "css"} />
+      <div className="asset-file-urls">
+        <AssetUrl label="Latest" url={latest} stylesheet={group === "css"} />
 
-      <AssetUrl label={version} url={pinned} stylesheet={group === "css"} />
+        <AssetUrl label={version} url={pinned} stylesheet={group === "css"} />
+      </div>
     </article>
   );
 }
@@ -239,7 +257,13 @@ function AssetUrl({
 }) {
   return (
     <div className="asset-version">
-      <span className="asset-version-label">{label}</span>
+      <div className="asset-version-heading">
+        <span>{label}</span>
+
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          <Octicon name="link-external" size={16} />
+        </a>
+      </div>
 
       <code className="asset-url-value">{url}</code>
 
@@ -276,7 +300,8 @@ function CopyButton({ label, value }: { label: string; value: string }) {
 
   return (
     <button type="button" onClick={copy}>
-      {copied ? "Copied!" : label}
+      <Octicon name={copied ? "check" : "copy"} size={16} />
+      <span>{copied ? "Copied" : label}</span>
     </button>
   );
 }
