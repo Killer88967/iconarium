@@ -6,7 +6,7 @@ export default function SiteHeader() {
       <div className="site-header-inner">
         <a className="site-brand" href="/">
           <span className="site-brand-mark">
-            <Octicon name="mark-github" size={24} />
+            <Octicon name="stack" size={24} />
           </span>
 
           <strong>Iconarium</strong>
@@ -28,13 +28,15 @@ export default function SiteHeader() {
             <span>Assets</span>
           </a>
 
+          <span className="site-nav-divider" />
+
           <a
             href="https://github.com/Killer88967/iconarium"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Octicon name="mark-github" size={16} />
-            <span>GitHub</span>
+            <span>Repository</span>
           </a>
         </nav>
       </div>

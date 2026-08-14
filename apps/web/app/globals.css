@@ -75,14 +75,15 @@ a:hover {
 
   border-bottom: 1px solid var(--border-default);
 
-  background: rgba(13, 17, 23, 0.94);
+  background: rgba(13, 17, 23, 0.92);
+
   backdrop-filter: blur(12px);
 }
 
 .site-header-inner {
   display: flex;
   width: min(1280px, calc(100% - 32px));
-  min-height: 64px;
+  min-height: 56px;
   margin: 0 auto;
 
   align-items: center;
@@ -92,10 +93,12 @@ a:hover {
 
 .site-brand {
   display: inline-flex;
+
   align-items: center;
-  gap: 10px;
+  gap: 9px;
 
   color: var(--fg-default);
+
   text-decoration: none;
 }
 
@@ -105,8 +108,9 @@ a:hover {
 
 .site-brand-mark {
   display: grid;
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
+
   place-items: center;
 
   border: 1px solid var(--border-default);
@@ -114,46 +118,61 @@ a:hover {
 
   background: var(--bg-subtle);
   color: var(--fg-default);
+}
 
-  font-weight: 700;
+.site-brand-mark svg {
+  display: block;
 }
 
 .site-brand strong {
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .site-nav {
   display: flex;
+
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 
 .site-nav a {
   display: inline-flex;
-  align-items: center;
-  gap: 7px;
 
-  padding: 7px 10px;
+  align-items: center;
+  gap: 6px;
+
+  min-height: 32px;
+  padding: 5px 9px;
 
   border-radius: 6px;
 
-  color: var(--fg-default);
+  color: var(--fg-muted);
 
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
-  line-height: 20px;
 
   text-decoration: none;
 }
 
 .site-nav a:hover {
   background: var(--bg-subtle);
+  color: var(--fg-default);
+
   text-decoration: none;
 }
 
 .site-nav a svg {
   display: block;
   flex: 0 0 auto;
+}
+
+.site-nav-divider {
+  width: 1px;
+  height: 20px;
+  margin: 0 6px;
+
+  background: var(--border-default);
 }
 
 .site-content {
@@ -1739,9 +1758,9 @@ article > p {
 
 @media (max-width: 700px) {
   .site-header-inner {
-    width: min(100% - 24px, 1280px);
-    min-height: 56px;
-    gap: 12px;
+    width: min(100% - 20px, 1280px);
+    min-height: 52px;
+    gap: 10px;
   }
 
   .site-brand strong {
@@ -1754,6 +1773,10 @@ article > p {
 
   .site-nav a {
     white-space: nowrap;
+  }
+
+  .site-nav-divider {
+    margin: 0 2px;
   }
 
   main {
