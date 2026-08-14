@@ -17,6 +17,11 @@ const assetProviders = {
     name: "Simple Icons Font",
     providerPage: `/providers/${providers["simple-icons"].id}`,
   },
+
+  octicons: {
+    name: providers.octicons.name,
+    providerPage: `/providers/${providers.octicons.id}`,
+  },
 } as const;
 
 type AssetProvider = keyof typeof assetProviders;

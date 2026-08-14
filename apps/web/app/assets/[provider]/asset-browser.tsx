@@ -2,7 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-type AssetProvider = "font-awesome" | "devicons" | "simple-icons-font";
+type AssetProvider =
+  "font-awesome" | "devicons" | "simple-icons-font" | "octicons";
 
 interface AssetManifest {
   provider: string;

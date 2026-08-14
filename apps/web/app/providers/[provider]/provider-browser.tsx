@@ -148,8 +148,8 @@ function IconPreview({ icon, version }: { icon: Icon; version: string }) {
 
   if (icon.provider === "font-awesome") {
     src =
-      `/packages/font-awesome/${version}/svg/` +
-      `${icon.style}/${icon.name}.svg`;
+      `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@${version}` +
+      `/svgs/${icon.style}/${icon.name}.svg`;
   }
 
   if (icon.provider === "devicons") {
@@ -160,12 +160,15 @@ function IconPreview({ icon, version }: { icon: Icon; version: string }) {
 
     if (variant) {
       src =
-        `/packages/devicons/${version}/svg/` + `${icon.name}/${variant}.svg`;
+        `https://cdn.jsdelivr.net/npm/devicon@${version}` +
+        `/icons/${icon.name}/${icon.name}-${variant}.svg`;
     }
   }
 
   if (icon.provider === "simple-icons") {
-    src = `/packages/simple-icons/${version}/svg/` + `${icon.name}.svg`;
+    src =
+      `https://cdn.jsdelivr.net/npm/simple-icons@${version}` +
+      `/icons/${icon.name}.svg`;
   }
 
   if (icon.provider === "octicons") {
@@ -176,7 +179,9 @@ function IconPreview({ icon, version }: { icon: Icon; version: string }) {
         : icon.sizes[0];
 
     if (size) {
-      src = `/packages/octicons/${version}/svg/` + `${icon.name}/${size}.svg`;
+      src =
+        `https://raw.githubusercontent.com/primer/octicons/v${version}` +
+        `/icons/${icon.name}-${size}.svg`;
     }
   }
 

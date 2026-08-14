@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-type Provider = "font-awesome" | "devicons" | "simple-icons";
+type Provider = "font-awesome" | "devicons" | "simple-icons" | "octicons";
 
 interface BaseIcon {
   name: string;
@@ -34,7 +34,12 @@ interface SimpleIcon extends BaseIcon {
   source: string;
 }
 
-type Icon = FontAwesomeIcon | DeviconIcon | SimpleIcon;
+interface OcticonIcon extends BaseIcon {
+  provider: "octicons";
+  sizes: number[];
+}
+
+type Icon = FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon;
 
 interface ProviderInfo {
   id: Provider;
@@ -52,7 +57,12 @@ interface SearchIcon {
   icon: Icon;
 }
 
-const providers: Provider[] = ["font-awesome", "devicons", "simple-icons"];
+const providers: Provider[] = [
+  "font-awesome",
+  "devicons",
+  "simple-icons",
+  "octicons",
+];
 
 function flattenMetadata(provider: Provider, metadata: Metadata): SearchIcon[] {
   if (provider === "font-awesome") {
@@ -99,6 +109,9 @@ function providerName(provider: Provider) {
 
     case "simple-icons":
       return "Simple Icons";
+
+    case "octicons":
+      return "Octicons";
   }
 }
 
@@ -106,7 +119,9 @@ function SearchIconPreview({ icon }: { icon: Icon }) {
   let src: string | null = null;
 
   if (icon.provider === "font-awesome") {
-    src = `/packages/font-awesome/latest/svg/${icon.style}/${icon.name}.svg`;
+    src =
+      "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest" +
+      `/svgs/${icon.style}/${icon.name}.svg`;
   }
 
   if (icon.provider === "devicons") {
@@ -116,12 +131,30 @@ function SearchIconPreview({ icon }: { icon: Icon }) {
       svgVariants.find((value) => value.includes("original")) ?? svgVariants[0];
 
     if (variant) {
-      src = `/packages/devicons/latest/svg/${icon.name}/${variant}.svg`;
+      src =
+        "https://cdn.jsdelivr.net/npm/devicon@latest" +
+        `/icons/${icon.name}/${icon.name}-${variant}.svg`;
     }
   }
 
   if (icon.provider === "simple-icons") {
-    src = `/packages/simple-icons/latest/svg/${icon.name}.svg`;
+    src =
+      "https://cdn.jsdelivr.net/npm/simple-icons@latest" +
+      `/icons/${icon.name}.svg`;
+  }
+
+  if (icon.provider === "octicons") {
+    const size = icon.sizes.includes(24)
+      ? 24
+      : icon.sizes.includes(16)
+        ? 16
+        : icon.sizes[0];
+
+    if (size) {
+      src =
+        "https://raw.githubusercontent.com/primer/octicons/main" +
+        `/icons/${icon.name}-${size}.svg`;
+    }
   }
 
   return (
@@ -242,6 +275,7 @@ export default function GlobalSearch() {
           <option value="font-awesome">Font Awesome</option>
           <option value="devicons">Devicons</option>
           <option value="simple-icons">Simple Icons</option>
+          <option value="octicons">Octicons</option>
         </select>
       </div>
 

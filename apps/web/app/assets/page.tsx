@@ -1,23 +1,32 @@
-const providers = [
+import { providers } from "@/lib/providers";
+
+const assetProviders = [
   {
-    name: "Font Awesome",
-    slug: "font-awesome",
+    name: providers["font-awesome"].name,
+    slug: providers["font-awesome"].assetsProvider,
     description:
       "Stylesheets, webfonts, and other mirrored Font Awesome assets.",
   },
 
   {
-    name: "Devicons",
-    slug: "devicons",
+    name: providers.devicons.name,
+    slug: providers.devicons.assetsProvider,
     description:
       "Devicon stylesheets and font assets mirrored from the published package.",
   },
 
   {
     name: "Simple Icons Font",
-    slug: "simple-icons-font",
+    slug: providers["simple-icons"].assetsProvider,
     description:
       "The official Simple Icons icon-font package, including CSS and font files.",
+  },
+
+  {
+    name: providers.octicons.name,
+    slug: providers.octicons.assetsProvider,
+    description:
+      "Octicons package files including CSS, JavaScript, SCSS, and metadata.",
   },
 ] as const;
 
@@ -40,7 +49,7 @@ export default function AssetsPage() {
       </section>
 
       <section className="asset-provider-grid">
-        {providers.map((provider) => (
+        {assetProviders.map((provider) => (
           <a
             key={provider.slug}
             href={`/assets/${provider.slug}`}
