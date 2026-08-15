@@ -684,6 +684,7 @@ article > p {
 .icon-preview-image.iconarium {
   width: 48px;
   height: 48px;
+  color: var(--fg-default);
 }
 
 .icon-preview-image.devicons,
