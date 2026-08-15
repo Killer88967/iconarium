@@ -162,6 +162,15 @@ a:hover {
   text-decoration: none;
 }
 
+.site-nav a.active {
+  background: var(--bg-overlay);
+  color: var(--fg-default);
+}
+
+.site-nav a.active svg {
+  color: var(--fg-default);
+}
+
 .site-nav a svg {
   display: block;
   flex: 0 0 auto;

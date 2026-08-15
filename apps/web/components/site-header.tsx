@@ -1,6 +1,19 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Octicon from "@/components/octicon";
 
 export default function SiteHeader() {
+  const pathname = usePathname();
+
+  function isActive(href: string) {
+    if (href === "/") {
+      return pathname === "/";
+    }
+
+    return pathname.startsWith(href);
+  }
+
   return (
     <header className="site-header">
       <div className="site-header-inner">
@@ -13,17 +26,23 @@ export default function SiteHeader() {
         </a>
 
         <nav className="site-nav" aria-label="Primary navigation">
-          <a href="/">
+          <a href="/" className={isActive("/") ? "active" : undefined}>
             <Octicon name="home" size={16} />
             <span>Home</span>
           </a>
 
-          <a href="/search">
+          <a
+            href="/search"
+            className={isActive("/search") ? "active" : undefined}
+          >
             <Octicon name="search" size={16} />
             <span>Search</span>
           </a>
 
-          <a href="/assets">
+          <a
+            href="/assets"
+            className={isActive("/assets") ? "active" : undefined}
+          >
             <Octicon name="package" size={16} />
             <span>Assets</span>
           </a>
