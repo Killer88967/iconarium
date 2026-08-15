@@ -13,6 +13,7 @@
     "generate:devicons": "tsx generators/providers/devicons/generate.ts",
     "generate:simple-icons": "tsx generators/providers/simple-icons/generate.ts",
     "generate:octicons": "tsx generators/providers/octicons/generate.ts",
+    "generate:iconarium": "tsx generators/providers/iconarium/generate.ts",
     "generate:used": "tsx generators/web/generate-used-octicons.ts && pnpm format:used",
     "generate:used:dev": "tsx watch --clear-screen=false --include \"apps/web/**/*.tsx\" generators/web/generate-used-octicons.ts",
     "format:used": "prettier -w ./apps/web/generated/",

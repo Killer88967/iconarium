@@ -18,7 +18,8 @@
       "@iconarium/font-awesome": ["./packages/font-awesome/src/index.ts"],
       "@iconarium/devicons": ["./packages/devicons/src/index.ts"],
       "@iconarium/simple-icons": ["./packages/simple-icons/src/index.ts"],
-      "@iconarium/octicons": ["./packages/octicons/src/index.ts"]
+      "@iconarium/octicons": ["./packages/octicons/src/index.ts"],
+      "@iconarium/iconarium": ["./packages/iconarium/src/index.ts"]
     }
   },
   "exclude": [

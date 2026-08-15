@@ -8,28 +8,64 @@ interface PublicOptions {
   metadata: unknown;
   esmRuntime: string;
   declarations: string;
+  browserExports?: string[];
+}
+
+const DEFAULT_BROWSER_EXPORTS = [
+  "icons",
+  "providerInfo",
+  "getIcon",
+  "hasIcon",
+  "searchIcons",
+] as const;
+
+function createBrowserRuntime({
+  globalName,
+  esmRuntime,
+  browserExports = [],
+}: Pick<PublicOptions, "globalName" | "esmRuntime" | "browserExports">) {
+  const exports = [...DEFAULT_BROWSER_EXPORTS, ...browserExports];
+
+  const runtime = esmRuntime
+    .replace(/^export /gm, "")
+    .replace(/export\s*\{[^}]+\};?/g, "");
+
+  return `// Generated file. Do not edit.\n\n(function (global) {
+${runtime}
+
+  global.IconMeta = global.IconMeta || {};
+  global.IconMeta[${JSON.stringify(globalName)}] = {
+    ${exports.join(",\n    ")}
+  };
+})(globalThis);
+`;
 }
 
 export async function writePublicProvider(options: PublicOptions) {
-  for (const dir of publicProviderDirs(options.provider, options.version)) {
-    await writeJson(join(dir, "metadata.json"), options.metadata);
-    await writeText(
-      join(dir, "metadata.js"),
-      `export default ${JSON.stringify(options.metadata)};\nexport const metadata = ${JSON.stringify(options.metadata)};\n`,
-    );
-    await writeText(join(dir, "index.js"), options.esmRuntime);
-    await writeText(join(dir, "index.d.ts"), options.declarations);
-    await writeJson(join(dir, "version.json"), {
-      provider: options.provider,
-      version: options.version,
-    });
+  const metadataJson = JSON.stringify(options.metadata);
+  const browserRuntime = createBrowserRuntime(options);
 
-    const browser = `(function (global) {\n${options.esmRuntime
-      .replace(/^export /gm, "")
-      .replace(
-        /export\s*\{[^}]+\};?/g,
-        "",
-      )}\n  global.IconMeta = global.IconMeta || {};\n  global.IconMeta[${JSON.stringify(options.globalName)}] = { icons, providerInfo, getIcon, hasIcon, searchIcons${options.provider !== "simple-icons" ? ", createClassName" : ""} };\n})(globalThis);\n`;
-    await writeText(join(dir, "browser.js"), browser);
+  const metadataModule = [
+    `const metadata = ${metadataJson};`,
+    "",
+    "export default metadata;",
+    "export { metadata };",
+    "",
+  ].join("\n");
+
+  const version = {
+    provider: options.provider,
+    version: options.version,
+  };
+
+  for (const dir of publicProviderDirs(options.provider, options.version)) {
+    await Promise.all([
+      writeJson(join(dir, "metadata.json"), options.metadata),
+      writeText(join(dir, "metadata.js"), metadataModule),
+      writeText(join(dir, "index.js"), options.esmRuntime),
+      writeText(join(dir, "index.d.ts"), options.declarations),
+      writeJson(join(dir, "version.json"), version),
+      writeText(join(dir, "browser.js"), browserRuntime),
+    ]);
   }
 }

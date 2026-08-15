@@ -36,6 +36,12 @@ export interface OcticonNormalized extends NormalizedBase {
   sizes: number[];
 }
 
+export interface IconariumNormalized extends NormalizedBase {
+  provider: "iconarium";
+  fileName: string;
+  viewBox: string;
+}
+
 export interface SourceResult<T> {
   version: string;
   source: string;

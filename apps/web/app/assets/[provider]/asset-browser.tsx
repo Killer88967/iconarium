@@ -5,10 +5,7 @@ import StatusPanel from "@/components/status-panel";
 import Octicon from "@/components/octicon";
 
 type AssetProvider =
-  | "font-awesome"
-  | "devicons"
-  | "simple-icons-font"
-  | "octicons";
+  "font-awesome" | "devicons" | "simple-icons-font" | "octicons";
 
 interface AssetManifest {
   provider: string;
