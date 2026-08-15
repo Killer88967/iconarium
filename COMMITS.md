@@ -1,4 +1,4 @@
-Why Are There So Many update Commits?
+# Why Are There So Many update Commits?
 
 If you look through Iconarium’s commit history, you’ll probably notice a lot of commits simply named:
 
