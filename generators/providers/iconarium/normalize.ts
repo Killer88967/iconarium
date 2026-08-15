@@ -1,4 +1,3 @@
-import path from "node:path";
 import type { IconariumNormalized } from "../../core/types";
 
 export interface IconariumSourceIcon {
@@ -13,35 +12,52 @@ function createLabel(name: string) {
     .join(" ");
 }
 
-function readViewBox(svg: string): string {
-  const match = svg.match(/\bviewBox=(["'])(.*?)\1/i);
+export function normalizeIconarium(files: IconariumSourceIcon[]) {
+  const icons: Record<string, IconariumNormalized> = {};
 
-  if (!match) {
-    throw new Error("SVG is missing a viewBox.");
+  for (const file of files) {
+    const match = file.fileName.match(/^(.+)-(\d+)\.svg$/);
+
+    if (!match) {
+      continue;
+    }
+
+    const [, name, sizeValue] = match;
+
+    const size = Number(sizeValue);
+
+    if (!Number.isFinite(size)) {
+      continue;
+    }
+
+    const existing = icons[name];
+
+    if (existing) {
+      if (!existing.sizes.includes(size)) {
+        existing.sizes.push(size);
+        existing.sizes.sort((a, b) => a - b);
+      }
+
+      continue;
+    }
+
+    icons[name] = {
+      name,
+      label: createLabel(name),
+
+      provider: "iconarium",
+
+      aliases: [],
+
+      categories: [],
+
+      tags: Array.from(new Set([name, ...name.split("-")])),
+
+      deprecated: false,
+
+      sizes: [size],
+    };
   }
 
-  return match[2];
-}
-
-export function normalizeIconariumIcon(
-  source: IconariumSourceIcon,
-): IconariumNormalized {
-  const name = path.basename(source.fileName, ".svg");
-
-  return {
-    name,
-    label: createLabel(name),
-
-    provider: "iconarium",
-
-    aliases: [],
-    categories: [],
-
-    tags: Array.from(new Set([name, ...name.split("-")])),
-
-    deprecated: false,
-
-    fileName: source.fileName,
-    viewBox: readViewBox(source.svg),
-  };
+  return icons;
 }

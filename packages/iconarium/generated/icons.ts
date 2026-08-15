@@ -9,8 +9,7 @@ export const icons = {
     categories: [],
     tags: ["iconarium"],
     deprecated: false,
-    fileName: "iconarium.svg",
-    viewBox: "0 0 24 24",
+    sizes: [16, 24],
   },
 } as const;
 

@@ -3,16 +3,24 @@ import { icons, providerInfo } from "../generated/icons";
 
 export { icons, providerInfo };
 
-export type IconariumIconMap = typeof icons;
-export type IconariumIconName = keyof IconariumIconMap;
+export type IconMap = typeof icons;
+export type IconName = keyof IconMap;
+export type IconSize<N extends IconName> = IconMap[N]["sizes"][number];
 
-export function getIcon<N extends IconariumIconName>(
+export function getIcon<N extends IconName, S extends IconSize<N>>(
   name: N,
-): IconariumIconMap[N] {
-  return icons[name];
+  size: S,
+) {
+  const metadata = icons[name];
+
+  return {
+    ...metadata,
+    size,
+    fileName: `${name}-${size}.svg` as const,
+  };
 }
 
-export function hasIcon(name: string): name is IconariumIconName {
+export function hasIcon(name: string): name is IconName {
   return Object.prototype.hasOwnProperty.call(icons, name);
 }
 

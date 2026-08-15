@@ -3,20 +3,12 @@ import { dirname, join } from "node:path";
 import { writePublicProvider } from "../../core/public-output";
 import { writeText } from "../../core/files";
 import { loadIconariumSource } from "./source";
-import { normalizeIconariumIcon } from "./normalize";
+import { normalizeIconarium } from "./normalize";
 
 export async function generateIconarium() {
   const source = await loadIconariumSource();
 
-  const icons = Object.fromEntries(
-    source.data
-      .map((icon) => {
-        const normalized = normalizeIconariumIcon(icon);
-
-        return [normalized.name, normalized] as const;
-      })
-      .sort(([a], [b]) => a.localeCompare(b)),
-  );
+  const icons = normalizeIconarium(source.data);
 
   const providerInfo = {
     id: "iconarium",
@@ -46,18 +38,19 @@ export async function generateIconarium() {
     `const icons = ${JSON.stringify(icons)};\n` +
     `const providerInfo = ${JSON.stringify(providerInfo)};\n` +
     `export { icons, providerInfo };\n` +
-    `export function getIcon(name) { return icons[name]; }\n` +
+    `export function getIcon(name, size) { const icon = icons[name]; if (!icon || !icon.sizes.includes(size)) return undefined; return { ...icon, size, fileName: \`${"${name}-${size}.svg"}\` }; }\n` +
     `export function hasIcon(name) { return Object.prototype.hasOwnProperty.call(icons, name); }\n` +
     `export function searchIcons(query) { const q = String(query ?? "").trim().toLowerCase(); return Object.values(icons).filter((icon) => !q || [icon.name, icon.label, ...(icon.aliases || []), ...(icon.tags || [])].join(" ").toLowerCase().includes(q)); }\n`;
 
   const declarations =
     `export const icons: ${JSON.stringify(icons, null, 2)};\n` +
     `export const providerInfo: ${JSON.stringify(providerInfo, null, 2)};\n` +
-    `export type IconariumIconMap = typeof icons;\n` +
-    `export type IconariumIconName = keyof IconariumIconMap;\n` +
-    `export function getIcon<N extends IconariumIconName>(name: N): IconariumIconMap[N];\n` +
-    `export function hasIcon(name: string): name is IconariumIconName;\n` +
-    `export function searchIcons(query: string): Array<IconariumIconMap[IconariumIconName]>;\n`;
+    `export type IconMap = typeof icons;\n` +
+    `export type IconName = keyof IconMap;\n` +
+    `export type IconSize<N extends IconName> = IconMap[N]["sizes"][number];\n` +
+    `export function getIcon<N extends IconName, S extends IconSize<N>>(name: N, size: S): IconMap[N] & { size: S; fileName: string };\n` +
+    `export function hasIcon(name: string): name is IconName;\n` +
+    `export function searchIcons(query: string): Array<IconMap[IconName]>;\n`;
 
   await writePublicProvider({
     provider: "iconarium",
