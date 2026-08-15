@@ -1,3 +1,4 @@
 /node_modules/*
 /public/packages/
 /generated/
+/next-env.d.ts
