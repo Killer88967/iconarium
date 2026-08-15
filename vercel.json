@@ -1,5 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "buildCommand": "cd ../.. && pnpm generate && pnpm --filter @iconarium/web build"
+  "buildCommand": "cd ../.. && pnpm generate:format && pnpm --filter @iconarium/web build"
 }
