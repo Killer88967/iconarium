@@ -1,10 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import StatusPanel from "@/components/status-panel";
 import Octicon from "@/components/octicon";
 
 type AssetProvider =
-  "font-awesome" | "devicons" | "simple-icons-font" | "octicons";
+  | "font-awesome"
+  | "devicons"
+  | "simple-icons-font"
+  | "octicons";
 
 interface AssetManifest {
   provider: string;
@@ -85,10 +89,11 @@ export default function AssetBrowser({ provider }: AssetBrowserProps) {
   if (error) {
     return (
       <section>
-        <div className="browser-error">
-          <strong>Could not load assets.</strong>
-          <code>{error}</code>
-        </div>
+        <StatusPanel
+          kind="error"
+          title="Could not load assets"
+          description={error}
+        />
       </section>
     );
   }
@@ -96,7 +101,11 @@ export default function AssetBrowser({ provider }: AssetBrowserProps) {
   if (!manifest) {
     return (
       <section className="asset-loading">
-        <p>Loading assets…</p>
+        <StatusPanel
+          kind="loading"
+          title="Loading assets"
+          description="Fetching the latest generated asset manifest."
+        />
       </section>
     );
   }
@@ -177,7 +186,15 @@ export default function AssetBrowser({ provider }: AssetBrowserProps) {
       </div>
 
       {files.length === 0 && (
-        <div className="empty-state">No matching files.</div>
+        <StatusPanel
+          kind="empty"
+          title="No matching files"
+          description={
+            query
+              ? `No assets matched "${query}".`
+              : "This asset group does not contain any files."
+          }
+        />
       )}
     </section>
   );

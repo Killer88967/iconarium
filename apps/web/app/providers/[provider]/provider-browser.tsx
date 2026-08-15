@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import StatusPanel from "@/components/status-panel";
 import Octicon from "@/components/octicon";
 import type { ProviderId } from "@/lib/providers";
 
@@ -526,9 +527,15 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
       </div>
 
       {filteredIcons.length === 0 && (
-        <div className="empty-state">
-          No icons matched <strong>{query}</strong>.
-        </div>
+        <StatusPanel
+          kind="empty"
+          title="No icons found"
+          description={
+            query
+              ? `No icons matched "${query}".`
+              : "No icons match the selected filters."
+          }
+        />
       )}
     </section>
   );

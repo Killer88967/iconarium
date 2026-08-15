@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import type { ProviderId } from "@/lib/providers";
+import StatusPanel from "@/components/status-panel";
 import Octicon from "@/components/octicon";
 
 interface ProviderInfo {
@@ -199,7 +200,6 @@ function LargeIconPreview({ icon, version }: { icon: Icon; version: string }) {
 
 export default function IconDetails({ provider, iconName }: IconDetailsProps) {
   const [metadata, setMetadata] = useState<ProviderMetadata | null>(null);
-
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -248,7 +248,11 @@ export default function IconDetails({ provider, iconName }: IconDetailsProps) {
   if (error) {
     return (
       <section>
-        <div className="browser-error">{error}</div>
+        <StatusPanel
+          kind="error"
+          title="Could not load icon metadata."
+          description={error}
+        />
       </section>
     );
   }
@@ -256,7 +260,11 @@ export default function IconDetails({ provider, iconName }: IconDetailsProps) {
   if (!metadata) {
     return (
       <section>
-        <p>Loading icon metadata…</p>
+        <StatusPanel
+          kind="loading"
+          title="Loading icon metadata"
+          description="Fetching the latest generated provider metadata."
+        />
       </section>
     );
   }
@@ -264,9 +272,11 @@ export default function IconDetails({ provider, iconName }: IconDetailsProps) {
   if (!icon) {
     return (
       <section>
-        <div className="empty-state">
-          Icon <strong>{iconName}</strong> was not found.
-        </div>
+        <StatusPanel
+          kind="empty"
+          title="Icon not found"
+          description={`No icon named "${iconName}" exists in this provider.`}
+        />
       </section>
     );
   }

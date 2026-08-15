@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { providerIds, providers, type ProviderId } from "@/lib/providers";
+import StatusPanel from "@/components/status-panel";
 import Octicon from "@/components/octicon";
 
 interface BaseIcon {
@@ -327,9 +328,11 @@ export default function GlobalSearch() {
           </div>
 
           {results.length === 0 && (
-            <div className="empty-state">
-              No icons matched <strong>{query}</strong>.
-            </div>
+            <StatusPanel
+              kind="empty"
+              title="No icons found"
+              description={`No icons matched "${query}".`}
+            />
           )}
         </>
       )}
