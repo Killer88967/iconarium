@@ -4,6 +4,7 @@ import { generateSimpleIcons } from "./providers/simple-icons/generate";
 import { generateSimpleIconsFont } from "./providers/simple-icons-font/generate";
 import { generateOcticons } from "./providers/octicons/generate";
 import { generateIconarium } from "./providers/iconarium/generate";
+import { generateUsedIconarium } from "./web/generate-used-iconarium";
 import { generateUsedOcticons } from "./web/generate-used-octicons";
 
 await generateFontAwesome();
@@ -12,4 +13,5 @@ await generateSimpleIcons();
 await generateSimpleIconsFont();
 await generateOcticons();
 await generateIconarium();
+await generateUsedIconarium();
 await generateUsedOcticons();

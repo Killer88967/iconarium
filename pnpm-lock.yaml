@@ -32,6 +32,9 @@ importers:
         specifier: ^19.2.0
         version: 19.2.8(react@19.2.8)
     devDependencies:
+      "@iconarium/iconarium":
+        specifier: workspace:*
+        version: link:../../packages/iconarium
       "@iconarium/octicons":
         specifier: workspace:*
         version: link:../../packages/octicons

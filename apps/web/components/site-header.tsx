@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Octicon from "@/components/octicon";
+import Icon from "@/components/icon";
 
 export default function SiteHeader() {
   const pathname = usePathname();
@@ -19,7 +20,7 @@ export default function SiteHeader() {
       <div className="site-header-inner">
         <a className="site-brand" href="/">
           <span className="site-brand-mark">
-            <Octicon name="stack" size={24} />
+            <Icon name="iconarium" />
           </span>
 
           <strong>Iconarium</strong>

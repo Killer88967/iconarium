@@ -15,6 +15,7 @@
   "devDependencies": {
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
-    "@iconarium/octicons": "workspace:*"
+    "@iconarium/octicons": "workspace:*",
+    "@iconarium/iconarium": "workspace:*"
   }
 }

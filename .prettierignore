@@ -1,1 +1,3 @@
 *.min.*
+*.svg
+/apps/web/lib/providers.ts
