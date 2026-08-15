@@ -2480,3 +2480,244 @@ article > p {
 .large-icon-image.simple-icons {
   filter: none;
 }
+
+/* -------------------------------------------------------------------------- */
+/* Responsive consolidation                                                    */
+/* Keep max-width breakpoints ordered from broadest to narrowest so the        */
+/* narrowest matching rule wins in the cascade.                                */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 1050px) {
+  .icon-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 950px) {
+  .global-search-results {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .provider-grid,
+  .info-panel-grid,
+  .asset-file-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .usage-examples {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .icon-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .browser-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .browser-search,
+  .browser-toolbar input,
+  .browser-controls,
+  .browser-controls select {
+    width: 100%;
+  }
+
+  .browser-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 760px) {
+  .asset-page-heading,
+  .icon-page-heading,
+  .provider-page-heading,
+  .global-search-results-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .provider-page-heading {
+    gap: 20px;
+  }
+
+  .provider-page-actions,
+  .asset-search,
+  .asset-tabs,
+  .browser-search,
+  .browser-controls,
+  .browser-controls select {
+    width: 100%;
+  }
+
+  .provider-page-actions .ui-button,
+  .asset-tab {
+    flex: 1;
+  }
+
+  .asset-tab {
+    justify-content: center;
+  }
+
+  .asset-browser-toolbar,
+  .browser-toolbar {
+    flex-direction: column;
+  }
+
+  .asset-provider-grid,
+  .global-search-toolbar,
+  .global-search-results,
+  .metadata-grid,
+  .usage-examples {
+    grid-template-columns: 1fr;
+  }
+
+  .browser-header {
+    align-items: flex-start;
+  }
+
+  .icon-summary {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .brand-color {
+    display: none;
+  }
+
+  .metadata-item {
+    border-right: 0;
+  }
+
+  .global-search-results-header {
+    gap: 4px;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header-inner {
+    width: min(100% - 20px, 1280px);
+    min-height: 52px;
+    gap: 10px;
+  }
+
+  .site-brand strong {
+    display: none;
+  }
+
+  .site-nav {
+    overflow-x: auto;
+  }
+
+  .site-nav a {
+    white-space: nowrap;
+  }
+
+  .site-nav-divider {
+    margin: 0 2px;
+  }
+
+  main {
+    width: min(100% - 24px, 1280px);
+    padding: 24px 0 48px;
+  }
+
+  .usage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .provider-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .asset-browser-toolbar {
+    align-items: stretch;
+  }
+
+  .asset-browser-toolbar input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .global-search-results {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .asset-file-urls {
+    grid-template-columns: 1fr;
+  }
+
+  .asset-version + .asset-version {
+    border-top: 1px solid var(--border-default);
+    border-left: 0;
+  }
+
+  .asset-results-bar,
+  .browser-results-bar,
+  .github-section-heading {
+    align-items: flex-start;
+  }
+
+  .asset-results-bar,
+  .browser-results-bar {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .home-hero {
+    margin-bottom: 48px;
+    padding-top: 8px;
+  }
+
+  .home-actions {
+    align-items: stretch;
+  }
+
+  .ui-button {
+    flex: 1 1 auto;
+  }
+
+  .provider-panel-footer {
+    flex-wrap: wrap;
+  }
+
+  .quick-start pre {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .icon-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .icon-card-preview {
+    height: 92px;
+  }
+
+  .global-search-provider {
+    display: none;
+  }
+}
