@@ -681,6 +681,11 @@ article > p {
   filter: brightness(0) invert(1);
 }
 
+.icon-preview-image.iconarium {
+  width: 48px;
+  height: 48px;
+}
+
 .icon-preview-image.devicons,
 .icon-preview-image.simple-icons {
   filter: none;

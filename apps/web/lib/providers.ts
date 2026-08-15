@@ -75,22 +75,22 @@ const mark = getIcon("mark-github", 24);
 console.log(mark.fileName);`,
   },
 
-//   iconarium: {
-//     id: "iconarium",
-//     name: "Iconarium",
-//     description: "First-party icons designed specifically for Iconarium.",
-//     website: "https://iconarium.vercel.app",
-//     assetsProvider: null,
-//     hasAssets: false,
-//     hasSvg: true,
-//     homepageDescription:
-//       "Explore Iconarium's own first-party SVG icon collection.",
-//     example: `import { getIcon } from "https://iconarium.vercel.app/packages/iconarium/latest";
+  iconarium: {
+    id: "iconarium",
+    name: "Iconarium",
+    description: "First-party icons designed specifically for Iconarium.",
+    website: "https://iconarium.vercel.app",
+    assetsProvider: null,
+    hasAssets: false,
+    hasSvg: true,
+    homepageDescription:
+      "Explore Iconarium's own first-party SVG icon collection.",
+    example: `import { getIcon } from "https://iconarium.vercel.app/packages/iconarium/latest";
 
-// const icon = getIcon("iconarium");
+const icon = getIcon("iconarium");
 
-// console.log(icon.fileName);`,
-//   },
+console.log(icon.fileName);`,
+  },
 } as const;
 
 export type ProviderId = keyof typeof providers;

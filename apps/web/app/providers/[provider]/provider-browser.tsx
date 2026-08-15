@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import StatusPanel from "@/components/status-panel";
+import Icon from "@/components/icon";
 import Octicon from "@/components/octicon";
 import type { ProviderId } from "@/lib/providers";
 
@@ -53,7 +54,17 @@ interface OcticonIcon extends BaseIcon {
   sizes: number[];
 }
 
-type Icon = FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon;
+interface IconariumIcon extends BaseIcon {
+  provider: "iconarium";
+  sizes: number[];
+}
+
+type Icon =
+  | FontAwesomeIcon
+  | DeviconIcon
+  | SimpleIcon
+  | OcticonIcon
+  | IconariumIcon;
 
 type FlatIcons = Record<string, Icon>;
 
@@ -129,19 +140,23 @@ function IconDetails({ icon }: { icon: Icon }) {
     );
   }
 
-  return (
-    <>
-      <span>
-        {icon.sizes.length} {icon.sizes.length === 1 ? "size" : "sizes"}
-      </span>
+  if (icon.provider === "octicons" || icon.provider === "iconarium") {
+    return (
+      <>
+        <span>
+          {icon.sizes.length} {icon.sizes.length === 1 ? "size" : "sizes"}
+        </span>
 
-      <code>
-        {icon.sizes.length > 0
-          ? icon.sizes.map((size) => `${size}px`).join(", ")
-          : "—"}
-      </code>
-    </>
-  );
+        <code>
+          {icon.sizes.length > 0
+            ? icon.sizes.map((size) => `${size}px`).join(", ")
+            : "—"}
+        </code>
+      </>
+    );
+  }
+
+  return null;
 }
 
 function IconPreview({ icon, version }: { icon: Icon; version: string }) {
@@ -186,6 +201,18 @@ function IconPreview({ icon, version }: { icon: Icon; version: string }) {
     }
   }
 
+  if (icon.provider === "iconarium") {
+    return (
+      <div className="icon-preview">
+        <Icon
+          name={icon.name as "iconarium"}
+          size={24}
+          className="icon-preview-image iconarium"
+        />
+      </div>
+    );
+  }
+
   return (
     <div className="icon-preview">
       {src ? (
@@ -222,6 +249,7 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
           `/packages/${provider}/latest/metadata.json`,
           {
             signal: controller.signal,
+            cache: "no-store",
           },
         );
 
@@ -372,11 +400,11 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
   if (error) {
     return (
       <section>
-        <div className="browser-error">
-          <strong>Could not load provider metadata.</strong>
-
-          <code>{error}</code>
-        </div>
+        <StatusPanel
+          kind="error"
+          title="Could not load provider metadata"
+          description={error}
+        />
       </section>
     );
   }
@@ -384,7 +412,11 @@ export default function ProviderBrowser({ provider }: ProviderBrowserProps) {
   if (!metadata) {
     return (
       <section>
-        <p>Loading provider metadata…</p>
+        <StatusPanel
+          kind="loading"
+          title="Loading provider metadata"
+          description="Fetching the latest generated provider metadata."
+        />
       </section>
     );
   }
