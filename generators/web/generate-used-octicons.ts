@@ -52,66 +52,204 @@ async function findTsxFiles(directory: string): Promise<string[]> {
   return files;
 }
 
+function findVariableDeclaration(
+  sourceFile: ts.SourceFile,
+  name: string,
+): ts.VariableDeclaration | undefined {
+  let found: ts.VariableDeclaration | undefined;
+
+  function visit(node: ts.Node) {
+    if (found) {
+      return;
+    }
+
+    if (
+      ts.isVariableDeclaration(node) &&
+      ts.isIdentifier(node.name) &&
+      node.name.text === name
+    ) {
+      found = node;
+      return;
+    }
+
+    ts.forEachChild(node, visit);
+  }
+
+  visit(sourceFile);
+
+  return found;
+}
+
+function resolveStringValues(
+  node: ts.Node,
+  sourceFile: ts.SourceFile,
+  visited = new Set<string>(),
+): string[] {
+  if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) {
+    return [node.text];
+  }
+
+  if (ts.isParenthesizedExpression(node)) {
+    return resolveStringValues(node.expression, sourceFile, visited);
+  }
+
+  if (ts.isAsExpression(node)) {
+    return resolveStringValues(node.expression, sourceFile, visited);
+  }
+
+  if (ts.isSatisfiesExpression(node)) {
+    return resolveStringValues(node.expression, sourceFile, visited);
+  }
+
+  if (ts.isIdentifier(node)) {
+    if (visited.has(node.text)) {
+      return [];
+    }
+
+    const nextVisited = new Set(visited);
+    nextVisited.add(node.text);
+
+    const declaration = findVariableDeclaration(sourceFile, node.text);
+
+    if (!declaration?.initializer) {
+      return [];
+    }
+
+    return resolveStringValues(
+      declaration.initializer,
+      sourceFile,
+      nextVisited,
+    );
+  }
+
+  if (ts.isConditionalExpression(node)) {
+    return [
+      ...new Set([
+        ...resolveStringValues(node.whenTrue, sourceFile, new Set(visited)),
+        ...resolveStringValues(node.whenFalse, sourceFile, new Set(visited)),
+      ]),
+    ];
+  }
+
+  return [];
+}
+
+function resolveNumberValues(
+  node: ts.Node,
+  sourceFile: ts.SourceFile,
+  visited = new Set<string>(),
+): number[] {
+  if (ts.isNumericLiteral(node)) {
+    return [Number(node.text)];
+  }
+
+  if (ts.isParenthesizedExpression(node)) {
+    return resolveNumberValues(node.expression, sourceFile, visited);
+  }
+
+  if (ts.isAsExpression(node)) {
+    return resolveNumberValues(node.expression, sourceFile, visited);
+  }
+
+  if (ts.isSatisfiesExpression(node)) {
+    return resolveNumberValues(node.expression, sourceFile, visited);
+  }
+
+  if (ts.isIdentifier(node)) {
+    if (visited.has(node.text)) {
+      return [];
+    }
+
+    const nextVisited = new Set(visited);
+    nextVisited.add(node.text);
+
+    const declaration = findVariableDeclaration(sourceFile, node.text);
+
+    if (!declaration?.initializer) {
+      return [];
+    }
+
+    return resolveNumberValues(
+      declaration.initializer,
+      sourceFile,
+      nextVisited,
+    );
+  }
+
+  if (ts.isConditionalExpression(node)) {
+    return [
+      ...new Set([
+        ...resolveNumberValues(node.whenTrue, sourceFile, new Set(visited)),
+        ...resolveNumberValues(node.whenFalse, sourceFile, new Set(visited)),
+      ]),
+    ];
+  }
+
+  return [];
+}
+
 function readStringAttribute(
   attributes: ts.JsxAttributes,
   name: string,
-): string | undefined {
+  sourceFile: ts.SourceFile,
+): string[] {
   const attribute = attributes.properties.find(
     (property) =>
-      ts.isJsxAttribute(property) && property.name.getText() === name,
+      ts.isJsxAttribute(property) && property.name.getText(sourceFile) === name,
   );
 
   if (!attribute || !ts.isJsxAttribute(attribute)) {
-    return undefined;
+    return [];
   }
 
   const initializer = attribute.initializer;
 
   if (!initializer) {
-    return undefined;
+    return [];
   }
 
   if (ts.isStringLiteral(initializer)) {
-    return initializer.text;
+    return [initializer.text];
   }
 
-  return undefined;
+  if (ts.isJsxExpression(initializer) && initializer.expression) {
+    return resolveStringValues(initializer.expression, sourceFile);
+  }
+
+  return [];
 }
 
 function readNumberAttribute(
   attributes: ts.JsxAttributes,
   name: string,
-): number | undefined {
+  sourceFile: ts.SourceFile,
+): number[] {
   const attribute = attributes.properties.find(
     (property) =>
-      ts.isJsxAttribute(property) && property.name.getText() === name,
+      ts.isJsxAttribute(property) && property.name.getText(sourceFile) === name,
   );
 
   if (!attribute || !ts.isJsxAttribute(attribute)) {
-    return undefined;
+    return [];
   }
 
   const initializer = attribute.initializer;
 
   if (!initializer) {
-    return undefined;
+    return [];
   }
 
   if (ts.isStringLiteral(initializer)) {
     const value = Number(initializer.text);
 
-    return Number.isFinite(value) ? value : undefined;
+    return Number.isFinite(value) ? [value] : [];
   }
 
-  if (
-    ts.isJsxExpression(initializer) &&
-    initializer.expression &&
-    ts.isNumericLiteral(initializer.expression)
-  ) {
-    return Number(initializer.expression.text);
+  if (ts.isJsxExpression(initializer) && initializer.expression) {
+    return resolveNumberValues(initializer.expression, sourceFile);
   }
 
-  return undefined;
+  return [];
 }
 
 function collectOcticons(sourceFile: ts.SourceFile): UsedOcticon[] {
@@ -130,14 +268,17 @@ function collectOcticons(sourceFile: ts.SourceFile): UsedOcticon[] {
     }
 
     if (tagName === "Octicon" && attributes) {
-      const name = readStringAttribute(attributes, "name");
-      const size = readNumberAttribute(attributes, "size");
+      const names = readStringAttribute(attributes, "name", sourceFile);
 
-      if (name && size !== undefined) {
-        icons.push({
-          name,
-          size,
-        });
+      const sizes = readNumberAttribute(attributes, "size", sourceFile);
+
+      for (const name of names) {
+        for (const size of sizes) {
+          icons.push({
+            name,
+            size,
+          });
+        }
       }
     }
 
