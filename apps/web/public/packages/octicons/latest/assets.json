@@ -1,9 +1,0 @@
-{
-  "provider": "octicons",
-  "version": "19.33.0",
-  "assets": {
-    "css": ["build/build.css"],
-    "fonts": [],
-    "other": ["build/data.json", "index.js", "index.scss"]
-  }
-}
