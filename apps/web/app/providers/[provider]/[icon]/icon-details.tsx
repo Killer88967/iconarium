@@ -394,7 +394,7 @@ export default function IconDetails({ provider, iconName }: IconDetailsProps) {
           </>
         )}
 
-        {icon.provider === "octicons" && (
+        {(icon.provider === "octicons" || icon.provider === "iconarium") && (
           <Metadata
             label="Sizes"
             value={
