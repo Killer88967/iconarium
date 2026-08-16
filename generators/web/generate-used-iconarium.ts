@@ -15,6 +15,45 @@ interface GeneratedIconData {
 const WEB_ROOT = "apps/web";
 const DEFAULT_SIZE = 24;
 
+async function collectAllIconariumIcons() {
+  const directory = path.join("packages", "iconarium", "icons");
+  const entries = await readdir(directory, {
+    withFileTypes: true,
+  });
+
+  const icons = new Map<string, Set<number>>();
+
+  for (const entry of entries) {
+    if (!entry.isFile()) {
+      continue;
+    }
+
+    const match = entry.name.match(/^(.+)-(\d+)\.svg$/);
+
+    if (!match) {
+      continue;
+    }
+
+    const [, name, sizeValue] = match;
+    const size = Number(sizeValue);
+
+    if (!Number.isFinite(size)) {
+      continue;
+    }
+
+    let sizes = icons.get(name);
+
+    if (!sizes) {
+      sizes = new Set<number>();
+      icons.set(name, sizes);
+    }
+
+    sizes.add(size);
+  }
+
+  return icons;
+}
+
 async function findTsxFiles(directory: string): Promise<string[]> {
   const entries = await readdir(directory, {
     withFileTypes: true,
@@ -312,12 +351,15 @@ function readSvgData(svg: string): GeneratedIconData {
 
 export async function generateUsedIconarium() {
   const files = await findTsxFiles(WEB_ROOT);
-
   const used = new Map<string, Set<number>>();
+  const catalog = await collectAllIconariumIcons();
+
+  for (const [name, sizes] of catalog) {
+    used.set(name, new Set(sizes));
+  }
 
   for (const file of files) {
     const contents = await readFile(file, "utf8");
-
     const sourceFile = ts.createSourceFile(
       file,
       contents,

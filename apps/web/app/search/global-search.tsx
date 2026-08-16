@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { providerIds, providers, type ProviderId } from "@/lib/providers";
 import StatusPanel from "@/components/status-panel";
 import Octicon from "@/components/octicon";
+import { RuntimeIcon } from "@/components/icon";
 
 interface BaseIcon {
   name: string;
@@ -40,7 +41,17 @@ interface OcticonIcon extends BaseIcon {
   sizes: number[];
 }
 
-type Icon = FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon;
+interface IconariumIcon extends BaseIcon {
+  provider: "iconarium";
+  sizes: number[];
+}
+
+type Icon =
+  | FontAwesomeIcon
+  | DeviconIcon
+  | SimpleIcon
+  | OcticonIcon
+  | IconariumIcon;
 
 interface ProviderInfo {
   id: ProviderId;
@@ -97,6 +108,29 @@ function matchesSearch(icon: Icon, query: string) {
 }
 
 function SearchIconPreview({ icon }: { icon: Icon }) {
+  if (icon.provider === "iconarium") {
+    const size = icon.sizes.includes(24)
+      ? 24
+      : icon.sizes.includes(16)
+        ? 16
+        : icon.sizes[0];
+
+    return (
+      <div className="global-search-icon">
+        {size ? (
+          <RuntimeIcon
+            name={icon.name}
+            size={size}
+            className="global-search-icon-image iconarium"
+            title={icon.label}
+          />
+        ) : (
+          <span>?</span>
+        )}
+      </div>
+    );
+  }
+
   let src: string | null = null;
 
   if (icon.provider === "font-awesome") {

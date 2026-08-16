@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { ProviderId } from "@/lib/providers";
 import StatusPanel from "@/components/status-panel";
 import Octicon from "@/components/octicon";
+import { RuntimeIcon } from "@/components/icon";
 
 interface ProviderInfo {
   id: ProviderId;
@@ -53,7 +54,17 @@ interface OcticonIcon extends BaseIcon {
   sizes: number[];
 }
 
-type Icon = FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon;
+interface IconariumIcon extends BaseIcon {
+  provider: "iconarium";
+  sizes: number[];
+}
+
+type Icon =
+  | FontAwesomeIcon
+  | DeviconIcon
+  | SimpleIcon
+  | OcticonIcon
+  | IconariumIcon;
 
 type FlatIcons = Record<string, Icon>;
 
@@ -87,7 +98,7 @@ function findIcon(
   return null;
 }
 
-function getPreferredOcticonSize(icon: OcticonIcon) {
+function getPreferredSize(icon: OcticonIcon | IconariumIcon) {
   return icon.sizes.includes(24)
     ? 24
     : icon.sizes.includes(16)
@@ -125,7 +136,7 @@ const icon = getIcon("${icon.name}", "${variant}");`,
   }
 
   if (icon.provider === "octicons") {
-    const size = getPreferredOcticonSize(icon);
+    const size = getPreferredSize(icon);
 
     return {
       latest: `import { getIcon } from "${base}/octicons/latest";
@@ -133,6 +144,20 @@ const icon = getIcon("${icon.name}", "${variant}");`,
 const icon = getIcon("${icon.name}", ${size});`,
 
       pinned: `import { getIcon } from "${base}/octicons/${version}";
+
+const icon = getIcon("${icon.name}", ${size});`,
+    };
+  }
+
+  if (icon.provider === "iconarium") {
+    const size = getPreferredSize(icon);
+
+    return {
+      latest: `import { getIcon } from "${base}/iconarium/latest";
+
+const icon = getIcon("${icon.name}", ${size});`,
+
+      pinned: `import { getIcon } from "${base}/iconarium/${version}";
 
 const icon = getIcon("${icon.name}", ${size});`,
     };
@@ -176,11 +201,30 @@ function LargeIconPreview({ icon, version }: { icon: Icon; version: string }) {
   }
 
   if (icon.provider === "octicons") {
-    const size = getPreferredOcticonSize(icon);
+    const size = getPreferredSize(icon);
 
     if (size) {
       src = `/packages/octicons/${version}/svg/${icon.name}/${size}.svg`;
     }
+  }
+
+  if (icon.provider === "iconarium") {
+    const size = getPreferredSize(icon);
+
+    return (
+      <div className="large-icon-preview">
+        {size ? (
+          <RuntimeIcon
+            name={icon.name}
+            size={size}
+            className="large-icon-image iconarium"
+            title={`${icon.label} icon`}
+          />
+        ) : (
+          <span>?</span>
+        )}
+      </div>
+    );
   }
 
   return (

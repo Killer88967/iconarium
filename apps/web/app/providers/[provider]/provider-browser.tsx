@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import StatusPanel from "@/components/status-panel";
+import { RuntimeIcon } from "@/components/icon";
 import Octicon from "@/components/octicon";
 import type { ProviderId } from "@/lib/providers";
 
@@ -207,9 +208,20 @@ function IconPreview({ icon, version }: { icon: Icon; version: string }) {
         ? 16
         : icon.sizes[0];
 
-    if (size) {
-      src = `/packages/iconarium/${version}/svg/${icon.name}-${size}.svg`;
-    }
+    return (
+      <div className="icon-preview">
+        {size ? (
+          <RuntimeIcon
+            name={icon.name}
+            size={size}
+            className="icon-preview-image iconarium"
+            title={icon.label}
+          />
+        ) : (
+          <span>?</span>
+        )}
+      </div>
+    );
   }
 
   return (
