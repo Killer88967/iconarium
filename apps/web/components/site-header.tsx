@@ -40,6 +40,11 @@ export default function SiteHeader() {
             <span>Search</span>
           </a>
 
+          <a href="/docs" className={isActive("/docs") ? "active" : undefined}>
+            <Octicon name="book" size={16} />
+            <span>Docs</span>
+          </a>
+
           <a
             href="/assets"
             className={isActive("/assets") ? "active" : undefined}
