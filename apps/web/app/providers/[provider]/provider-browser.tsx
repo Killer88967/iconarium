@@ -2,7 +2,6 @@
 
 import { useEffect, useMemo, useState } from "react";
 import StatusPanel from "@/components/status-panel";
-import Icon from "@/components/icon";
 import Octicon from "@/components/octicon";
 import type { ProviderId } from "@/lib/providers";
 
@@ -60,7 +59,11 @@ interface IconariumIcon extends BaseIcon {
 }
 
 type Icon =
-  FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon | IconariumIcon;
+  | FontAwesomeIcon
+  | DeviconIcon
+  | SimpleIcon
+  | OcticonIcon
+  | IconariumIcon;
 
 type FlatIcons = Record<string, Icon>;
 
@@ -198,15 +201,15 @@ function IconPreview({ icon, version }: { icon: Icon; version: string }) {
   }
 
   if (icon.provider === "iconarium") {
-    return (
-      <div className="icon-preview">
-        <Icon
-          name={icon.name as "iconarium"}
-          size={24}
-          className="icon-preview-image iconarium"
-        />
-      </div>
-    );
+    const size = icon.sizes.includes(24)
+      ? 24
+      : icon.sizes.includes(16)
+        ? 16
+        : icon.sizes[0];
+
+    if (size) {
+      src = `/packages/iconarium/${version}/svg/${icon.name}-${size}.svg`;
+    }
   }
 
   return (

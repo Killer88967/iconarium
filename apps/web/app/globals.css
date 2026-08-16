@@ -677,14 +677,14 @@ article > p {
 }
 
 .icon-preview-image.font-awesome,
-.icon-preview-image.octicons {
+.icon-preview-image.octicons,
+.icon-preview-image.iconarium {
   filter: brightness(0) invert(1);
 }
 
 .icon-preview-image.iconarium {
   width: 48px;
   height: 48px;
-  color: var(--fg-default);
 }
 
 .icon-preview-image.devicons,
