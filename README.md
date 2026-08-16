@@ -1,5 +1,7 @@
 # Iconarium
 
+[![Why so many commits?](https://img.shields.io/badge/commits-why_so_many%3F-blue)](./COMMITS.md)
+
 [![Build](https://github.com/Killer88967/iconarium/actions/workflows/build.yml/badge.svg)](https://github.com/Killer88967/iconarium/actions/workflows/build.yml)
 [![GitHub License](https://img.shields.io/github/license/Killer88967/iconarium)](LICENSE)
 [![GitHub Issues](https://img.shields.io/github/issues/Killer88967/iconarium)](https://github.com/Killer88967/iconarium/issues)
