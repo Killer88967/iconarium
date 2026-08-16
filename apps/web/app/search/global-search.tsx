@@ -47,11 +47,7 @@ interface IconariumIcon extends BaseIcon {
 }
 
 type Icon =
-  | FontAwesomeIcon
-  | DeviconIcon
-  | SimpleIcon
-  | OcticonIcon
-  | IconariumIcon;
+  FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon | IconariumIcon;
 
 interface ProviderInfo {
   id: ProviderId;
