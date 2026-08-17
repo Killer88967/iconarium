@@ -61,7 +61,11 @@ interface IconariumIcon extends BaseIcon {
 }
 
 type Icon =
-  FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon | IconariumIcon;
+  | FontAwesomeIcon
+  | DeviconIcon
+  | SimpleIcon
+  | OcticonIcon
+  | IconariumIcon;
 
 type FlatIcons = Record<string, Icon>;
 
@@ -239,6 +243,53 @@ function LargeIconPreview({ icon, version }: { icon: Icon; version: string }) {
   );
 }
 
+function makeAssetUrls(icon: Icon, version: string) {
+  const base = "https://iconarium.vercel.app/packages";
+  const providerBase = `${base}/${icon.provider}/${version}`;
+
+  const urls = {
+    esm: providerBase,
+    metadata: `${providerBase}/metadata.json`,
+    svg: null as string | null,
+  };
+
+  if (icon.provider === "font-awesome") {
+    urls.svg = `${providerBase}/svg/${icon.style}/${icon.name}.svg`;
+  }
+
+  if (icon.provider === "devicons") {
+    const svgVariants = icon.svgVariants ?? icon.variants ?? [];
+    const variant =
+      svgVariants.find((value) => value.includes("original")) ?? svgVariants[0];
+
+    if (variant) {
+      urls.svg = `${providerBase}/svg/${icon.name}/${variant}.svg`;
+    }
+  }
+
+  if (icon.provider === "simple-icons") {
+    urls.svg = `${providerBase}/svg/${icon.name}.svg`;
+  }
+
+  if (icon.provider === "octicons") {
+    const size = getPreferredSize(icon);
+
+    if (size) {
+      urls.svg = `${providerBase}/svg/${icon.name}/${size}.svg`;
+    }
+  }
+
+  if (icon.provider === "iconarium") {
+    const size = getPreferredSize(icon);
+
+    if (size) {
+      urls.svg = `${providerBase}/svg/${icon.name}-${size}.svg`;
+    }
+  }
+
+  return urls;
+}
+
 export default function IconDetails({ provider, iconName }: IconDetailsProps) {
   const [metadata, setMetadata] = useState<ProviderMetadata | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -323,6 +374,7 @@ export default function IconDetails({ provider, iconName }: IconDetailsProps) {
   }
 
   const usage = makeUsage(icon, metadata.providerInfo.version);
+  const assetUrls = makeAssetUrls(icon, metadata.providerInfo.version);
 
   return (
     <section className="icon-details-page">
@@ -424,6 +476,25 @@ export default function IconDetails({ provider, iconName }: IconDetailsProps) {
           title={`Pinned · ${metadata.providerInfo.version}`}
           value={usage.pinned}
         />
+      </div>
+
+      <div className="usage-examples">
+        <CodeBlock label="ESM URL" icon={<Octicon name="link" size={16} />}>
+          {assetUrls.esm}
+        </CodeBlock>
+
+        <CodeBlock
+          label="Metadata URL"
+          icon={<Octicon name="file-code" size={16} />}
+        >
+          {assetUrls.metadata}
+        </CodeBlock>
+
+        {assetUrls.svg && (
+          <CodeBlock label="SVG URL" icon={<Octicon name="image" size={16} />}>
+            {assetUrls.svg}
+          </CodeBlock>
+        )}
       </div>
 
       {icon.tags.length > 0 && (
