@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { ProviderId } from "@/lib/providers";
 import StatusPanel from "@/components/status-panel";
 import Octicon from "@/components/octicon";
+import CodeBlock from "@/components/code-block";
 import { RuntimeIcon } from "@/components/icon";
 
 interface ProviderInfo {
@@ -60,7 +61,11 @@ interface IconariumIcon extends BaseIcon {
 }
 
 type Icon =
-  FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon | IconariumIcon;
+  | FontAwesomeIcon
+  | DeviconIcon
+  | SimpleIcon
+  | OcticonIcon
+  | IconariumIcon;
 
 type FlatIcons = Record<string, Icon>;
 
@@ -450,36 +455,11 @@ function Metadata({ label, value }: { label: string; value: string }) {
 }
 
 function UsageBlock({ title, value }: { title: string; value: string }) {
-  const [copied, setCopied] = useState(false);
-
-  async function copy() {
-    await copyText(value);
-
-    setCopied(true);
-
-    window.setTimeout(() => {
-      setCopied(false);
-    }, 1500);
-  }
-
   return (
     <div className="usage-block">
-      <div className="usage-block-heading">
-        <div className="usage-block-title">
-          <Octicon name="code" size={16} />
-          <h3>{title}</h3>
-        </div>
-
-        <button type="button" onClick={copy}>
-          <Octicon name={copied ? "check" : "copy"} size={16} />
-
-          <span>{copied ? "Copied" : "Copy"}</span>
-        </button>
-      </div>
-
-      <pre>
-        <code>{value}</code>
-      </pre>
+      <CodeBlock label={title} icon={<Octicon name="code" size={16} />}>
+        {value}
+      </CodeBlock>
     </div>
   );
 }

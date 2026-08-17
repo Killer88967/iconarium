@@ -7,12 +7,14 @@ interface CodeBlockProps {
   children: string;
   label?: string;
   className?: string;
+  icon?: React.ReactNode;
 }
 
 export default function CodeBlock({
   children,
   label,
   className,
+  icon,
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false);
 
@@ -29,7 +31,10 @@ export default function CodeBlock({
   return (
     <div className={`code-block${className ? ` ${className}` : ""}`}>
       <div className="code-block-header">
-        <span>{label ?? "Code"}</span>
+        <span className="code-block-label">
+          {icon}
+          <span>{label ?? "Code"}</span>
+        </span>
 
         <button
           type="button"

@@ -2757,6 +2757,17 @@ article > p {
   font-weight: 500;
 }
 
+.code-block-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.code-block-label svg {
+  display: block;
+  flex: 0 0 auto;
+}
+
 .code-block-copy {
   display: inline-flex;
   min-height: 28px;
