@@ -469,20 +469,9 @@ function UsageBlock({ title, value }: { title: string; value: string }) {
 
   return (
     <div className="usage-block">
-      <div className="usage-block-heading">
-        <div className="usage-block-title">
-          <Octicon name="code" size={16} />
-          <h3>{title}</h3>
-        </div>
-
-        <button type="button" onClick={copy}>
-          <Octicon name={copied ? "check" : "copy"} size={16} />
-
-          <span>{copied ? "Copied" : "Copy"}</span>
-        </button>
-      </div>
-
-      <CodeBlock>{value}</CodeBlock>
+      <CodeBlock label={title} icon={<Octicon name="code" size={16} />}>
+        {value}
+      </CodeBlock>
     </div>
   );
 }
