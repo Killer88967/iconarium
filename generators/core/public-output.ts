@@ -1,3 +1,4 @@
+import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { publicProviderDirs, writeJson, writeText } from "./files";
 
@@ -9,6 +10,11 @@ interface PublicOptions {
   esmRuntime: string;
   declarations: string;
   browserExports?: string[];
+}
+
+interface VersionManifest {
+  latest: string;
+  versions: string[];
 }
 
 const DEFAULT_BROWSER_EXPORTS = [
@@ -41,6 +47,38 @@ ${runtime}
 `;
 }
 
+async function writeVersionsManifest(provider: string, version: string) {
+  const path = join(
+    "apps",
+    "web",
+    "public",
+    "packages",
+    provider,
+    "versions.json",
+  );
+
+  let versions: string[] = [];
+
+  try {
+    const current = JSON.parse(
+      await readFile(path, "utf8"),
+    ) as Partial<VersionManifest>;
+
+    if (Array.isArray(current.versions)) {
+      versions = current.versions;
+    }
+  } catch {
+    // The manifest does not exist yet.
+  }
+
+  versions = Array.from(new Set([...versions, version]));
+
+  await writeJson(path, {
+    latest: version,
+    versions,
+  } satisfies VersionManifest);
+}
+
 export async function writePublicProvider(options: PublicOptions) {
   const metadataJson = JSON.stringify(options.metadata);
   const browserRuntime = createBrowserRuntime(options);
@@ -68,4 +106,6 @@ export async function writePublicProvider(options: PublicOptions) {
       writeText(join(dir, "browser.js"), browserRuntime),
     ]);
   }
+
+  await writeVersionsManifest(options.provider, options.version);
 }
