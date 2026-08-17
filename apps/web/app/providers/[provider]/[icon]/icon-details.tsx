@@ -61,7 +61,11 @@ interface IconariumIcon extends BaseIcon {
 }
 
 type Icon =
-  FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon | IconariumIcon;
+  | FontAwesomeIcon
+  | DeviconIcon
+  | SimpleIcon
+  | OcticonIcon
+  | IconariumIcon;
 
 type FlatIcons = Record<string, Icon>;
 
@@ -483,17 +487,30 @@ export default function IconDetails({ provider, iconName }: IconDetailsProps) {
 
       <div className="icon-detail-section">
         <div className="icon-detail-section-heading">
-          <span className="section-kicker">Usage</span>
-          <h3>Import this icon</h3>
+          <span className="section-kicker">Assets</span>
+          <h3>Direct URLs</h3>
         </div>
 
         <div className="usage-examples">
-          <UsageBlock title="Latest" value={usage.latest} />
+          <CodeBlock label="ESM URL" icon={<Octicon name="link" size={16} />}>
+            {assetUrls.esm}
+          </CodeBlock>
 
-          <UsageBlock
-            title={`Pinned · ${metadata.providerInfo.version}`}
-            value={usage.pinned}
-          />
+          <CodeBlock
+            label="Metadata URL"
+            icon={<Octicon name="file-code" size={16} />}
+          >
+            {assetUrls.metadata}
+          </CodeBlock>
+
+          {assetUrls.svg && (
+            <CodeBlock
+              label="SVG URL"
+              icon={<Octicon name="image" size={16} />}
+            >
+              {assetUrls.svg}
+            </CodeBlock>
+          )}
         </div>
       </div>
 
