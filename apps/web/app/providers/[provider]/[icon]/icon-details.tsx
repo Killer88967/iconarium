@@ -61,11 +61,7 @@ interface IconariumIcon extends BaseIcon {
 }
 
 type Icon =
-  | FontAwesomeIcon
-  | DeviconIcon
-  | SimpleIcon
-  | OcticonIcon
-  | IconariumIcon;
+  FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon | IconariumIcon;
 
 type FlatIcons = Record<string, Icon>;
 
@@ -469,32 +465,36 @@ export default function IconDetails({ provider, iconName }: IconDetailsProps) {
         />
       </div>
 
-      <div className="usage-examples">
-        <UsageBlock title="Latest" value={usage.latest} />
+      <div className="icon-detail-section">
+        <div className="icon-detail-section-heading">
+          <span className="section-kicker">Usage</span>
+          <h3>Import this icon</h3>
+        </div>
 
-        <UsageBlock
-          title={`Pinned · ${metadata.providerInfo.version}`}
-          value={usage.pinned}
-        />
+        <div className="usage-examples">
+          <UsageBlock title="Latest" value={usage.latest} />
+
+          <UsageBlock
+            title={`Pinned · ${metadata.providerInfo.version}`}
+            value={usage.pinned}
+          />
+        </div>
       </div>
 
-      <div className="usage-examples">
-        <CodeBlock label="ESM URL" icon={<Octicon name="link" size={16} />}>
-          {assetUrls.esm}
-        </CodeBlock>
+      <div className="icon-detail-section">
+        <div className="icon-detail-section-heading">
+          <span className="section-kicker">Usage</span>
+          <h3>Import this icon</h3>
+        </div>
 
-        <CodeBlock
-          label="Metadata URL"
-          icon={<Octicon name="file-code" size={16} />}
-        >
-          {assetUrls.metadata}
-        </CodeBlock>
+        <div className="usage-examples">
+          <UsageBlock title="Latest" value={usage.latest} />
 
-        {assetUrls.svg && (
-          <CodeBlock label="SVG URL" icon={<Octicon name="image" size={16} />}>
-            {assetUrls.svg}
-          </CodeBlock>
-        )}
+          <UsageBlock
+            title={`Pinned · ${metadata.providerInfo.version}`}
+            value={usage.pinned}
+          />
+        </div>
       </div>
 
       {icon.tags.length > 0 && (
