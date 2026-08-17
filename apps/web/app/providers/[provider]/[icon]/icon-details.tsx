@@ -515,10 +515,13 @@ export default function IconDetails({ provider, iconName }: IconDetailsProps) {
       </div>
 
       {icon.tags.length > 0 && (
-        <div className="icon-tags">
-          <span className="section-kicker">Tags</span>
+        <div className="icon-detail-section">
+          <div className="icon-detail-section-heading">
+            <span className="section-kicker">Tags</span>
+            <h3>Related terms</h3>
+          </div>
 
-          <div className="tag-list">
+          <div className="tag-list icon-detail-tags">
             {icon.tags.map((tag) => (
               <span key={tag}>{tag}</span>
             ))}

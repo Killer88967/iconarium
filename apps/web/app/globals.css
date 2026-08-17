@@ -995,15 +995,24 @@ article > p {
   white-space: pre;
 }
 
-.icon-tags {
-  margin-top: 24px;
-  padding-top: 16px;
-
-  border-top: 1px solid var(--border-muted);
+/* ICON TAGS */
+.icon-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.icon-tags .tag-list {
-  margin-top: 10px;
+.icon-detail-tags > span {
+  padding: 4px 9px;
+
+  border: 1px solid var(--border-default);
+  border-radius: 999px;
+
+  background: var(--bg-subtle);
+  color: var(--fg-muted);
+
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 /* Font Awesome SVGs are generally monochrome black. */
