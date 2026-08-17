@@ -7,7 +7,7 @@ interface CodeBlockProps {
   children: string;
   label?: string;
   className?: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
 }
 
 export default function CodeBlock({

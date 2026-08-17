@@ -455,18 +455,6 @@ function Metadata({ label, value }: { label: string; value: string }) {
 }
 
 function UsageBlock({ title, value }: { title: string; value: string }) {
-  const [copied, setCopied] = useState(false);
-
-  async function copy() {
-    await copyText(value);
-
-    setCopied(true);
-
-    window.setTimeout(() => {
-      setCopied(false);
-    }, 1500);
-  }
-
   return (
     <div className="usage-block">
       <CodeBlock label={title} icon={<Octicon name="code" size={16} />}>
