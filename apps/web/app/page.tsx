@@ -1,4 +1,5 @@
 import Octicon from "@/components/octicon";
+import CodeBlock from "@/components/code-block";
 import { providerIds, providers } from "@/lib/providers";
 
 export default function Home() {
@@ -49,13 +50,13 @@ export default function Home() {
             <span className="panel-meta">Octicons</span>
           </div>
 
-          <pre>
-            <code>{`import { getIcon } from "https://iconarium.vercel.app/packages/octicons/latest";
+          <CodeBlock>
+            {`import { getIcon } from "https://iconarium.vercel.app/packages/octicons/latest";
 
 const mark = getIcon("mark-github", 24);
 
-console.log(mark.fileName);`}</code>
-          </pre>
+console.log(mark.fileName);`}
+          </CodeBlock>
         </div>
       </section>
 

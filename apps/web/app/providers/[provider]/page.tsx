@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import ProviderBrowser from "./provider-browser";
 import Octicon from "@/components/octicon";
+import CodeBlock from "@/components/code-block";
 import { getProvider, isProviderId, providerIds } from "@/lib/providers";
 
 interface PageProps {
@@ -84,11 +85,9 @@ export default async function ProviderPage({ params }: PageProps) {
             <span className="panel-meta">latest</span>
           </div>
 
-          <pre>
-            <code>
-              {`import { getIcon } from "https://iconarium.vercel.app/packages/${provider}/latest";`}
-            </code>
-          </pre>
+          <CodeBlock>
+            {`import { getIcon } from "https://iconarium.vercel.app/packages/${provider}/latest";`}
+          </CodeBlock>
         </div>
       </section>
 

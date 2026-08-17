@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { ProviderId } from "@/lib/providers";
 import StatusPanel from "@/components/status-panel";
 import Octicon from "@/components/octicon";
+import CodeBlock from "@/components/code-block";
 import { RuntimeIcon } from "@/components/icon";
 
 interface ProviderInfo {
@@ -60,7 +61,11 @@ interface IconariumIcon extends BaseIcon {
 }
 
 type Icon =
-  FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon | IconariumIcon;
+  | FontAwesomeIcon
+  | DeviconIcon
+  | SimpleIcon
+  | OcticonIcon
+  | IconariumIcon;
 
 type FlatIcons = Record<string, Icon>;
 
@@ -477,9 +482,7 @@ function UsageBlock({ title, value }: { title: string; value: string }) {
         </button>
       </div>
 
-      <pre>
-        <code>{value}</code>
-      </pre>
+      <CodeBlock>{value}</CodeBlock>
     </div>
   );
 }
