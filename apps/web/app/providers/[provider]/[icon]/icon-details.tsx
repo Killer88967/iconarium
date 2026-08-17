@@ -61,11 +61,7 @@ interface IconariumIcon extends BaseIcon {
 }
 
 type Icon =
-  | FontAwesomeIcon
-  | DeviconIcon
-  | SimpleIcon
-  | OcticonIcon
-  | IconariumIcon;
+  FontAwesomeIcon | DeviconIcon | SimpleIcon | OcticonIcon | IconariumIcon;
 
 type FlatIcons = Record<string, Icon>;
 
